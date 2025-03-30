@@ -14,6 +14,8 @@ options = webdriver.ChromeOptions()
 options.add_argument("--headless")  # 無頭模式
 options.add_argument("--no-sandbox")
 options.add_argument("--disable-dev-shm-usage")
+options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0")
+driver = webdriver.Chrome(options=options)
 
 # 指定 Chrome 瀏覽器的路徑
 options.binary_location = chrome_path
