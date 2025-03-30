@@ -14,7 +14,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@main
 
-    - uses: browser-actions/setup-chrome@master
+    - uses: browser-actions/setup-chrome@v1
     - run: chrome --version
       
     - name: Set up Python
