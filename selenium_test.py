@@ -25,10 +25,14 @@ driver = webdriver.Chrome(service=service, options=options)
 
 
 url = "https://internet-measurement.com/#ips"
+url = "https://disp.cc/b/"
+css_selector = "#ips > pre:nth-child(1)"
+css_selector = ".disp_bbs"
+
 driver.get(url)
 
 # 使用 CSS Selector 定位元素
-element = driver.find_element(By.CSS_SELECTOR, "#ips > pre:nth-child(1)")
+element = driver.find_element(By.CSS_SELECTOR, css_selector)
 print(element.text)  # 取出元素內的文本
 
 driver.quit()
