@@ -18,7 +18,7 @@ options.add_argument("--disable-dev-shm-usage")
 options.binary_location = chrome_path
 
 # 指定 ChromeDriver 路徑
-driver = webdriver.Chrome(executable_path=chromedriver_path, options=options)
+driver = webdriver.Chrome(service=chromedriver_path, options=options)
 
 
 url = "https://internet-measurement.com/#ips"
