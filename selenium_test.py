@@ -1,3 +1,4 @@
+import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
@@ -28,5 +29,3 @@ element = driver.find_element(By.CSS_SELECTOR, "#ips > pre:nth-child(1)")
 print(element.text)  # 取出元素內的文本
 
 driver.quit()
-
-
