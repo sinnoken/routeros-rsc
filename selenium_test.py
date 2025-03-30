@@ -1,6 +1,7 @@
 import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
 
 # 從環境變數讀取 Chrome 路徑
 chrome_path = os.getenv('CHROME_PATH')  # 這是從 GitHub Actions 中傳遞過來的
@@ -18,7 +19,9 @@ options.add_argument("--disable-dev-shm-usage")
 options.binary_location = chrome_path
 
 # 指定 ChromeDriver 路徑
-driver = webdriver.Chrome(service=chromedriver_path, options=options)
+service = Service(executable_path=chromedriver_path)
+driver = webdriver.Chrome(service=service, options=options)
+#driver = webdriver.Chrome(service=chromedriver_path, options=options)
 
 
 url = "https://internet-measurement.com/#ips"
