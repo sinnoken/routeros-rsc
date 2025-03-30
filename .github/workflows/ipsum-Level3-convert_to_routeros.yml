@@ -13,6 +13,9 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@main
+
+    - uses: browser-actions/setup-chrome@master
+    - run: chrome --version
       
     - name: Set up Python
       uses: actions/setup-python@main
