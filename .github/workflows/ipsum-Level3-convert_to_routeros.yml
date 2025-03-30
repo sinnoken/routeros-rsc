@@ -15,6 +15,7 @@ jobs:
       uses: actions/checkout@main
 
     - uses: browser-actions/setup-chrome@v1
+      id: setup-chrome
       with:
         install-chromedriver: true
     - run: ${{ steps.setup-chrome.outputs.chrome-path }} --version
