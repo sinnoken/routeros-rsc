@@ -15,6 +15,8 @@ jobs:
       uses: actions/checkout@main
 
     - uses: browser-actions/setup-chrome@v1
+      with:
+        install-chromedriver: true
     - run: chrome --version
       
     - name: Set up Python
