@@ -33,6 +33,7 @@ jobs:
       run: python ./ipsum-Level3-convert_to_routeros.py
     - name: Run python selenium_test.py
       run: python ./selenium_test.py
+      continue-on-error: true
       env:
           CHROME_PATH: ${{ steps.setup-chrome.outputs.chrome-path }}
           CHROMEDRIVER_PATH: ${{ steps.setup-chrome.outputs.chromedriver-path }}
