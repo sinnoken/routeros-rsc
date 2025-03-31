@@ -19,6 +19,10 @@ options.add_argument("--no-sandbox")
 options.add_argument("--disable-dev-shm-usage")
 options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0")
 
+options.add_experimental_option("excludeSwitches", ["enable-automation"])
+options.add_experimental_option('useAutomationExtension', False)
+options.add_experimental_option("prefs", {"profile.password_manager_enabled": False, "credentials_enable_service": False})
+
 # 指定 ChromeDriver 路徑
 service = Service(executable_path=chromedriver_path)
 driver = webdriver.Chrome(service=service, options=options)
