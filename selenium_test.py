@@ -32,12 +32,14 @@ driver = webdriver.Chrome(service=service, options=options)
 url = "https://internet-measurement.com/#ips"
 url = "https://disp.cc/b/"
 css_selector = "#ips > pre:nth-child(1)"
-css_selector = "#ht_content > div:nth-child(1) > span.ht_title > a"
+css_selector = "#ht_content > div.ht_row > span.ht_title > a"
 
 driver.get(url)
 
-# 使用 CSS Selector 定位元素
-element = driver.find_element(By.CSS_SELECTOR, css_selector)
-print(element.text)  # 取出元素內的文本
+elements = driver.find_elements(By.CSS_SELECTOR, css_selector)
+
+# 提取每個元素的文本內容並輸出
+for element in elements:
+    print(element.text)
 
 driver.quit()
