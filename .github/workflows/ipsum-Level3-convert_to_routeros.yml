@@ -47,10 +47,17 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Notify the commit on Telegram
-      uses: EverythingSuckz/github-telegram-notify@main
+      uses: appleboy/telegram-action@master
       with:
-        bot_token: '${{ secrets.TELEGRAM_BOT_TOKEN }}'
-        chat_id: '${{ secrets.TELEGRAM_CHAT_ID }}'
+        token: '${{ secrets.TELEGRAM_BOT_TOKEN }}'
+        to: '${{ secrets.TELEGRAM_CHAT_ID }}'
+        message: |
+          ${{ github.actor }} created commit:
+          Commit message: ${{ github.event.commits[0].message }}
+          
+          Repository: ${{ github.repository }}
+          
+          See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
 
     - name: Create Release
       uses: softprops/action-gh-release@master
