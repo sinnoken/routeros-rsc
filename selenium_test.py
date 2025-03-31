@@ -28,7 +28,7 @@ driver = webdriver.Chrome(service=service, options=options)
 url = "https://internet-measurement.com/#ips"
 url = "https://disp.cc/b/"
 css_selector = "#ips > pre:nth-child(1)"
-css_selector = ".disp_bbs"
+css_selector = "#ht_content > div:nth-child(1) > span.ht_title > a"
 
 driver.get(url)
 
