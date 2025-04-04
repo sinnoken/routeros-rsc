@@ -1,0 +1,15 @@
+/ip firewall address-list add address=80.82.77.33     comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
+/ip firewall address-list add address=92.255.85.188   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
+/ip firewall address-list add address=93.174.95.106   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
+/ip firewall address-list add address=134.209.120.69  comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
+/ip firewall address-list add address=160.191.89.4    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
+/ip firewall address-list add address=194.0.234.35    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
+/ip firewall address-list add address=194.0.234.36    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
+/ip firewall address-list add address=196.251.87.74   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
+/ip firewall address-list add address=218.92.0.103    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
+/ip firewall address-list add address=218.92.0.217    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
+/ip firewall address-list add address=218.92.0.219    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
+/ip firewall address-list add address=218.92.0.225    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
+/ip firewall address-list add address=218.92.0.230    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
+/ip firewall address-list add address=218.92.0.232    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
+/ip firewall address-list add address=218.92.0.236    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
