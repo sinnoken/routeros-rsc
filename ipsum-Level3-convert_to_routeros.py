@@ -43,6 +43,9 @@ def process_url(session, url):
 
     # 批量寫入文件
     with open(output_file, 'w') as f:
+        f.write(f"# IPsum Threat Intelligence Feed - Level {level}\n")
+        f.write(f"# Source: https://github.com/stamparm/ipsum\n")
+        f.write(f"# Converted for RouterOS by sinnoken/routeros-rsc\n\n")
         f.writelines(commands)
 
     print(f'已儲存 {output_file}')
