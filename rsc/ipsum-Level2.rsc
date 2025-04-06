@@ -1,3 +1,7 @@
+# IPsum Threat Intelligence Feed - Level 2
+# Source: https://github.com/stamparm/ipsum
+# Converted for RouterOS by sinnoken/routeros-rsc
+
 /ip firewall address-list add address=1.0.69.131      comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L2
 /ip firewall address-list add address=1.4.195.114     comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L2
 /ip firewall address-list add address=1.6.53.205      comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L2
