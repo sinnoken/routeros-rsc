@@ -48,7 +48,7 @@ def process_url(session, url):
         f.write(f"# Source: https://github.com/stamparm/ipsum\n")
         f.write(f"# Converted for RouterOS by sinnoken/routeros-rsc\n")
         f.write(f"# WARNING: This file is auto-generated. Manual edits may be overwritten.\n")
-        f.write(f"# Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+        f.write(f"# Generated on: {datetime.now().astimezone().strftime('%Y-%m-%d %H:%M:%S %Z%z')}\n\n")
         f.writelines(commands)
 
     print(f'已儲存 {output_file}')
