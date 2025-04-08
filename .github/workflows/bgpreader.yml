@@ -15,7 +15,16 @@ jobs:
 
     - name: Install bgpstream
       run: |
-        pip install pybgpstream
+        sudo apt-get install build-essential curl zlib1g-dev libbz2-dev libcurl4-openssl-dev librdkafka-dev
+        mkdir ~/src
+        cd ~/src/
+        curl -LO https://github.com/LibtraceTeam/wandio/archive/refs/tags/4.2.4-1.tar.gz
+        tar zxf wandio-4.2.3.tar.gz
+        cd wandio-4.2.3/
+        ./configure
+        make
+        sudo make install
+        sudo ldconfig
 
     - name: Extract prefixes for ASN 9505
       run: |
