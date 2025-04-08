@@ -15,8 +15,8 @@ jobs:
 
     - name: Install bgpstream
       run: |
-        sudo apt-get update
-        sudo apt-get install -y bgpstream
+        curl -s https://pkg.caida.org/os/$(lsb_release -si|awk '{print tolower($0)}')/bootstrap.sh | bash 
+        sudo apt update; sudo apt-get install bgpstream
 
     - name: Extract prefixes for ASN 9505
       run: |
