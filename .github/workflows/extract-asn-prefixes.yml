@@ -21,12 +21,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install pyasn
 
-    - name: Download BGP data
-      run: |
-        pyasn_util_download.py --latest --filename rib.latest.bz2
-        pyasn_util_convert.py --single rib.latest.bz2 rib.latest.dat
-
-    - name: Run Python script
+    - name: Download BGP data & Run Python script
       run: python extract_asn_prefixes.py
 
     - name: Commit and push changes
