@@ -24,7 +24,7 @@ jobs:
     - name: Download BGP data
       run: |
         wget http://data.caida.org/datasets/routing/routeviews-prefix2as/2023/09/routeviews-rv2-20230901-1200.pfx2as.gz
-        gunzip routeviews-rv2-20230901-1200.pfx2as.gz
+        gunzip -v routeviews-rv2-20230901-1200.pfx2as.gz
 
     - name: Run Python script
       run: python extract_asn_prefixes.py
