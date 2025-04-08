@@ -15,16 +15,13 @@ jobs:
 
     - name: Install bgpstream
       run: |
-        sudo apt-get install build-essential curl zlib1g-dev libbz2-dev libcurl4-openssl-dev librdkafka-dev
-        mkdir ~/src
-        cd ~/src/
-        curl -LO https://github.com/LibtraceTeam/wandio/archive/refs/tags/4.2.4-1.tar.gz
-        tar zxf wandio-4.2.3.tar.gz
-        cd wandio-4.2.3/
-        ./configure
-        make
-        sudo make install
-        sudo ldconfig
+        sudo apt-get update
+        sudo apt-get install -y curl apt-transport-https ssl-cert ca-certificates gnupg lsb-release
+        curl -1sLf 'https://dl.cloudsmith.io/public/wand/libwandio/cfg/setup/bash.deb.sh' | sudo -E bash
+        echo "deb https://pkg.caida.org/os/$(lsb_release -si|awk '{print tolower($0)}') $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/caida.list
+        sudo wget -O /etc/apt/trusted.gpg.d/caida.gpg https://pkg.caida.org/os/ubuntu/keyring.gpg
+        sudo apt-get install bgpstream
+        sudo apt-get install python3-pybgpstream
 
     - name: Extract prefixes for ASN 9505
       run: |
