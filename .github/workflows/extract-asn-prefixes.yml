@@ -24,7 +24,13 @@ jobs:
     - name: Download BGP data & Run Python script
       run: python extract_asn_prefixes.py
 
+    - name: Check for changes
+      id: changes
+      run: |
+        git diff --exit-code asn9505_prefixes.txt || echo "has_changes=true" >> $GITHUB_ENV
+
     - name: Commit and push changes
+      if: env.has_changes == 'true'
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
