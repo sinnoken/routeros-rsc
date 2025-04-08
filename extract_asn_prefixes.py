@@ -1,5 +1,6 @@
 import subprocess
 import pyasn
+import ipaddress
 
 def download_and_convert():
     # Step 1: Download the latest BGP data
@@ -22,9 +23,9 @@ def main():
     print("Extracting prefixes for ASN 9505...")
     prefixes = asndb.get_as_prefixes(9505)
 
-    # Sort the prefixes
-    print("Sorting prefixes...")
-    sorted_prefixes = sorted(prefixes)
+    # Sort the prefixes by numerical value
+    print("Sorting prefixes by numerical value...")
+    sorted_prefixes = sorted(prefixes, key=lambda p: (ipaddress.ip_network(p, strict=False).network_address, ipaddress.ip_network(p, strict=False).prefixlen))
 
     # Write sorted prefixes to file
     print("Writing sorted prefixes to asn9505_prefixes.txt...")
