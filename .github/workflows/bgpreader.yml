@@ -1,0 +1,31 @@
+name: Extract BGP Prefixes
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 每天運行一次
+  workflow_dispatch:    # 手動觸發
+
+jobs:
+  extract-prefixes:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Install bgpstream
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y bgpstream
+
+    - name: Extract prefixes for ASN 9505
+      run: |
+        bgpreader -c rrc00 -w $(date +%s) -j 9505 > prefixes.txt
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add prefixes.txt
+        git commit -m "Update prefixes for ASN 9505"
+        git push
