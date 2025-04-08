@@ -25,6 +25,7 @@ jobs:
       run: |
         wget http://data.caida.org/datasets/routing/routeviews-prefix2as/2023/09/routeviews-rv2-20230901-1200.pfx2as.gz
         gunzip -v routeviews-rv2-20230901-1200.pfx2as.gz
+        pyasn_util_convert.py --single routeviews-rv2-20230901-1200.pfx2as routeviews-rv2-20230901-1200.dat
 
     - name: Run Python script
       run: python extract_asn_prefixes.py
