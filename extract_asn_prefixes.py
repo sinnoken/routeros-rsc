@@ -22,10 +22,14 @@ def main():
     print("Extracting prefixes for ASN 9505...")
     prefixes = asndb.get_as_prefixes(9505)
 
-    # Write prefixes to file
-    print("Writing prefixes to asn9505_prefixes.txt...")
+    # Sort the prefixes
+    print("Sorting prefixes...")
+    sorted_prefixes = sorted(prefixes)
+
+    # Write sorted prefixes to file
+    print("Writing sorted prefixes to asn9505_prefixes.txt...")
     with open('asn9505_prefixes.txt', 'w') as f:
-        for prefix in prefixes:
+        for prefix in sorted_prefixes:
             f.write(f'{prefix}\n')
 
 if __name__ == "__main__":
