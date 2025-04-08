@@ -1,7 +1,7 @@
 import pyasn
 
 # 加載 BGP 資料庫
-asndb = pyasn.pyasn('routeviews-rv2-20230901-1200.pfx2as')
+asndb = pyasn.pyasn('routeviews-rv2-20230901-1200.dat')
 
 # 提取 ASN 9505 的前綴
 prefixes = asndb.get_as_prefixes(9505)
