@@ -37,6 +37,10 @@ jobs:
       env:
           CHROME_PATH: ${{ steps.setup-chrome.outputs.chrome-path }}
           CHROMEDRIVER_PATH: ${{ steps.setup-chrome.outputs.chromedriver-path }}
+          
+    - name: Run python testList.py
+      run: python ./testList.py
+      continue-on-error: true
 
     - name: Generate tag name
       run: echo "TAG_NAME=$(date +%F-%H-%M)" >> $GITHUB_ENV
