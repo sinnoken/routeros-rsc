@@ -128,7 +128,7 @@ def main():
     """主函數，使用多線程加速處理"""
     with requests.Session() as session:
         with ThreadPoolExecutor(max_workers=4) as executor:
-            executor.map(lambda url: process_url(session, url), urls)
+            executor.map(lambda url: process_url(session, url_info), urls_info)
 
 if __name__ == '__main__':
     main()
