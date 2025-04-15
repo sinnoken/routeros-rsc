@@ -87,6 +87,10 @@ def process_url(session, url_info):
     response = session.get(url)
     ip_list = response.text.splitlines()
 
+    if not ip_list:
+        print(f"警告: {url} 沒有下載到任何資料。")
+        return
+
     # 使用集合來去重和驗證 IP 地址
     valid_ips = set()
     for line in ip_list:
