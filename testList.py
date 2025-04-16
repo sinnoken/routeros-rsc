@@ -11,18 +11,53 @@ os.makedirs(output_dir, exist_ok=True)
 # 設定下載的 URL 清單
 urls_info = [
     {
-        "list_name": "stamparm/ipsum-1",
+        "list_name": "stamparm/ipsum/level-1",
         "source_url": "https://github.com/stamparm/ipsum/raw/refs/heads/master/levels/1.txt",
-        "comment": "Level 1 threat list",
-        "type": "IPv4"  # Not specifically IPv4 or IPv6
+        "comment": "stamparm/ipsum/level-1",
+        "type": "IPv4"
     },
     {
-        "list_name": "stamparm/ipsum-2",
+        "list_name": "stamparm/ipsum/level-2",
         "source_url": "https://github.com/stamparm/ipsum/raw/refs/heads/master/levels/2.txt",
+        "comment": "stamparm/ipsum/level-2",
+        "type": "IPv4"
+    },
+    {
+        "list_name": "stamparm/ipsum/level-3",
+        "source_url": "https://github.com/stamparm/ipsum/raw/refs/heads/master/levels/3.txt",
+        "comment": "stamparm/ipsum/level-3",
+        "type": "IPv4"
+    },
+    {
+        "list_name": "stamparm/ipsum/level-4",
+        "source_url": "https://github.com/stamparm/ipsum/raw/refs/heads/master/levels/4.txt",
         "comment": "Level 2 threat list",
         "type": "IPv4"
     },
-    # ... (其他 levels 同樣結構)
+    {
+        "list_name": "stamparm/ipsum/level-5",
+        "source_url": "https://github.com/stamparm/ipsum/raw/refs/heads/master/levels/5.txt",
+        "comment": "stamparm/ipsum/level-5",
+        "type": "IPv4"
+    },
+    {
+        "list_name": "stamparm/ipsum/level-6",
+        "source_url": "https://github.com/stamparm/ipsum/raw/refs/heads/master/levels/6.txt",
+        "comment": "stamparm/ipsum/level-6",
+        "type": "IPv4"
+    },
+    {
+        "list_name": "stamparm/ipsum/level-7",
+        "source_url": "https://github.com/stamparm/ipsum/raw/refs/heads/master/levels/7.txt",
+        "comment": "stamparm/ipsum/level-7",
+        "type": "IPv4"
+    },
+    {
+        "list_name": "stamparm/ipsum/level-8",
+        "source_url": "https://github.com/stamparm/ipsum/raw/refs/heads/master/levels/8.txt",
+        "comment": "stamparm/ipsum/level-8",
+        "type": "IPv4"
+    },
     {
         "list_name": "ipv64.net-ipv64_blocklist_v4_JP",
         "source_url": "https://ipv64.net/blocklists/countries/ipv64_blocklist_v4_JP.txt",
