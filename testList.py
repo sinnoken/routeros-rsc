@@ -163,9 +163,9 @@ def process_url(session, url_info):
         elif isinstance(entry, ipaddress.IPv6Address) and ip_type == "IPv6":
             commands.append(f'/ipv6 firewall address-list add address={str(entry).ljust(39)} comment={comment} list={list_name}\n')
         elif isinstance(entry, ipaddress.IPv4Network) and ip_type == "IPv4":
-            commands.append(f'/ip firewall address-list add address={str(entry).ljust(15)} comment={comment} list={list_name}\n')
+            commands.append(f'/ip firewall address-list add address={str(entry).ljust(18)} comment={comment} list={list_name}\n')
         elif isinstance(entry, ipaddress.IPv6Network) and ip_type == "IPv6":
-            commands.append(f'/ipv6 firewall address-list add address={str(entry).ljust(39)} comment={comment} list={list_name}\n')
+            commands.append(f'/ipv6 firewall address-list add address={str(entry).ljust(43)} comment={comment} list={list_name}\n')
 
     # 批量寫入文件
     with open(output_file, 'w') as f:
