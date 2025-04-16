@@ -93,7 +93,11 @@ def process_url(session, url_info):
 
     ip_list = response.text.splitlines()
 
-    if not ip_list:
+    # 檢查 ip_list 行數
+    line_count = len(ip_list)
+    print(f"從 {url} 下載到 {line_count} 行資料。")
+
+    if line_count == 0:
         print(f"警告: {url} 沒有下載到任何資料。")
         return
 
