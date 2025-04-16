@@ -2,7 +2,7 @@
 # Source: https://github.com/stamparm/ipsum/raw/refs/heads/master/levels/4.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: This file is auto-generated. Manual edits may be overwritten.
-# Generated on: 2025-04-16 02:37:44 UTC+0000
+# Generated on: 2025-04-16 02:38:51 UTC+0000
 
 /ip firewall address-list add address=1.55.33.86      comment=Level 2 threat list list=STAMPARM-IPSUM-LEVEL-4
 /ip firewall address-list add address=1.85.61.165     comment=Level 2 threat list list=STAMPARM-IPSUM-LEVEL-4
