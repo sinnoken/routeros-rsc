@@ -84,7 +84,13 @@ def process_url(session, url_info):
     os.makedirs(output_dir, exist_ok=True)
     output_file = os.path.join(output_dir, f'{list_name}.rsc')
 
-    response = session.get(url)
+    try:
+        response = session.get(url)
+        response.raise_for_status()  # 檢查 HTTP 回應狀態碼是否為錯誤
+    except requests.exceptions.RequestException as e:
+        print(f"警告: 無法下載 {url}，錯誤: {e}")
+        return
+
     ip_list = response.text.splitlines()
 
     if not ip_list:
