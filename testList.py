@@ -101,31 +101,36 @@ def process_url(session, url_info):
         print(f"警告: {url} 沒有下載到任何資料。")
         return
 
-    # 使用集合來去重和驗證 IP 地址
-    valid_ips = set()
+    # 使用集合來去重和驗證 IP 地址和 CIDR
+    valid_entries = set()
     for line in ip_list:
         if line and not line.startswith('#'):
             try:
+                # 嘗試解析為單個 IP 地址
                 ip = ipaddress.ip_address(line.split()[0])
-                valid_ips.add(ip)
+                valid_entries.add(ip)
             except ValueError:
-                continue
+                try:
+                    # 如果不是單個 IP，嘗試解析為網路地址
+                    network = ipaddress.ip_network(line.split()[0], strict=False)
+                    valid_entries.add(network)
+                except ValueError:
+                    continue
 
-    sorted_ips = sorted(valid_ips)
+    # 排序：先按 IP 類型（IPv4, IPv6），再按數值
+    sorted_entries = sorted(valid_entries, key=lambda x: (x.version, int(x.network_address) if isinstance(x, ipaddress._BaseNetwork) else int(x)))
 
     # 生成 RouterOS 指令
-    if ip_type == "IPv4":
-        commands = [
-            f'/ip firewall address-list add address={str(ip).ljust(15)} comment={comment} list={list_name}\n'
-            for ip in sorted_ips if isinstance(ip, ipaddress.IPv4Address)
-        ]
-    elif ip_type == "IPv6":
-        commands = [
-            f'/ipv6 firewall address-list add address={str(ip).ljust(39)} comment={comment} list={list_name}\n'
-            for ip in sorted_ips if isinstance(ip, ipaddress.IPv6Address)
-        ]
-    else:
-        commands = []
+    commands = []
+    for entry in sorted_entries:
+        if isinstance(entry, ipaddress.IPv4Address) and ip_type == "IPv4":
+            commands.append(f'/ip firewall address-list add address={str(entry).ljust(15)} comment={comment} list={list_name}\n')
+        elif isinstance(entry, ipaddress.IPv6Address) and ip_type == "IPv6":
+            commands.append(f'/ipv6 firewall address-list add address={str(entry).ljust(39)} comment={comment} list={list_name}\n')
+        elif isinstance(entry, ipaddress.IPv4Network) and ip_type == "IPv4":
+            commands.append(f'/ip firewall address-list add address={entry} comment={comment} list={list_name}\n')
+        elif isinstance(entry, ipaddress.IPv6Network) and ip_type == "IPv6":
+            commands.append(f'/ipv6 firewall address-list add address={entry} comment={comment} list={list_name}\n')
 
     # 批量寫入文件
     with open(output_file, 'w') as f:
