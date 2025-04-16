@@ -155,17 +155,22 @@ def process_url(session, url_info):
     # 排序：先按 IP 類型（IPv4, IPv6），再按數值
     sorted_entries = sorted(valid_entries, key=lambda x: (x.version, int(x.network_address) if isinstance(x, ipaddress._BaseNetwork) else int(x)))
 
+    # 計算最大長度
+    max_length_ipv4 = max(len(str(entry)) for entry in sorted_entries if isinstance(entry, (ipaddress.IPv4Address, ipaddress.IPv4Network)))
+    max_length_ipv6 = max(len(str(entry)) for entry in sorted_entries if isinstance(entry, (ipaddress.IPv6Address, ipaddress.IPv6Network)))
+
     # 生成 RouterOS 指令
     commands = []
     for entry in sorted_entries:
+        entry_str = str(entry)
         if isinstance(entry, ipaddress.IPv4Address) and ip_type == "IPv4":
-            commands.append(f'/ip firewall address-list add address={str(entry).ljust(15)} comment={comment} list={list_name}\n')
+            commands.append(f'/ip firewall address-list add address={entry_str.ljust(max_length_ipv4)} comment={comment} list={list_name}\n')
         elif isinstance(entry, ipaddress.IPv6Address) and ip_type == "IPv6":
-            commands.append(f'/ipv6 firewall address-list add address={str(entry).ljust(39)} comment={comment} list={list_name}\n')
+            commands.append(f'/ipv6 firewall address-list add address={entry_str.ljust(max_length_ipv6)} comment={comment} list={list_name}\n')
         elif isinstance(entry, ipaddress.IPv4Network) and ip_type == "IPv4":
-            commands.append(f'/ip firewall address-list add address={str(entry).ljust(18)} comment={comment} list={list_name}\n')
+            commands.append(f'/ip firewall address-list add address={entry_str.ljust(max_length_ipv4)} comment={comment} list={list_name}\n')
         elif isinstance(entry, ipaddress.IPv6Network) and ip_type == "IPv6":
-            commands.append(f'/ipv6 firewall address-list add address={str(entry).ljust(43)} comment={comment} list={list_name}\n')
+            commands.append(f'/ipv6 firewall address-list add address={entry_str.ljust(max_length_ipv6)} comment={comment} list={list_name}\n')
 
     # 批量寫入文件
     with open(output_file, 'w') as f:
