@@ -105,6 +105,12 @@ urls_info = [
         "source_url": "https://ipv64.net/blocklists/countries/ipv64_blocklist_v6_TW.txt",
         "comment": "Taiwan IPv6 blocklist",
         "type": "IPv6"
+    },
+    {
+        "list_name": "ipv64.net-TorExitNodes",
+        "source_url": "https://ipv64.net/blocklists/ipv64_blocklist_v4_tor_exit.txt",
+        "comment": "ipv64.net-TorExitNodes",
+        "type": "IPv4"
     }
 ]
 
