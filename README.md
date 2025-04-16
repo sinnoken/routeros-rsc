@@ -11,7 +11,7 @@
 
 ## Mikrotik RouterOS v6 & v7
 
-1.- Script which will download the drop list and update
+1. Script which will download the drop list and update
 
 ```
 /system script add name="downloadBlackList" owner="HybridNetworks" source={
@@ -25,7 +25,7 @@
 }
 ```
 
-2.- Schedule the download and application of the blacklist
+2. Schedule the download and application of the blacklist
 
 ```
 /system scheduler add comment="BlackList" interval=3d \
@@ -33,7 +33,7 @@
     start-date=jan/01/1970 start-time=10:10:10
 ```
 
-3.- Blacklist blocking by [RAW](https://wiki.mikrotik.com/wiki/Manual:IP/Firewall/Raw) firewall rules
+3. Blacklist blocking by [RAW](https://wiki.mikrotik.com/wiki/Manual:IP/Firewall/Raw) firewall rules
 
 ```
 /ip firewall raw
