@@ -2,7 +2,7 @@
 # Source: https://github.com/stamparm/ipsum/raw/refs/heads/master/levels/2.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: This file is auto-generated. Manual edits may be overwritten.
-# Generated on: 2025-04-16 01:42:21 UTC+0000
+# Generated on: 2025-04-16 01:44:03 UTC+0000
 
 /ip firewall address-list add address=1.6.53.205      comment=Level 2 threat list list=STAMPARM-IPSUM-2
 /ip firewall address-list add address=1.7.182.136     comment=Level 2 threat list list=STAMPARM-IPSUM-2
