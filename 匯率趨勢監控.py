@@ -51,7 +51,31 @@ def calculate_ma60(data):
     df['MA60'] = df[CLOSE_PRICE_KEY].rolling(window=60).mean()  # 計算60日移動平均
     print("MA60 calculation completed.")
     return df
+    
+def calculate_moving_averages(data):
+    """
+    計算匯率數據的21日、60日和297日移動平均線（MA21、MA60、MA297）。
 
+    Args:
+        data (dict): 包含每日匯率數據的字典。
+
+    Returns:
+        pd.DataFrame: 包含匯率和 MA21、MA60、MA297 的資料框。
+    """
+    print("Calculating moving averages...")
+    df = pd.DataFrame(data).T  # 轉置數據以便日期作為索引
+    df.index = pd.to_datetime(df.index)  # 將索引轉換為日期時間格式
+    df = df.sort_index()  # 按日期排序
+    df[CLOSE_PRICE_KEY] = df[CLOSE_PRICE_KEY].astype(float)  # 將收盤價轉換為浮點數
+    # 計算21日移動平均
+    df['MA21'] = df[CLOSE_PRICE_KEY].rolling(window=21).mean()
+    # 計算60日移動平均
+    df['MA60'] = df[CLOSE_PRICE_KEY].rolling(window=60).mean()
+    # 計算297日移動平均
+    df['MA297'] = df[CLOSE_PRICE_KEY].rolling(window=297).mean()
+    print("Moving averages calculation completed.")
+    return df
+    
 def log_rate_below_ma60(latest_date, latest_rate, ma60):
     """
     當最新匯率低於 MA60 時，將事件記錄到日誌文件中。
@@ -87,12 +111,14 @@ def check_and_log(df):
     print("Checking latest rate against MA60...")
     latest_date = df.index[-1]  # 獲取最新日期
     latest_rate = df[CLOSE_PRICE_KEY].iloc[-1]  # 獲取最新匯率
-    ma60 = df['MA60'].iloc[-1]  # 獲取最新的 MA60 值
+    ma60  = df['MA60'].iloc[-1]  # 獲取最新的 MA60 值
+    ma21  = df['MA21'].iloc[-1]  # 獲取最新的 MA21 值
+    ma297 = df['MA297'].iloc[-1]  # 獲取最新的 MA297 值
 
-    if latest_rate < ma60:
-        log_rate_below_ma60(latest_date, latest_rate, ma60)
+    if ma21 < ma297:
+        log_rate_below_ma60(latest_date, ma21, ma297)
     else:
-        print(f"No logging needed: Rate {latest_rate} is above MA60 {ma60} on {latest_date}")
+        print(f"No logging needed: MA21 {ma21} is above MA297 {ma297} on {latest_date}")
 
 def main():
     """
@@ -100,7 +126,7 @@ def main():
     """
     print("Starting main process...")
     data = fetch_exchange_rate()  # 獲取匯率數據
-    df = calculate_ma60(data)  # 計算 MA60
+    df = calculate_moving_averages(data)  # 計算 
     check_and_log(df)  # 檢查並記錄匯率狀況
     print("Main process completed.")
 
