@@ -1,15 +1,17 @@
 import os
 import pandas as pd
-from alpha_vantage.foreignexchange import ForeignExchange
-from alpha_vantage.techindicators import TechIndicators
+import requests
 import datetime
 
 # 使用環境變數來獲取 API 金鑰
 API_KEY = os.getenv('ALPHA_VANTAGE_API')
+BASE_URL = 'https://www.alphavantage.co/query'
 
 # 定義貨幣符號和資料鍵名
 FROM_SYMBOL = 'USD'
 TO_SYMBOL = 'TWD'
+TIME_SERIES_KEY = 'Time Series FX (Daily)'
+CLOSE_PRICE_KEY = '4. close'
 LOG_FILE = 'exchange_rate_log.txt'
 
 def fetch_exchange_rate():
@@ -17,30 +19,38 @@ def fetch_exchange_rate():
     從 Alpha Vantage API 獲取每日匯率數據。
 
     Returns:
-        pd.DataFrame: 包含每日匯率數據的資料框。
+        dict: 包含每日匯率數據的字典。
     """
     print("Fetching exchange rate data...")
-    fx = ForeignExchange(key=API_KEY, output_format='pandas')
-    data, _ = fx.get_currency_exchange_daily(from_symbol=FROM_SYMBOL, to_symbol=TO_SYMBOL, outputsize='full')
+    params = {
+        'function': 'FX_DAILY',  # API 功能參數，指定要獲取的數據類型
+        'from_symbol': FROM_SYMBOL,  # 基礎貨幣
+        'to_symbol': TO_SYMBOL,  # 目標貨幣
+        'apikey': API_KEY  # API 金鑰
+    }
+    response = requests.get(BASE_URL, params=params)
+    data = response.json()
     print("Exchange rate data fetched.")
-    return data
+    return data.get(TIME_SERIES_KEY, {})
 
 def calculate_ma60(data):
     """
     計算匯率數據的60日移動平均線（MA60）。
 
     Args:
-        data (pd.DataFrame): 包含每日匯率數據的資料框。
+        data (dict): 包含每日匯率數據的字典。
 
     Returns:
         pd.DataFrame: 包含匯率和 MA60 的資料框。
     """
     print("Calculating MA60...")
-    ti = TechIndicators(key=API_KEY, output_format='pandas')
-    ma60, _ = ti.get_sma(symbol=f'{FROM_SYMBOL}/{TO_SYMBOL}', interval='daily', time_period=60, series_type='close')
-    data['MA60'] = ma60['SMA']
+    df = pd.DataFrame(data).T  # 轉置數據以便日期作為索引
+    df.index = pd.to_datetime(df.index)  # 將索引轉換為日期時間格式
+    df = df.sort_index()  # 按日期排序
+    df[CLOSE_PRICE_KEY] = df[CLOSE_PRICE_KEY].astype(float)  # 將收盤價轉換為浮點數
+    df['MA60'] = df[CLOSE_PRICE_KEY].rolling(window=60).mean()  # 計算60日移動平均
     print("MA60 calculation completed.")
-    return data
+    return df
 
 def log_rate_below_ma60(latest_date, latest_rate, ma60):
     """
@@ -64,7 +74,7 @@ def check_and_log(df):
     """
     print("Checking latest rate against MA60...")
     latest_date = df.index[-1]  # 獲取最新日期
-    latest_rate = df['4. close'].iloc[-1]  # 獲取最新匯率
+    latest_rate = df[CLOSE_PRICE_KEY].iloc[-1]  # 獲取最新匯率
     ma60 = df['MA60'].iloc[-1]  # 獲取最新的 MA60 值
 
     if latest_rate < ma60:
