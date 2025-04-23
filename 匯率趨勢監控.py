@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 import requests
-from datetime import datetime
+from datetime import datetime, timedelta
 
 # 使用環境變數來獲取 API 金鑰
 API_KEY = os.getenv('ALPHA_VANTAGE_API')
