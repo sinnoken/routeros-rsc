@@ -98,7 +98,7 @@ def log_rate_below_ma60(latest_date, latest_rate, ma60):
         latest_rate (float): 最新匯率。
         ma60 (float): 最新的 MA60 值。
     """
-    log_message = f"{datetime.datetime.now()}: Rate {latest_rate} fell below MA60 {ma60} on {latest_date}\n"
+    log_message = f"{datetime.now()}: Rate {latest_rate} fell below MA60 {ma60} on {latest_date}\n"
 
     # 記錄到日誌文件
     with open(LOG_FILE, 'a') as log_file:
