@@ -16,22 +16,32 @@ LOG_FILE = 'exchange_rate_log.txt'
 
 def fetch_exchange_rate():
     """
-    從 Alpha Vantage API 獲取每日匯率數據。
+    從 Alpha Vantage API 獲取一年的每日匯率數據。
 
     Returns:
-        dict: 包含每日匯率數據的字典。
+        dict: 包含一年的每日匯率數據的字典。
     """
     print("Fetching exchange rate data...")
     params = {
-        'function': 'FX_DAILY',  # API 功能參數，指定要獲取的數據類型
-        'from_symbol': FROM_SYMBOL,  # 基礎貨幣
-        'to_symbol': TO_SYMBOL,  # 目標貨幣
-        'apikey': API_KEY  # API 金鑰
+        'function': 'FX_DAILY',
+        'from_symbol': FROM_SYMBOL,
+        'to_symbol': TO_SYMBOL,
+        'apikey': API_KEY,
+        'outputsize': 'full'  # 確保獲取完整的數據集
     }
     response = requests.get(BASE_URL, params=params)
     data = response.json()
+
+    # 獲取當前日期和一年前的日期
+    today = datetime.now()
+    one_year_ago = today - timedelta(days=365)
+
+    # 提取一年的數據
+    time_series = data.get(TIME_SERIES_KEY, {})
+    filtered_data = {date: values for date, values in time_series.items() if one_year_ago <= datetime.strptime(date, '%Y-%m-%d') <= today}
+
     print("Exchange rate data fetched.")
-    return data.get(TIME_SERIES_KEY, {})
+    return filtered_data
 
 def calculate_ma60(data):
     """
