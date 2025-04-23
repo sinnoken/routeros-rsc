@@ -11,8 +11,8 @@ def fetch_exchange_rate():
     print("Fetching exchange rate data...")
     params = {
         'function': 'FX_DAILY',
-        'from_symbol': 'TWD',
-        'to_symbol': 'USD',
+        'from_symbol': 'USD',
+        'to_symbol': 'TWD',
         'apikey': API_KEY
     }
     response = requests.get(BASE_URL, params=params)
