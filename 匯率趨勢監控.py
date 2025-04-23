@@ -124,14 +124,23 @@ def check_and_log(df):
     print("Checking latest rate against MA60...")
     latest_date = df.index[-1]  # 獲取最新日期
     latest_rate = df[CLOSE_PRICE_KEY].iloc[-1]  # 獲取最新匯率
-    ma60  = df['MA60'].iloc[-1]  # 獲取最新的 MA60 值
+    
     ma21  = df['MA21'].iloc[-1]  # 獲取最新的 MA21 值
+    ma60  = df['MA60'].iloc[-1]  # 獲取最新的 MA60 值
+    ma75  = df['MA75'].iloc[-1]  # 獲取最新的 MA60 值
     ma297 = df['MA297'].iloc[-1]  # 獲取最新的 MA297 值
 
-    if ma21 < ma297:
+    # 檢查 MA21 是否小於 MA297 且 MA297 是否小於 MA75
+    if ma21 < ma297 < ma75:
         log_rate_below_ma60(latest_date, ma21, ma297)
     else:
         print(f"No logging needed: MA21 {ma21} is above MA297 {ma297} on {latest_date}")
+    
+    # 檢查 MA75 是否小於 MA297 且 MA297 是否小於 MA21
+    if ma75 < ma297 < ma21:
+        log_rate_below_ma60(latest_date, ma21, ma297)
+    else:
+        print(f"No logging needed: MA75 {ma75} is above MA297 {ma297} on {latest_date}")
 
 def main():
     """
