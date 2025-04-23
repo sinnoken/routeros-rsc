@@ -26,3 +26,14 @@ jobs:
         ALPHA_VANTAGE_API: ${{ secrets.ALPHA_VANTAGE_API }}
       run: |
         python 匯率趨勢監控.py
+        
+    - name: Notify on Telegram if RATE_BELOW_MA60 is set
+      if: env.RATE_BELOW_MA60 != ''
+      uses: appleboy/telegram-action@master
+      with:
+        token: '${{ secrets.TELEGRAM_BOT_TOKEN }}'
+        to: '${{ secrets.TELEGRAM_CHAT_ID }}'
+        message: |
+          Rate Alert:
+          ${{ env.RATE_BELOW_MA60 }}
+
