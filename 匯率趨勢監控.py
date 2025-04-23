@@ -132,8 +132,8 @@ def check_and_log(df):
 
     # 檢查 MA21 是否小於 MA297 且 MA297 是否小於 MA75
     if latest_rate < ma60:
-        print(f"{datetime.now()}: ma21:{ma21} < ma297:{ma297} < ma75:{ma75} on {latest_date}\n")
-        log_message = f"{datetime.now()}: ma21:{ma21} < ma297:{ma297} < ma75:{ma75} on {latest_date}\n"
+        print(f"{datetime.now()}: latest_rate:{latest_rate} < ma60:{ma60} on {latest_date}\n")
+        log_message = f"{datetime.now()}: latest_rate:{latest_rate} < ma60:{ma60} on {latest_date}\n"
         with open(os.environ['GITHUB_ENV'], 'a') as env_file:
             env_file.write(f"RATE_BELOW_MA60={log_message.strip()}\n")
         print("Environment variable RATE_BELOW_MA60 set.")
