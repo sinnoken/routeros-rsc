@@ -126,6 +126,7 @@ def check_and_log(df):
     latest_rate = df[CLOSE_PRICE_KEY].iloc[-1]  # 獲取最新匯率
     
     ma21  = df['MA21'].iloc[-1]  # 獲取最新的 MA21 值
+    ma21  = latest_rate
     ma60  = df['MA60'].iloc[-1]  # 獲取最新的 MA60 值
     ma75  = df['MA75'].iloc[-1]  # 獲取最新的 MA60 值
     ma297 = df['MA297'].iloc[-1]  # 獲取最新的 MA297 值
