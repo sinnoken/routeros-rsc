@@ -64,23 +64,26 @@ def calculate_ma60(data):
     
 def calculate_moving_averages(data):
     """
-    計算匯率數據的21日、60日和297日移動平均線（MA21、MA60、MA297）。
+    計算匯率數據的21日、60日、75日和297日移動平均線（MA21、MA60、MA75、MA297）。
 
     Args:
-        data (dict): 包含每日匯率數據的字典。
+        data (dict): 包含每日匯率數據的字典，其中鍵為日期（字串格式），值為包含匯率信息的字典。
 
     Returns:
-        pd.DataFrame: 包含匯率和 MA21、MA60、MA297 的資料框。
+        pd.DataFrame: 包含每日匯率和對應的 MA21、MA60、MA75、MA297 的資料框。
+                      資料框的索引為日期，列包括匯率的收盤價和計算出的移動平均線。
     """
     print("Calculating moving averages...")
     df = pd.DataFrame(data).T  # 轉置數據以便日期作為索引
     df.index = pd.to_datetime(df.index)  # 將索引轉換為日期時間格式
     df = df.sort_index()  # 按日期排序
-    df[CLOSE_PRICE_KEY] = df[CLOSE_PRICE_KEY].astype(float)  # 將收盤價轉換為浮點數
+    df[CLOSE_PRICE_KEY] = df[CLOSE_PRICE_KEY].astype(float)  # 將收盤價轉換為浮點數類型以便計算
     # 計算21日移動平均
     df['MA21'] = df[CLOSE_PRICE_KEY].rolling(window=21).mean()
     # 計算60日移動平均
     df['MA60'] = df[CLOSE_PRICE_KEY].rolling(window=60).mean()
+    # 計算75日移動平均
+    df['MA75'] = df[CLOSE_PRICE_KEY].rolling(window=75).mean()
     # 計算297日移動平均
     df['MA297'] = df[CLOSE_PRICE_KEY].rolling(window=297).mean()
     print("Moving averages calculation completed.")
