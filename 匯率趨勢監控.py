@@ -71,6 +71,10 @@ def log_rate_below_ma60(latest_date, latest_rate, ma60):
     # 設置環境變數
     os.environ['RATE_BELOW_MA60'] = log_message.strip()
 
+    # 將環境變數寫入 $GITHUB_ENV
+    with open(os.environ['GITHUB_ENV'], 'a') as env_file:
+        env_file.write(f"RATE_BELOW_MA60={log_message.strip()}\n")
+    
     print("Environment variable RATE_BELOW_MA60 set.")
 
 def check_and_log(df):
