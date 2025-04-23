@@ -34,7 +34,7 @@ def fetch_exchange_rate():
 
     # 獲取當前日期和一年前的日期
     today = datetime.now()
-    one_year_ago = today - timedelta(days=365)
+    one_year_ago = today - timedelta(days=700)
 
     # 提取一年的數據
     time_series = data.get(TIME_SERIES_KEY, {})
