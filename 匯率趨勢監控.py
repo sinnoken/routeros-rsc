@@ -15,12 +15,6 @@ CLOSE_PRICE_KEY = '4. close'
 LOG_FILE = 'exchange_rate_log.txt'
 
 def fetch_exchange_rate():
-    """
-    從 Alpha Vantage API 獲取一年的每日匯率數據。
-
-    Returns:
-        dict: 包含一年的每日匯率數據的字典。
-    """
     print("Fetching exchange rate data...")
     params = {
         'function': 'FX_DAILY',
@@ -44,15 +38,6 @@ def fetch_exchange_rate():
     return filtered_data
 
 def calculate_ma60(data):
-    """
-    計算匯率數據的60日移動平均線（MA60）。
-
-    Args:
-        data (dict): 包含每日匯率數據的字典。
-
-    Returns:
-        pd.DataFrame: 包含匯率和 MA60 的資料框。
-    """
     print("Calculating MA60...")
     df = pd.DataFrame(data).T  # 轉置數據以便日期作為索引
     df.index = pd.to_datetime(df.index)  # 將索引轉換為日期時間格式
@@ -63,16 +48,6 @@ def calculate_ma60(data):
     return df
     
 def calculate_moving_averages(data):
-    """
-    計算匯率數據的21日、60日、75日和297日移動平均線（MA21、MA60、MA75、MA297）。
-
-    Args:
-        data (dict): 包含每日匯率數據的字典，其中鍵為日期（字串格式），值為包含匯率信息的字典。
-
-    Returns:
-        pd.DataFrame: 包含每日匯率和對應的 MA21、MA60、MA75、MA297 的資料框。
-                      資料框的索引為日期，列包括匯率的收盤價和計算出的移動平均線。
-    """
     print("Calculating moving averages...")
     df = pd.DataFrame(data).T  # 轉置數據以便日期作為索引
     df.index = pd.to_datetime(df.index)  # 將索引轉換為日期時間格式
@@ -90,14 +65,6 @@ def calculate_moving_averages(data):
     return df
     
 def log_rate_below_ma60(latest_date, latest_rate, ma60):
-    """
-    當最新匯率低於 MA60 時，將事件記錄到日誌文件中。
-
-    Args:
-        latest_date (datetime): 最新匯率的日期。
-        latest_rate (float): 最新匯率。
-        ma60 (float): 最新的 MA60 值。
-    """
     log_message = f"{datetime.now()}: Rate {latest_rate} fell below MA60 {ma60} on {latest_date}\n"
 
     # 記錄到日誌文件
@@ -115,12 +82,6 @@ def log_rate_below_ma60(latest_date, latest_rate, ma60):
     print("Environment variable RATE_BELOW_MA60 set.")
 
 def check_and_log(df):
-    """
-    檢查最新匯率是否低於 MA60，若是則記錄到日誌中。
-
-    Args:
-        df (pd.DataFrame): 包含匯率和 MA60 的資料框。
-    """
     print("Checking latest rate against MA60...")
     latest_date = df.index[-1]  # 獲取最新日期
     latest_rate = df[CLOSE_PRICE_KEY].iloc[-1]  # 獲取最新匯率
@@ -161,9 +122,6 @@ def check_and_log(df):
         print(f"No logging needed: MA75 {ma75} is above MA297 {ma297} on {latest_date}")
 
 def main():
-    """
-    主程序流程：獲取匯率數據，計算 MA60，並檢查和記錄匯率狀況。
-    """
     print("Starting main process...")
     data = fetch_exchange_rate()  # 獲取匯率數據
     df = calculate_moving_averages(data)  # 計算 
