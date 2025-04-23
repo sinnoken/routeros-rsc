@@ -61,9 +61,17 @@ def log_rate_below_ma60(latest_date, latest_rate, ma60):
         latest_rate (float): 最新匯率。
         ma60 (float): 最新的 MA60 值。
     """
+    log_message = f"{datetime.datetime.now()}: Rate {latest_rate} fell below MA60 {ma60} on {latest_date}\n"
+
+    # 記錄到日誌文件
     with open(LOG_FILE, 'a') as log_file:
-        log_file.write(f"{datetime.datetime.now()}: Rate {latest_rate} fell below MA60 {ma60} on {latest_date}\n")
-    print(f"Logged: Rate {latest_rate} fell below MA60 {ma60} on {latest_date}")
+        log_file.write(log_message)
+    print(f"Logged: {log_message.strip()}")
+
+    # 設置環境變數
+    os.environ['RATE_BELOW_MA60'] = log_message.strip()
+
+    print("Environment variable RATE_BELOW_MA60 set.")
 
 def check_and_log(df):
     """
