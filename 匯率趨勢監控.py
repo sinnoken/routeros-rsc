@@ -137,7 +137,6 @@ def check_and_log(df):
         with open(os.environ['GITHUB_ENV'], 'a') as env_file:
             env_file.write(f"RATE_BELOW_MA60={log_message.strip()}\n")
         print("Environment variable RATE_BELOW_MA60 set.")
-        log_rate_below_ma60(latest_date, ma21, ma297)
     else:
         print(f"No logging needed: MA21 {ma21} is above MA297 {ma297} on {latest_date}")
     
@@ -148,7 +147,6 @@ def check_and_log(df):
         with open(os.environ['GITHUB_ENV'], 'a') as env_file:
             env_file.write(f"RATE_BELOW_MA60={log_message.strip()}\n")
         print("Environment variable RATE_BELOW_MA60 set.")
-        log_rate_below_ma60(latest_date, ma21, ma297)
     else:
         print(f"No logging needed: MA75 {ma75} is above MA297 {ma297} on {latest_date}")
 
