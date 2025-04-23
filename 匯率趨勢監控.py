@@ -132,12 +132,22 @@ def check_and_log(df):
 
     # 檢查 MA21 是否小於 MA297 且 MA297 是否小於 MA75
     if ma21 < ma297 < ma75:
+        print(f"{datetime.datetime.now()}: ma21:{ma21} < ma297:{ma297} < ma75:{ma75} on {latest_date}\n")
+        log_message = f"{datetime.datetime.now()}: ma21:{ma21} < ma297:{ma297} < ma75:{ma75} on {latest_date}\n"
+        with open(os.environ['GITHUB_ENV'], 'a') as env_file:
+            env_file.write(f"RATE_BELOW_MA60={log_message.strip()}\n")
+        print("Environment variable RATE_BELOW_MA60 set.")
         log_rate_below_ma60(latest_date, ma21, ma297)
     else:
         print(f"No logging needed: MA21 {ma21} is above MA297 {ma297} on {latest_date}")
     
     # 檢查 MA75 是否小於 MA297 且 MA297 是否小於 MA21
     if ma75 < ma297 < ma21:
+        print(f"{datetime.datetime.now()}: ma75:{ma75} < ma297:{ma297} < ma21:{ma21} on {latest_date}\n")
+        log_message = f"{datetime.datetime.now()}: ma75:{ma75} < ma297:{ma297} < ma21:{ma21} on {latest_date}\n"
+        with open(os.environ['GITHUB_ENV'], 'a') as env_file:
+            env_file.write(f"RATE_BELOW_MA60={log_message.strip()}\n")
+        print("Environment variable RATE_BELOW_MA60 set.")
         log_rate_below_ma60(latest_date, ma21, ma297)
     else:
         print(f"No logging needed: MA75 {ma75} is above MA297 {ma297} on {latest_date}")
