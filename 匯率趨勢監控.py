@@ -1,9 +1,10 @@
+import os
 import pandas as pd
 import requests
 import datetime
 
-# 假設使用 Alpha Vantage API
-API_KEY = 'your_api_key'
+# 使用環境變數來獲取 API 金鑰
+API_KEY = os.getenv('ALPHA_VANTAGE_API')
 BASE_URL = 'https://www.alphavantage.co/query'
 
 def fetch_exchange_rate():
