@@ -19,17 +19,17 @@ def main():
     print("Loading BGP database from rib.latest.dat...")
     asndb = pyasn.pyasn('rib.latest.dat')
 
-    # Extract prefixes for ASN 9505
-    print("Extracting prefixes for ASN 9505...")
-    prefixes = asndb.get_as_prefixes(9505)
+    # Extract prefixes for ASN 45102
+    print("Extracting prefixes for ASN 45102...")
+    prefixes = asndb.get_as_prefixes(45102)
 
     # Sort the prefixes by numerical value
     print("Sorting prefixes by numerical value...")
     sorted_prefixes = sorted(prefixes, key=lambda p: (ipaddress.ip_network(p, strict=False).network_address, ipaddress.ip_network(p, strict=False).prefixlen))
 
     # Write sorted prefixes to file
-    print("Writing sorted prefixes to asn9505_prefixes.txt...")
-    with open('asn9505_prefixes.txt', 'w') as f:
+    print("Writing sorted prefixes to asn_prefixes.txt...")
+    with open('asn_prefixes.txt', 'w') as f:
         for prefix in sorted_prefixes:
             f.write(f'{prefix}\n')
 
