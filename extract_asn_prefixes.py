@@ -1,6 +1,7 @@
 import subprocess
 import pyasn
 import ipaddress
+import argparse
 
 def download_and_convert():
     print("Downloading latest BGP data...")
@@ -8,13 +9,13 @@ def download_and_convert():
     print("Converting rib.latest.bz2 to rib.latest.dat...")
     subprocess.run(["pyasn_util_convert.py", "--single", "rib.latest.bz2", "rib.latest.dat"], check=True)
 
-def main():
+def main(asn):
     download_and_convert()
     print("Loading BGP database from rib.latest.dat...")
     asndb = pyasn.pyasn('rib.latest.dat')
 
-    print("Extracting prefixes for ASN 45102...")
-    prefixes = asndb.get_as_prefixes(45102)
+    print(f"Extracting prefixes for ASN {asn}...")
+    prefixes = asndb.get_as_prefixes(asn)
 
     print("Sorting prefixes by numerical value...")
     sorted_prefixes = sorted(prefixes, key=lambda p: (ipaddress.ip_network(p, strict=False).network_address, ipaddress.ip_network(p, strict=False).prefixlen))
@@ -24,4 +25,7 @@ def main():
         f.writelines(f'{prefix}\n' for prefix in sorted_prefixes)
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Process BGP data for a specific ASN.")
+    parser.add_argument('asn', type=int, help='The ASN to extract prefixes for')
+    args = parser.parse_args()
+    main(args.asn)
