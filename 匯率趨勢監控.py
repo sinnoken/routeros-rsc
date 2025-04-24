@@ -37,16 +37,6 @@ def fetch_exchange_rate():
     print("Exchange rate data fetched.")
     return filtered_data
 
-def calculate_ma60(data):
-    print("Calculating MA60...")
-    df = pd.DataFrame(data).T  # 轉置數據以便日期作為索引
-    df.index = pd.to_datetime(df.index)  # 將索引轉換為日期時間格式
-    df = df.sort_index()  # 按日期排序
-    df[CLOSE_PRICE_KEY] = df[CLOSE_PRICE_KEY].astype(float)  # 將收盤價轉換為浮點數
-    df['MA60'] = df[CLOSE_PRICE_KEY].rolling(window=60).mean()  # 計算60日移動平均
-    print("MA60 calculation completed.")
-    return df
-    
 def calculate_moving_averages(data):
     print("Calculating moving averages...")
     df = pd.DataFrame(data).T  # 轉置數據以便日期作為索引
@@ -64,25 +54,8 @@ def calculate_moving_averages(data):
     print("Moving averages calculation completed.")
     return df
     
-def log_rate_below_ma60(latest_date, latest_rate, ma60):
-    log_message = f"{datetime.now()}: Rate {latest_rate} fell below MA60 {ma60} on {latest_date}\n"
-
-    # 記錄到日誌文件
-    with open(LOG_FILE, 'a') as log_file:
-        log_file.write(log_message)
-    print(f"Logged: {log_message.strip()}")
-
-    # 設置環境變數
-    os.environ['RATE_BELOW_MA60'] = log_message.strip()
-
-    # 將環境變數寫入 $GITHUB_ENV
-    with open(os.environ['GITHUB_ENV'], 'a') as env_file:
-        env_file.write(f"RATE_BELOW_MA60={log_message.strip()}\n")
-    
-    print("Environment variable RATE_BELOW_MA60 set.")
-
 def check_and_log(df):
-    print("Checking latest rate against MA60...")
+    print("Checking latest rate against MA...")
     latest_date = df.index[-1]  # 獲取最新日期
     latest_rate = df[CLOSE_PRICE_KEY].iloc[-1]  # 獲取最新匯率
     
