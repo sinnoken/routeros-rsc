@@ -20,8 +20,9 @@ def main(asn):
     print("Sorting prefixes by numerical value...")
     sorted_prefixes = sorted(prefixes, key=lambda p: (ipaddress.ip_network(p, strict=False).network_address, ipaddress.ip_network(p, strict=False).prefixlen))
 
-    print("Writing sorted prefixes to asn_prefixes.txt...")
-    with open('asn_prefixes.txt', 'w') as f:
+    output_filename = f'asn_{asn}_prefixes.txt'
+    print(f"Writing sorted prefixes to {output_filename}...")
+    with open(output_filename, 'w') as f:
         f.writelines(f'{prefix}\n' for prefix in sorted_prefixes)
 
 if __name__ == "__main__":
