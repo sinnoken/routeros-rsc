@@ -27,7 +27,7 @@ jobs:
     - name: Check for changes
       id: changes
       run: |
-        git diff --exit-code asn9505_prefixes.txt || echo "has_changes=true" >> $GITHUB_ENV
+        git diff --exit-code asn_prefixes.txt || echo "has_changes=true" >> $GITHUB_ENV
 
     - name: Commit and push changes
       if: env.has_changes == 'true'
@@ -35,7 +35,7 @@ jobs:
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         git add asn9505_prefixes.txt
-        git commit -m 'Add ASN 9505 prefixes'
+        git commit -m 'Add ASN 45102 prefixes'
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
