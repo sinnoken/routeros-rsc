@@ -71,8 +71,8 @@ def check_and_log(df):
     if latest_rate < ma60:
         message = (
             f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}: "
-            f"最新匯率: {latest_rate:.2f} 小於 MA60: {ma60:.2f}，日期: {latest_date}\n"
-            f"價格差: {price_difference:.2f}\n"
+            f"最新匯率: {latest_rate:.2f} 小於 MA60: {ma60:.2f}，日期: {latest_date} "
+            f"價格差: {price_difference:.2f} "
         )
         print(message)
         with open(os.environ['GITHUB_ENV'], 'a') as env_file:
