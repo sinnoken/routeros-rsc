@@ -88,8 +88,8 @@ def check_and_log(df):
         message = f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}: ma21:{ma21:.2f} < ma297:{ma297:.2f} < ma75:{ma75:.2f} on {latest_date}\n"
         print(message)
         with open(os.environ['GITHUB_ENV'], 'a') as env_file:
-            env_file.write(f"MA21_BELOW_MA297_BELOW_MA75={message.strip()}\n")
-        print("Environment variable MA21_BELOW_MA297_BELOW_MA75 set.")
+            env_file.write(f"RATE_BELOW_MA60={message.strip()}\n")
+        print("Environment variable RATE_BELOW_MA60 set.")
     else:
         print(f"No logging needed: MA21 {ma21:.2f} is not below MA297 {ma297:.2f} or MA297 is not below MA75 {ma75:.2f} on {latest_date}")
 
@@ -98,8 +98,8 @@ def check_and_log(df):
         message = f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}: ma75:{ma75:.2f} < ma297:{ma297:.2f} < ma21:{ma21:.2f} on {latest_date}\n"
         print(message)
         with open(os.environ['GITHUB_ENV'], 'a') as env_file:
-            env_file.write(f"MA75_BELOW_MA297_BELOW_MA21={message.strip()}\n")
-        print("Environment variable MA75_BELOW_MA297_BELOW_MA21 set.")
+            env_file.write(f"RATE_BELOW_MA60={message.strip()}\n")
+        print("Environment variable RATE_BELOW_MA60 set.")
     else:
         print(f"No logging needed: MA75 {ma75:.2f} is not below MA297 {ma297:.2f} or MA297 is not below MA21 {ma21:.2f} on {latest_date}")
 
