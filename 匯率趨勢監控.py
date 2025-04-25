@@ -66,6 +66,8 @@ def check_and_log(df):
 
     # 計算價格差
     price_difference = ma60 - latest_rate
+
+    existing_value = os.getenv('RATE_BELOW_MA60', '')
     
     # 檢查 latest_rate 是否小於 MA60
     if latest_rate < ma60:
@@ -74,7 +76,8 @@ def check_and_log(df):
         )
         print(message)
         with open(os.environ['GITHUB_ENV'], 'a') as env_file:
-            env_file.write(f"RATE_BELOW_MA60={message.strip()}\n")
+            env_file.write(f"RATE_BELOW_MA60={existing_value.strip() + message.strip()}\n")
+            existing_value = os.getenv('RATE_BELOW_MA60', '')
         print("環境變數 RATE_BELOW_MA60 已設定。")
     else:
         print(
@@ -86,7 +89,8 @@ def check_and_log(df):
         message = f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}: ma21:{ma21:.2f} < ma297:{ma297:.2f} < ma75:{ma75:.2f} on {latest_date}\n"
         print(message)
         with open(os.environ['GITHUB_ENV'], 'a') as env_file:
-            env_file.write(f"RATE_BELOW_MA60={message.strip()}\n")
+            env_file.write(f"RATE_BELOW_MA60={existing_value.strip() + message.strip()}\n")
+            existing_value = os.getenv('RATE_BELOW_MA60', '')
         print("Environment variable RATE_BELOW_MA60 set.")
     else:
         print(f"No logging needed: MA21 {ma21:.2f} is not below MA297 {ma297:.2f} or MA297 is not below MA75 {ma75:.2f} on {latest_date}")
@@ -96,7 +100,8 @@ def check_and_log(df):
         message = f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}: ma75:{ma75:.2f} < ma297:{ma297:.2f} < ma21:{ma21:.2f} on {latest_date}\n"
         print(message)
         with open(os.environ['GITHUB_ENV'], 'a') as env_file:
-            env_file.write(f"RATE_BELOW_MA60={message.strip()}\n")
+            env_file.write(f"RATE_BELOW_MA60={existing_value.strip() + message.strip()}\n")
+            existing_value = os.getenv('RATE_BELOW_MA60', '')
         print("Environment variable RATE_BELOW_MA60 set.")
     else:
         print(f"No logging needed: MA75 {ma75:.2f} is not below MA297 {ma297:.2f} or MA297 is not below MA21 {ma21:.2f} on {latest_date}")
