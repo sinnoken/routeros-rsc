@@ -64,15 +64,24 @@ def check_and_log(df):
     ma75  = df['MA75'].iloc[-1]
     ma297 = df['MA297'].iloc[-1]
 
+    # 計算價格差
+    price_difference = ma60 - latest_rate
+    
     # 檢查 latest_rate 是否小於 MA60
     if latest_rate < ma60:
-        message = f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}: latest_rate:{latest_rate:.2f} < ma60:{ma60:.2f} on {latest_date}\n"
+        message = (
+            f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}: "
+            f"最新匯率: {latest_rate:.2f} 小於 MA60: {ma60:.2f}，日期: {latest_date}\n"
+            f"價格差: {price_difference:.2f}\n"
+        )
         print(message)
         with open(os.environ['GITHUB_ENV'], 'a') as env_file:
             env_file.write(f"RATE_BELOW_MA60={message.strip()}\n")
-        print("Environment variable RATE_BELOW_MA60 set.")
+        print("環境變數 RATE_BELOW_MA60 已設定。")
     else:
-        print(f"No logging needed: latest_rate {latest_rate:.2f} is above MA60 {ma60:.2f} on {latest_date}")
+        print(
+            f"無需記錄：最新匯率 {latest_rate:.2f} 高於 MA60 {ma60:.2f}，日期: {latest_date}"
+        )
 
     # 檢查 MA21 < MA297 < MA75
     if ma21 < ma297 < ma75:
