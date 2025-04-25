@@ -58,7 +58,7 @@ def check_and_log(df):
     print("Checking latest rate against MA...")
     latest_date = df.index[-1]  # 獲取最新日期
     
-    latest_rate = df[CLOSE_PRICE_KEY].iloc[-1]:.2f  # 獲取最新匯率
+    latest_rate = df[CLOSE_PRICE_KEY].iloc[-1]  # 獲取最新匯率
     ma21  = df['MA21'].iloc[-1]
     ma60  = df['MA60'].iloc[-1]
     ma75  = df['MA75'].iloc[-1]
