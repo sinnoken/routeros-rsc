@@ -8,6 +8,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    
+    - name: Enable globstar
+      run: shopt -s globstar
+      
     - name: Checkout repository
       uses: actions/checkout@v3
 
