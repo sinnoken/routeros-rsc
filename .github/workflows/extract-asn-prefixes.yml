@@ -27,7 +27,7 @@ jobs:
     - name: Check for changes
       id: changes
       run: |
-        git diff --exit-code -- **\*.txt || echo "has_changes=true" >> $GITHUB_ENV
+        git diff --exit-code '*.txt' || echo "has_changes=true" >> $GITHUB_ENV
 
     - name: Commit and push changes
       if: env.has_changes == 'true'
