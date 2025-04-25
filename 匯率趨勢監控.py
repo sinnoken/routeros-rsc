@@ -57,16 +57,16 @@ def calculate_moving_averages(data):
 def check_and_log(df):
     print("Checking latest rate against MA...")
     latest_date = df.index[-1]  # 獲取最新日期
-    latest_rate = df[CLOSE_PRICE_KEY].iloc[-1]  # 獲取最新匯率
-
-    ma21 = df['MA21'].iloc[-1]
-    ma60 = df['MA60'].iloc[-1]
-    ma75 = df['MA75'].iloc[-1]
-    ma297 = df['MA297'].iloc[-1]
+    
+    latest_rate = df[CLOSE_PRICE_KEY].iloc[-1]:.2f  # 獲取最新匯率
+    ma21  = df['MA21'].iloc[-1]:.2f
+    ma60  = df['MA60'].iloc[-1]:.2f
+    ma75  = df['MA75'].iloc[-1]:.2f
+    ma297 = df['MA297'].iloc[-1]:.2f
 
     # 檢查 latest_rate 是否小於 MA60
     if latest_rate < ma60:
-        message = f"{datetime.now()}: latest_rate:{latest_rate} < ma60:{ma60} on {latest_date}\n"
+        message = f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}: latest_rate:{latest_rate} < ma60:{ma60} on {latest_date}\n"
         print(message)
         with open(os.environ['GITHUB_ENV'], 'a') as env_file:
             env_file.write(f"RATE_BELOW_MA60={message.strip()}\n")
@@ -76,7 +76,7 @@ def check_and_log(df):
 
     # 檢查 MA21 < MA297 < MA75
     if ma21 < ma297 < ma75:
-        message = f"{datetime.now()}: ma21:{ma21} < ma297:{ma297} < ma75:{ma75} on {latest_date}\n"
+        message = f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}: ma21:{ma21} < ma297:{ma297} < ma75:{ma75} on {latest_date}\n"
         print(message)
         with open(os.environ['GITHUB_ENV'], 'a') as env_file:
             env_file.write(f"MA21_BELOW_MA297_BELOW_MA75={message.strip()}\n")
@@ -86,7 +86,7 @@ def check_and_log(df):
 
     # 檢查 MA75 < MA297 < MA21
     if ma75 < ma297 < ma21:
-        message = f"{datetime.now()}: ma75:{ma75} < ma297:{ma297} < ma21:{ma21} on {latest_date}\n"
+        message = f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}: ma75:{ma75} < ma297:{ma297} < ma21:{ma21} on {latest_date}\n"
         print(message)
         with open(os.environ['GITHUB_ENV'], 'a') as env_file:
             env_file.write(f"MA75_BELOW_MA297_BELOW_MA21={message.strip()}\n")
