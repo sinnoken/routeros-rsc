@@ -2,15 +2,12 @@
 # Source: https://github.com/stamparm/ipsum/raw/refs/heads/master/levels/7.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: This file is auto-generated. Manual edits may be overwritten.
-# Generated on: 2025-04-26 02:56:16 UTC+0000
+# Generated on: 2025-04-27 03:04:58 UTC+0000
 
 /ip firewall address-list add address=45.148.10.67    comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
-/ip firewall address-list add address=47.74.40.171    comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
-/ip firewall address-list add address=80.82.77.139    comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
+/ip firewall address-list add address=68.178.174.75   comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
 /ip firewall address-list add address=92.118.39.57    comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
-/ip firewall address-list add address=92.118.39.61    comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
 /ip firewall address-list add address=92.118.39.65    comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
-/ip firewall address-list add address=92.118.39.68    comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
 /ip firewall address-list add address=103.70.114.33   comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
 /ip firewall address-list add address=103.70.114.87   comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
 /ip firewall address-list add address=103.70.115.6    comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
@@ -32,14 +29,16 @@
 /ip firewall address-list add address=160.191.52.79   comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
 /ip firewall address-list add address=160.191.52.81   comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
 /ip firewall address-list add address=160.191.52.84   comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
-/ip firewall address-list add address=160.191.89.4    comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
+/ip firewall address-list add address=162.142.125.203 comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
+/ip firewall address-list add address=167.94.138.119  comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
 /ip firewall address-list add address=180.178.94.73   comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
 /ip firewall address-list add address=183.162.197.57  comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
+/ip firewall address-list add address=185.165.191.26  comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
+/ip firewall address-list add address=192.112.63.23   comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
 /ip firewall address-list add address=193.32.162.84   comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
 /ip firewall address-list add address=193.32.162.89   comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
 /ip firewall address-list add address=193.32.162.97   comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
 /ip firewall address-list add address=193.233.165.245 comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
-/ip firewall address-list add address=195.178.110.26  comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
 /ip firewall address-list add address=196.251.66.3    comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
 /ip firewall address-list add address=196.251.66.71   comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
 /ip firewall address-list add address=196.251.67.42   comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
@@ -52,12 +51,11 @@
 /ip firewall address-list add address=196.251.87.35   comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
 /ip firewall address-list add address=196.251.87.42   comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
 /ip firewall address-list add address=196.251.87.45   comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
-/ip firewall address-list add address=196.251.87.54   comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
 /ip firewall address-list add address=196.251.87.74   comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
+/ip firewall address-list add address=206.168.34.201  comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
 /ip firewall address-list add address=209.38.37.108   comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
 /ip firewall address-list add address=218.92.0.103    comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
 /ip firewall address-list add address=218.92.0.111    comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
-/ip firewall address-list add address=218.92.0.112    comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
 /ip firewall address-list add address=218.92.0.198    comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
 /ip firewall address-list add address=218.92.0.216    comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
 /ip firewall address-list add address=218.92.0.217    comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
@@ -79,3 +77,4 @@
 /ip firewall address-list add address=218.92.0.235    comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
 /ip firewall address-list add address=218.92.0.236    comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
 /ip firewall address-list add address=218.92.0.237    comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
+/ip firewall address-list add address=218.250.231.191 comment=stamparm/ipsum/level-7 list=STAMPARM-IPSUM-LEVEL-7
