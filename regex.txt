@@ -4,3 +4,5 @@ find (timeout>00:10:00 || timeout~"^\$") && comment~"^\$" && list~"^(PortScanner
 
 /ip/firewall/address-list
 find (timeout>00:10:00 || timeout="") && comment="" && list~"^(PortScanner[12]|ros_service_login[1-5])$"
+
+/tool user-manager user find where comment=[] 
