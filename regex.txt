@@ -6,3 +6,6 @@ find (timeout>00:10:00 || timeout="") && comment="" && list~"^(PortScanner[12]|r
 
 /ip/firewall/address-list
 find (timeout>00:10:00 || timeout=[]) && comment=[] && list~"^(PortScanner[12]|ros_service_login[1-5])$"
+
+/ip/firewall/address-list
+find (timeout>00:10:00 || [:len timeout] = 0) && [:len comment] = 0 && list~"^(PortScanner[12]|ros_service_login[1-5])$"
