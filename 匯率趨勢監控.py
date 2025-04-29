@@ -81,7 +81,7 @@ def check_and_log(df):
         print("環境變數 RATE_BELOW_MA60 已設定。")
     else:
         print(
-            f"無需記錄：最新匯率 {latest_rate:.2f} 高於 MA60 {ma60:.2f}，日期: {latest_date}"
+            f"無需記錄：最新匯率 {latest_rate:.2f} 高於 MA75 {ma75:.2f}，日期: {latest_date}"
         )
 
     # 檢查 MA21 < MA297 < MA75
