@@ -2,30 +2,49 @@
 # Source: https://github.com/stamparm/ipsum
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: This file is auto-generated. Manual edits may be overwritten.
-# Generated on: 2025-04-29 03:02:32 UTC+0000
+# Generated on: 2025-04-30 03:02:15 UTC+0000
 
 /ip firewall address-list add address=8.209.214.165   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
+/ip firewall address-list add address=43.240.223.15   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=80.94.95.115    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=88.214.48.10    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=88.214.48.11    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
+/ip firewall address-list add address=92.118.39.57    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
+/ip firewall address-list add address=92.118.39.65    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
+/ip firewall address-list add address=92.118.39.68    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
+/ip firewall address-list add address=92.118.39.97    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
+/ip firewall address-list add address=93.174.95.106   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=103.70.114.33   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
+/ip firewall address-list add address=103.70.114.87   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=103.70.115.6    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
+/ip firewall address-list add address=103.70.115.15   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=103.70.115.38   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=103.197.184.12  comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=103.197.184.115 comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=103.197.184.162 comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
+/ip firewall address-list add address=103.197.184.167 comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=103.197.184.219 comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=134.209.120.69  comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
+/ip firewall address-list add address=137.184.69.215  comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=160.19.78.241   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=160.19.78.242   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=160.19.78.247   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=160.19.79.72    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
+/ip firewall address-list add address=160.19.79.239   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=160.191.52.73   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=160.191.52.76   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=160.191.52.79   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
+/ip firewall address-list add address=160.191.52.81   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=160.191.52.84   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
+/ip firewall address-list add address=167.71.10.67    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
+/ip firewall address-list add address=180.178.94.73   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=183.162.197.57  comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
+/ip firewall address-list add address=190.129.60.240  comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
+/ip firewall address-list add address=192.112.63.23   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
+/ip firewall address-list add address=193.32.162.84   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
+/ip firewall address-list add address=193.32.162.89   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=194.0.234.19    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
+/ip firewall address-list add address=195.178.110.50  comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=196.251.66.3    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=196.251.66.71   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=196.251.67.42   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
@@ -33,13 +52,19 @@
 /ip firewall address-list add address=196.251.69.116  comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=196.251.70.234  comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=196.251.83.136  comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
+/ip firewall address-list add address=196.251.85.34   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=196.251.85.62   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=196.251.87.35   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=196.251.87.42   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=196.251.87.45   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
+/ip firewall address-list add address=196.251.87.54   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=196.251.87.74   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
+/ip firewall address-list add address=206.168.34.65   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
+/ip firewall address-list add address=209.38.37.108   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
+/ip firewall address-list add address=216.10.250.218  comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=218.92.0.103    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=218.92.0.111    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
+/ip firewall address-list add address=218.92.0.112    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=218.92.0.198    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=218.92.0.216    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=218.92.0.217    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
@@ -61,3 +86,4 @@
 /ip firewall address-list add address=218.92.0.235    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=218.92.0.236    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
 /ip firewall address-list add address=218.92.0.237    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
+/ip firewall address-list add address=218.250.231.191 comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L7
