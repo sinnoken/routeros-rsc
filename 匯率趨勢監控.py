@@ -66,13 +66,14 @@ def check_and_log(df):
 
     # 計算價格差
     price_difference = ma75 - latest_rate
+    percentage_difference = (price_difference / ma75) * 100
 
     existing_value = os.getenv('RATE_BELOW_MA60', '')
     
     # 檢查 latest_rate 是否小於 MA60
     if latest_rate < ma75:
         message = (
-            f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}: 最新匯率: {latest_rate:.2f} 小於 MA75: {ma75:.2f}，價格差: {price_difference:.2f}。"
+            f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}: 最新匯率: {latest_rate:.2f} 小於 MA75: {ma75:.2f}，價格差: {price_difference:.2f}，百分比差異: {percentage_difference:.2f}%。"
         )
         print(message)
         with open(os.environ['GITHUB_ENV'], 'a') as env_file:
