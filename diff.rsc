@@ -12,3 +12,8 @@
 } else={
     :log info "BGP local.address is already up to date."
 }
+
+rapid7
+censys
+shadow
+criminalip
