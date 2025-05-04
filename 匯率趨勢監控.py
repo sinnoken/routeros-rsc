@@ -94,7 +94,7 @@ def check_and_log(df):
             existing_value = os.getenv('RATE_BELOW_MA60', '')
         print("Environment variable RATE_BELOW_MA60 set.")
     else:
-        print(f"No logging needed: MA21 {ma21:.2f} is not below MA297 {ma297:.2f} or MA297 is not below MA75 {ma75:.2f} on {latest_date}")
+        print(f"No logging needed: MA21 {ma21:.2f} 不小於 MA297 {ma297:.2f} or MA297 不小於 MA75 {ma75:.2f} on {latest_date}")
 
     # 檢查 MA75 < MA297 < MA21
     if ma75 < ma297 < ma21:
@@ -105,7 +105,7 @@ def check_and_log(df):
             existing_value = os.getenv('RATE_BELOW_MA60', '')
         print("Environment variable RATE_BELOW_MA60 set.")
     else:
-        print(f"No logging needed: MA75 {ma75:.2f} is not below MA297 {ma297:.2f} or MA297 is not below MA21 {ma21:.2f} on {latest_date}")
+        print(f"No logging needed: MA75 {ma75:.2f} 不小於 MA297 {ma297:.2f} or MA297 不小於 MA21 {ma21:.2f} on {latest_date}")
 
 def main():
     print("Starting main process...")
