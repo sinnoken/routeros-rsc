@@ -2,7 +2,12 @@ name: Run Exchange Rate Script
 
 on:
   schedule:
-    - cron: '0 11,15 * * 1-5'
+    # 每週一至週五的 09:30 UTC
+    - cron: '30 9 * * 1-5'
+    # 每週一至週五的 15:00 UTC
+    - cron: '0 15 * * 1-5'
+    # 每週一至週五的 20:00 UTC
+    - cron: '0 20 * * 1-5'
 
   workflow_dispatch:
 
