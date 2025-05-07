@@ -2,12 +2,17 @@
 # Source: https://github.com/stamparm/ipsum/raw/refs/heads/master/levels/8.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: This file is auto-generated. Manual edits may be overwritten.
-# Generated on: 2025-05-06 03:04:52 UTC+0000
+# Generated on: 2025-05-07 03:06:11 UTC+0000
 
+/ip firewall address-list add address=47.74.40.171   comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
+/ip firewall address-list add address=94.159.102.167 comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
+/ip firewall address-list add address=101.36.124.120 comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
+/ip firewall address-list add address=111.12.81.147  comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
 /ip firewall address-list add address=134.209.120.69 comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
-/ip firewall address-list add address=195.178.110.50 comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
 /ip firewall address-list add address=218.92.0.111   comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
+/ip firewall address-list add address=218.92.0.112   comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
 /ip firewall address-list add address=218.92.0.198   comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
+/ip firewall address-list add address=218.92.0.216   comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
 /ip firewall address-list add address=218.92.0.217   comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
 /ip firewall address-list add address=218.92.0.218   comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
 /ip firewall address-list add address=218.92.0.219   comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
