@@ -87,7 +87,7 @@ def check_and_log(df):
 
     # 檢查 MA21 < MA297 < MA75
     if ma21 < ma297 < ma75:
-        message = f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}: MA21:{ma21:.2f} 小於 MA297:{ma297:.2f} 小於 MA75:{ma75:.2f}，價格差: {price_difference:.2f}。"
+        message = f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}: MA21:{ma21:.2f} 小於 MA297:{ma297:.2f} 小於 MA75:{ma75:.2f}，價格差: {price_difference:.2f}，百分比差異: {percentage_difference:.2f}%。"
         print(message)
         with open(os.environ['GITHUB_ENV'], 'a') as env_file:
             env_file.write(f"RATE_BELOW_MA60={existing_value.strip() + message.strip()}\n")
@@ -98,7 +98,7 @@ def check_and_log(df):
 
     # 檢查 MA75 < MA297 < MA21
     if ma75 < ma297 < ma21:
-        message = f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}: MA75:{ma75:.2f} 小於 MA297:{ma297:.2f} 小於 MA21:{ma21:.2f}，價格差: {price_difference:.2f}。"
+        message = f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}: MA75:{ma75:.2f} 小於 MA297:{ma297:.2f} 小於 MA21:{ma21:.2f}，價格差: {price_difference:.2f}，百分比差異: {percentage_difference:.2f}%。"
         print(message)
         with open(os.environ['GITHUB_ENV'], 'a') as env_file:
             env_file.write(f"RATE_BELOW_MA60={existing_value.strip() + message.strip()}\n")
