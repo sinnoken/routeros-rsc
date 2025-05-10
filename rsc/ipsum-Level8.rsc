@@ -2,14 +2,17 @@
 # Source: https://github.com/stamparm/ipsum
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: This file is auto-generated. Manual edits may be overwritten.
-# Generated on: 2025-05-09 03:06:13 UTC+0000
+# Generated on: 2025-05-10 03:00:08 UTC+0000
 
 /ip firewall address-list add address=80.94.95.115    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
 /ip firewall address-list add address=80.94.95.116    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
 /ip firewall address-list add address=85.208.84.4     comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
 /ip firewall address-list add address=85.208.84.5     comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
+/ip firewall address-list add address=92.118.39.61    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
+/ip firewall address-list add address=103.154.143.162 comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
+/ip firewall address-list add address=194.0.234.16    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
 /ip firewall address-list add address=194.0.234.19    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
-/ip firewall address-list add address=196.251.69.43   comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
+/ip firewall address-list add address=218.92.0.103    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
 /ip firewall address-list add address=218.92.0.111    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
 /ip firewall address-list add address=218.92.0.198    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
 /ip firewall address-list add address=218.92.0.216    comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L8
