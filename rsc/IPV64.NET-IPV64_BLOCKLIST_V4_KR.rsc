@@ -2,7 +2,7 @@
 # Source: https://ipv64.net/blocklists/countries/ipv64_blocklist_v4_KR.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: This file is auto-generated. Manual edits may be overwritten.
-# Generated on: 2025-06-11 03:13:53 UTC+0000
+# Generated on: 2025-06-12 03:12:20 UTC+0000
 
 /ip firewall address-list add address=1.11.0.0/16      comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=1.16.0.0/18      comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
@@ -523,8 +523,8 @@
 /ip firewall address-list add address=61.47.192.0/18   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=61.64.0.0/11     comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=61.96.0.0/12     comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
-/ip firewall address-list add address=61.96.0.0/13     comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=61.96.0.0/15     comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
+/ip firewall address-list add address=61.96.0.0/13     comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=61.101.0.0/16    comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=61.101.244.0/22  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=61.104.0.0/13    comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
@@ -545,8 +545,8 @@
 /ip firewall address-list add address=61.251.107.0/24  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=61.251.111.0/24  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=61.251.128.0/17  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
-/ip firewall address-list add address=61.252.0.0/14    comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=61.252.0.0/18    comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
+/ip firewall address-list add address=61.252.0.0/14    comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=61.252.76.0/22   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=62.182.171.0/24  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=63.105.192.0/20  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
@@ -872,9 +872,9 @@
 /ip firewall address-list add address=104.70.122.0/24  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=104.74.144.0/20  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=104.74.160.0/19  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
-/ip firewall address-list add address=104.75.0.0/18    comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
-/ip firewall address-list add address=104.75.0.0/20    comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=104.75.0.0/22    comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
+/ip firewall address-list add address=104.75.0.0/20    comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
+/ip firewall address-list add address=104.75.0.0/18    comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=104.76.28.0/22   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=104.76.64.0/18   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=104.77.89.0/24   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
@@ -910,8 +910,8 @@
 /ip firewall address-list add address=110.5.128.0/17   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=110.8.0.0/13     comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=110.34.0.0/17    comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
-/ip firewall address-list add address=110.35.0.0/18    comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=110.35.0.0/16    comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
+/ip firewall address-list add address=110.35.0.0/18    comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=110.44.0.0/14    comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=110.44.32.0/19   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=110.68.0.0/14    comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
@@ -1129,8 +1129,8 @@
 /ip firewall address-list add address=123.98.128.0/17  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=123.99.64.0/18   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=123.100.160.0/19 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
-/ip firewall address-list add address=123.108.0.0/21   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=123.108.0.0/24   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
+/ip firewall address-list add address=123.108.0.0/21   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=123.108.16.0/20  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=123.108.160.0/19 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=123.109.0.0/16   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
@@ -1342,8 +1342,8 @@
 /ip firewall address-list add address=159.248.200.0/21 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=159.248.216.0/21 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=160.48.171.0/24  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
-/ip firewall address-list add address=160.202.160.0/22 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=160.202.160.0/19 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
+/ip firewall address-list add address=160.202.160.0/22 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=160.238.37.0/24  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=161.69.100.0/24  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=161.122.0.0/16   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
@@ -1381,9 +1381,9 @@
 /ip firewall address-list add address=163.171.217.0/24 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=163.171.219.0/24 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=163.171.221.0/24 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
+/ip firewall address-list add address=163.171.224.0/21 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=163.171.224.0/20 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=163.171.224.0/19 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
-/ip firewall address-list add address=163.171.224.0/21 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=163.171.248.0/22 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=163.171.252.0/24 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=163.180.0.0/16   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
@@ -1497,8 +1497,8 @@
 /ip firewall address-list add address=182.172.0.0/16   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=182.173.64.0/18  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=182.173.160.0/19 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
-/ip firewall address-list add address=182.192.0.0/10   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=182.192.0.0/13   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
+/ip firewall address-list add address=182.192.0.0/10   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=182.237.0.0/17   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=182.237.192.0/18 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=182.252.0.0/18   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
@@ -1601,8 +1601,8 @@
 /ip firewall address-list add address=202.72.96.0/20   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=202.73.132.0/22  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=202.79.160.0/21  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
-/ip firewall address-list add address=202.79.168.0/21  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=202.79.168.0/24  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
+/ip firewall address-list add address=202.79.168.0/21  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=202.79.174.0/23  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=202.86.8.0/21    comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=202.89.124.0/22  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
@@ -1690,8 +1690,8 @@
 /ip firewall address-list add address=203.233.165.0/24 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=203.233.192.0/18 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=203.240.0.0/14   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
-/ip firewall address-list add address=203.240.0.0/12   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=203.240.0.0/15   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
+/ip firewall address-list add address=203.240.0.0/12   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=203.240.64.0/18  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=203.240.128.0/19 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=203.241.128.0/17 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
@@ -1741,10 +1741,10 @@
 /ip firewall address-list add address=210.87.192.0/19  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=210.88.0.0/13    comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=210.89.160.0/19  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
-/ip firewall address-list add address=210.96.0.0/12    comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=210.96.0.0/13    comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=210.96.0.0/11    comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=210.96.0.0/14    comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
+/ip firewall address-list add address=210.96.0.0/12    comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=210.111.64.0/18  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=210.112.0.0/12   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=210.114.88.0/21  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
@@ -1756,15 +1756,15 @@
 /ip firewall address-list add address=210.176.0.0/13   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=210.176.150.0/23 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=210.192.64.0/19  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
-/ip firewall address-list add address=210.204.0.0/14   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=210.204.0.0/15   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
+/ip firewall address-list add address=210.204.0.0/14   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=210.210.0.0/15   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=210.211.64.0/19  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
-/ip firewall address-list add address=210.216.0.0/13   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=210.216.0.0/14   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
+/ip firewall address-list add address=210.216.0.0/13   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=210.218.128.0/17 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
-/ip firewall address-list add address=210.220.0.0/14   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=210.220.0.0/15   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
+/ip firewall address-list add address=210.220.0.0/14   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=211.32.0.0/13    comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=211.32.0.0/14    comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=211.32.0.0/12    comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
@@ -1783,15 +1783,15 @@
 /ip firewall address-list add address=211.172.96.0/20  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=211.172.128.0/19 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=211.172.176.0/20 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
-/ip firewall address-list add address=211.190.0.0/15   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=211.190.0.0/16   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
+/ip firewall address-list add address=211.190.0.0/15   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=211.191.0.0/16   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=211.191.32.0/20  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=211.191.64.0/19  comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=211.191.160.0/19 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=211.224.0.0/11   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
-/ip firewall address-list add address=211.232.0.0/14   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=211.232.0.0/13   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
+/ip firewall address-list add address=211.232.0.0/14   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=211.236.0.0/14   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=211.237.160.0/19 comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=211.254.0.0/15   comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR

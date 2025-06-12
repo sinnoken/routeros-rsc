@@ -2,7 +2,7 @@
 # Source: https://ipv64.net/blocklists/countries/ipv64_blocklist_v6_TW.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: This file is auto-generated. Manual edits may be overwritten.
-# Generated on: 2025-06-11 03:13:53 UTC+0000
+# Generated on: 2025-06-12 03:12:21 UTC+0000
 
 /ipv6 firewall address-list add address=::ffff:1.32.200.0/117           comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=::ffff:1.32.208.0/117           comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
@@ -420,8 +420,8 @@
 /ipv6 firewall address-list add address=::ffff:103.122.236.0/118        comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=::ffff:103.123.0.0/118          comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=::ffff:103.123.124.0/118        comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
-/ipv6 firewall address-list add address=::ffff:103.123.128.0/113        comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=::ffff:103.123.128.0/117        comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
+/ipv6 firewall address-list add address=::ffff:103.123.128.0/113        comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=::ffff:103.123.140.0/118        comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=::ffff:103.123.216.0/118        comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=::ffff:103.123.240.0/118        comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
@@ -445,8 +445,8 @@
 /ipv6 firewall address-list add address=::ffff:103.129.160.0/116        comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=::ffff:103.129.176.0/117        comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=::ffff:103.129.240.0/118        comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
-/ipv6 firewall address-list add address=::ffff:103.130.0.0/114          comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=::ffff:103.130.0.0/118          comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
+/ipv6 firewall address-list add address=::ffff:103.130.0.0/114          comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=::ffff:103.130.64.0/114         comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=::ffff:103.130.84.0/118         comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=::ffff:103.130.120.0/117        comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
@@ -1223,8 +1223,8 @@
 /ipv6 firewall address-list add address=2001:238:f80::/47               comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:238:f88::/46               comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:238:f8d::/48               comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
-/ipv6 firewall address-list add address=2001:288::/34                   comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:288::/32                   comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
+/ipv6 firewall address-list add address=2001:288::/34                   comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:470:0:3d6::2/128           comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:470:1:128::2/128           comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:470:8:405::/64             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
@@ -1793,8 +1793,8 @@
 /ipv6 firewall address-list add address=2001:dd8:18::/48                comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:de4::/48                   comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:ded:c000::/48              comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
-/ipv6 firewall address-list add address=2001:df0:d9::/55                comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:df0:d9::/48                comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
+/ipv6 firewall address-list add address=2001:df0:d9::/55                comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:df0:4e00::/48              comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:df0:bf40::/48              comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:df1:940::/48               comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
@@ -1807,8 +1807,8 @@
 /ipv6 firewall address-list add address=2001:df4:9d00::/48              comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:df6:3f80::/48              comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:df6:4780::/48              comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
-/ipv6 firewall address-list add address=2001:e10::/33                   comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:e10::/32                   comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
+/ipv6 firewall address-list add address=2001:e10::/33                   comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:ed8::/32                   comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:f10::/32                   comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:f18::/32                   comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
@@ -1823,13 +1823,13 @@
 /ipv6 firewall address-list add address=2001:4860:7:510::/64            comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:b000::/27                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:b000::/26                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
-/ipv6 firewall address-list add address=2001:b000::/21                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:b000::/40                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
+/ipv6 firewall address-list add address=2001:b000::/21                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:b000:80::/43               comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:b000:90::/47               comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:b011::/32                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
-/ipv6 firewall address-list add address=2001:b011::/33                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:b011::/34                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
+/ipv6 firewall address-list add address=2001:b011::/33                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:b011:1000::/45             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:b011:4000::/35             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2001:b011:4000::/34             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
@@ -1985,8 +1985,8 @@
 /ipv6 firewall address-list add address=2401:c900:1201:2c9::/64         comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2401:c900:1401:45::/64          comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2401:e180::/32                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
-/ipv6 firewall address-list add address=2401:f540::/47                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2401:f540::/32                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
+/ipv6 firewall address-list add address=2401:f540::/47                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2401:fa00::/46                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2401:fa00:f::/48                comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2401:fa00:21::/48               comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
@@ -2122,8 +2122,8 @@
 /ipv6 firewall address-list add address=2404:63c0::/32                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2404:6800:4008::/48             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2404:7340::/32                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
-/ipv6 firewall address-list add address=2404:73c0::/34                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2404:73c0::/32                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
+/ipv6 firewall address-list add address=2404:73c0::/34                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2404:7d40::/32                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2404:8cc0::/32                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2404:9cc0::/32                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
@@ -2188,8 +2188,8 @@
 /ipv6 firewall address-list add address=2406:840:ff00::/44              comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:cc0::/32                   comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:1740::/32                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
-/ipv6 firewall address-list add address=2406:2000::/32                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000::/40                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
+/ipv6 firewall address-list add address=2406:2000::/32                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:80::/41               comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:80::/42               comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:98:800::/62           comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
@@ -2197,8 +2197,8 @@
 /ipv6 firewall address-list add address=2406:2000:98:801::1008/125      comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:98:802::/63           comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:98:802::1008/125      comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
-/ipv6 firewall address-list add address=2406:2000:98:804::/63           comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:98:804::/62           comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
+/ipv6 firewall address-list add address=2406:2000:98:804::/63           comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:98:804::1008/125      comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:98:805::1008/125      comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:98:806::1008/125      comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
@@ -2210,26 +2210,26 @@
 /ipv6 firewall address-list add address=2406:2000:a8:802::/63           comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:a8:804::/62           comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:e4::/50               comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
-/ipv6 firewall address-list add address=2406:2000:e4::/48               comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:e4::/53               comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
+/ipv6 firewall address-list add address=2406:2000:e4::/48               comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
+/ipv6 firewall address-list add address=2406:2000:e4:2000::/58          comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:e4:2000::/53          comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:e4:2000::/57          comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
-/ipv6 firewall address-list add address=2406:2000:e4:2000::/58          comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:e4:2020::/59          comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:e4:2037::/64          comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:e4:2037::3000/116     comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:e4:2400::/54          comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:e4:2600::/55          comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
-/ipv6 firewall address-list add address=2406:2000:e4:2700::/58          comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:e4:2700::/60          comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
+/ipv6 firewall address-list add address=2406:2000:e4:2700::/58          comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:e4:270c::/62          comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:e4:2744::/62          comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:e4:2748::/62          comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:e4:274c::/62          comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:e4:2752::/64          comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:e4:2754::/62          comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
-/ipv6 firewall address-list add address=2406:2000:e4:e000::/52          comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:e4:e000::/51          comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
+/ipv6 firewall address-list add address=2406:2000:e4:e000::/52          comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:e4:ec00::/54          comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:e000::/35             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:ef00::/40             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
@@ -2238,8 +2238,8 @@
 /ipv6 firewall address-list add address=2406:2000:f000::/36             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:f000::/42             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:f010::/44             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
-/ipv6 firewall address-list add address=2406:2000:f015::/63             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:f015::/61             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
+/ipv6 firewall address-list add address=2406:2000:f015::/63             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:f018::/45             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:f018:10::/62          comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2406:2000:f01f::/59             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
@@ -2489,8 +2489,8 @@
 /ipv6 firewall address-list add address=2a01:111:f403:c400::/61         comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a01:111:f403:ca46::/63         comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a01:111:f403:cc00::/59         comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
-/ipv6 firewall address-list add address=2a01:111:f403:d400::/64         comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a01:111:f403:d400::/61         comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
+/ipv6 firewall address-list add address=2a01:111:f403:d400::/64         comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a01:111:f403:dc00::/61         comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a01:111:f403:e400::/61         comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a01:b747:428::/47              comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
@@ -2559,11 +2559,11 @@
 /ipv6 firewall address-list add address=2a05:dfc1:5efb:140::/59         comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a05:dfc1:5efb:160::/59         comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a05:dfc1:5efb:180::/59         comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
-/ipv6 firewall address-list add address=2a05:dfc1:5efb:200::/55         comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
-/ipv6 firewall address-list add address=2a05:dfc1:5efb:200::/56         comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
-/ipv6 firewall address-list add address=2a05:dfc1:5efb:200::/57         comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a05:dfc1:5efb:200::/58         comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a05:dfc1:5efb:200::/59         comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
+/ipv6 firewall address-list add address=2a05:dfc1:5efb:200::/57         comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
+/ipv6 firewall address-list add address=2a05:dfc1:5efb:200::/55         comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
+/ipv6 firewall address-list add address=2a05:dfc1:5efb:200::/56         comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a05:dfc1:5efb:220::/59         comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a05:dfc1:5efb:240::/58         comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a05:dfc1:5efb:240::/59         comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
@@ -2668,9 +2668,9 @@
 /ipv6 firewall address-list add address=2a0c:e642:50::/44               comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a0c:e643:aaa1::/48             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a0d:2580:1000::/40             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
+/ipv6 firewall address-list add address=2a0d:2580:1000::/38             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a0d:2580:1000::/36             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a0d:2580:1000::/37             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
-/ipv6 firewall address-list add address=2a0d:2580:1000::/38             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a0d:2580:1600::/39             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a0d:2580:1800::/37             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a0d:2580:4000::/34             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
@@ -2703,8 +2703,8 @@
 /ipv6 firewall address-list add address=2a0e:b107:c10::/44              comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a0e:b107:d70::/48              comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a0e:b107:d76::/48              comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
-/ipv6 firewall address-list add address=2a0e:b107:df0::/47              comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a0e:b107:df0::/44              comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
+/ipv6 firewall address-list add address=2a0e:b107:df0::/47              comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a0e:b107:df5::/48              comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a0e:b107:ea2::/48              comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a0e:b107:f41::/48              comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
@@ -2767,8 +2767,8 @@
 /ipv6 firewall address-list add address=2a12:f8c7::/32                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a13:a5c3::/48                  comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a13:a5c3:1000::/40             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
-/ipv6 firewall address-list add address=2a13:a5c3:3000::/40             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a13:a5c3:3000::/36             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
+/ipv6 firewall address-list add address=2a13:a5c3:3000::/40             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a13:a5c5:2100::/40             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a13:a5c6:4000::/36             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=2a13:a5c7:1101::/48             comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
