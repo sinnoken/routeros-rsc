@@ -2,7 +2,7 @@
 # Source: https://github.com/stamparm/ipsum
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: This file is auto-generated. Manual edits may be overwritten.
-# Generated on: 2025-07-28 03:41:28 UTC+0000
+# Generated on: 2025-07-29 03:45:06 UTC+0000
 
 /ip firewall address-list add address=1.13.79.144     comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L5
 /ip firewall address-list add address=1.13.185.47     comment=IPsum-Threat-Intelligence-Feed list=HN-BLACKLIST-IPSUM-L5
