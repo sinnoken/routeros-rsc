@@ -2,7 +2,7 @@
 # Source: https://ipv64.net/blocklists/countries/ipv64_blocklist_v4_JP.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: This file is auto-generated. Manual edits may be overwritten.
-# Generated on: 2025-08-27 02:58:56 UTC+0000
+# Generated on: 2025-08-28 02:58:42 UTC+0000
 
 /ip firewall address-list add address=1.0.16.0/20      comment=Japan IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_JP
 /ip firewall address-list add address=1.0.64.0/18      comment=Japan IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_JP
