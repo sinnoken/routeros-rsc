@@ -2,7 +2,7 @@
 # Source: https://ipv64.net/blocklists/countries/ipv64_blocklist_v4_KR.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: This file is auto-generated. Manual edits may be overwritten.
-# Generated on: 2026-01-03 03:17:36 UTC+0000
+# Generated on: 2026-01-04 03:45:29 UTC+0000
 
 /ip firewall address-list add address=1.11.0.0/16      comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
 /ip firewall address-list add address=1.16.0.0/18      comment=South Korea IPv4 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V4_KR
