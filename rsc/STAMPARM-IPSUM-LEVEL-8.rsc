@@ -2,34 +2,18 @@
 # Source: https://github.com/stamparm/ipsum/raw/refs/heads/master/levels/8.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: This file is auto-generated. Manual edits may be overwritten.
-# Generated on: 2026-01-17 03:18:14 UTC+0000
+# Generated on: 2026-01-18 03:41:13 UTC+0000
 
-/ip firewall address-list add address=2.57.121.25     comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
 /ip firewall address-list add address=2.57.121.112    comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
-/ip firewall address-list add address=2.57.122.210    comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
-/ip firewall address-list add address=3.143.33.63     comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
-/ip firewall address-list add address=12.156.67.18    comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
-/ip firewall address-list add address=38.55.16.34     comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
 /ip firewall address-list add address=38.248.14.48    comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
 /ip firewall address-list add address=45.148.10.121   comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
-/ip firewall address-list add address=61.245.11.87    comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
-/ip firewall address-list add address=77.83.39.128    comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
-/ip firewall address-list add address=80.94.95.115    comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
-/ip firewall address-list add address=93.174.95.106   comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
-/ip firewall address-list add address=101.36.107.228  comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
+/ip firewall address-list add address=103.232.121.71  comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
 /ip firewall address-list add address=118.26.111.61   comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
-/ip firewall address-list add address=121.52.147.5    comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
-/ip firewall address-list add address=160.174.129.232 comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
-/ip firewall address-list add address=161.18.228.75   comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
-/ip firewall address-list add address=182.93.50.90    comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
-/ip firewall address-list add address=185.156.73.233  comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
-/ip firewall address-list add address=190.124.153.17  comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
-/ip firewall address-list add address=193.32.162.157  comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
-/ip firewall address-list add address=195.40.154.8    comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
-/ip firewall address-list add address=197.5.145.102   comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
-/ip firewall address-list add address=197.221.232.44  comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
-/ip firewall address-list add address=213.55.85.202   comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
+/ip firewall address-list add address=121.142.146.167 comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
+/ip firewall address-list add address=162.142.125.32  comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
+/ip firewall address-list add address=162.142.125.223 comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
 /ip firewall address-list add address=213.209.159.158 comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
 /ip firewall address-list add address=213.209.159.159 comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
-/ip firewall address-list add address=217.154.69.208  comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
-/ip firewall address-list add address=220.80.223.144  comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
+/ip firewall address-list add address=216.108.237.50  comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
+/ip firewall address-list add address=217.154.38.135  comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
+/ip firewall address-list add address=220.95.14.102   comment=stamparm/ipsum/level-8 list=STAMPARM-IPSUM-LEVEL-8
