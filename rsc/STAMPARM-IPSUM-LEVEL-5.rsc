@@ -2,7 +2,7 @@
 # Source: https://github.com/stamparm/ipsum/raw/refs/heads/master/levels/5.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: This file is auto-generated. Manual edits may be overwritten.
-# Generated on: 2026-01-26 03:51:53 UTC+0000
+# Generated on: 2026-01-27 03:42:42 UTC+0000
 
 /ip firewall address-list add address=1.30.199.218    comment=stamparm/ipsum/level-5 list=STAMPARM-IPSUM-LEVEL-5
 /ip firewall address-list add address=1.55.33.86      comment=stamparm/ipsum/level-5 list=STAMPARM-IPSUM-LEVEL-5

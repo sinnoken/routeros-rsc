@@ -2,7 +2,7 @@
 # Source: https://github.com/stamparm/ipsum/raw/refs/heads/master/levels/6.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: This file is auto-generated. Manual edits may be overwritten.
-# Generated on: 2026-01-26 03:51:54 UTC+0000
+# Generated on: 2026-01-27 03:42:42 UTC+0000
 
 /ip firewall address-list add address=1.203.97.79     comment=stamparm/ipsum/level-6 list=STAMPARM-IPSUM-LEVEL-6
 /ip firewall address-list add address=1.212.225.99    comment=stamparm/ipsum/level-6 list=STAMPARM-IPSUM-LEVEL-6
