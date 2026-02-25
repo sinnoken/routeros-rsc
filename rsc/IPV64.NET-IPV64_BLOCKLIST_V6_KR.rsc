@@ -2,7 +2,7 @@
 # Source: https://ipv64.net/blocklists/countries/ipv64_blocklist_v6_KR.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: This file is auto-generated. Manual edits may be overwritten.
-# Generated on: 2026-02-24 04:12:36 UTC+0000
+# Generated on: 2026-02-25 04:14:06 UTC+0000
 
 /ipv6 firewall address-list add address=::ffff:1.11.0.0/112            comment=South Korea IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_KR
 /ipv6 firewall address-list add address=::ffff:1.16.0.0/114            comment=South Korea IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_KR
