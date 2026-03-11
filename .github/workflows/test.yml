@@ -20,8 +20,8 @@ jobs:
     - name: Install requests
       run: pip install -r requirements.txt
 
-    - name: Run python testList.py
-      run: python ./testList.py
+    - name: Run python ros-blocklist-gen.py
+      run: python ./ros-blocklist-gen.py
       continue-on-error: true
       
     - name: Commit & Push changes
