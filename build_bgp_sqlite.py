@@ -71,11 +71,12 @@ def main():
     c.executemany("INSERT INTO bgp VALUES (?, ?)", ((item[2], item[3]) for item in raw_data))
     c.execute("CREATE INDEX idx_asn ON bgp(asn)")
 
-    # ... 之前的代碼 ...
-    print("Optimizing SQLite file...")
-    c.execute("PRAGMA optimize")
-    c.execute("VACUUM") 
     conn.commit()
+    
+    print("Optimizing database size (VACUUM)...")
+    conn.isolation_level = None
+    conn.execute("VACUUM")
+    conn.isolation_level = "" # 恢復預設
     conn.close()
     print("Process complete. File size:", os.path.getsize(db_name) / 1024 / 1024, "MB")
 
