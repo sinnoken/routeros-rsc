@@ -2,13 +2,38 @@ import subprocess
 import pyasn
 import sqlite3
 import os
+import sys
+import time
 import ipaddress
 
 def download_and_convert():
+    target_dat = "rib.latest.dat"
+    target_bz2 = "rib.latest.bz2"
+    one_hour_in_seconds = 3600
+
+    # 檢查檔案是否存在且修改時間在 1 小時內
+    if os.path.exists(target_dat):
+        file_age = time.time() - os.path.getmtime(target_dat)
+        if file_age < one_hour_in_seconds:
+            print(f"Found {target_dat} (created {int(file_age/60)} mins ago). Skipping download.")
+            return
+        else:
+            print(f"{target_dat} is older than 1 hour. Re-downloading...")
+    else:
+        print(f"{target_dat} not found. Starting fresh download.")
+
+    # 開始下載
     print("Downloading latest BGP data...")
-    subprocess.run(["pyasn_util_download.py", "--latest", "--filename", "rib.latest.bz2"], check=True)
-    print("Converting rib.latest.bz2 to rib.latest.dat...")
-    subprocess.run(["pyasn_util_convert.py", "--single", "rib.latest.bz2", "rib.latest.dat"], check=True)
+    subprocess.run([sys.executable, "-m", "pyasn.scripts.pyasn_util_download", "--latest", "--filename", target_bz2], check=True)
+    
+    # 開始轉換
+    print(f"Converting {target_bz2} to {target_dat}...")
+    subprocess.run([sys.executable, "-m", "pyasn.scripts.pyasn_util_convert", "--single", target_bz2, target_dat], check=True)
+
+    # 轉換完畢後，建議刪除原始壓縮檔以節省空間
+    if os.path.exists(target_bz2):
+        os.remove(target_bz2)
+        print(f"Cleaned up {target_bz2}")
 
 def main():
     # 執行下載與轉換
