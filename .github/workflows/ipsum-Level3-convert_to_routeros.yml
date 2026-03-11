@@ -38,8 +38,8 @@ jobs:
           CHROME_PATH: ${{ steps.setup-chrome.outputs.chrome-path }}
           CHROMEDRIVER_PATH: ${{ steps.setup-chrome.outputs.chromedriver-path }}
           
-    - name: Run python testList.py
-      run: python ./testList.py
+    - name: Run python ros-blocklist-gen.py
+      run: python ./ros-blocklist-gen.py
       continue-on-error: true
 
     - name: Generate tag name
