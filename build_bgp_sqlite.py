@@ -5,11 +5,10 @@ import os
 import ipaddress
 
 def download_and_convert():
-    # 保持你原本的下載與轉換邏輯
     print("Downloading latest BGP data...")
-    subprocess.run(["python", "pyasn_util_download.py", "--latest", "--filename", "rib.latest.bz2"], check=True)
+    subprocess.run(["pyasn_util_download.py", "--latest", "--filename", "rib.latest.bz2"], check=True)
     print("Converting rib.latest.bz2 to rib.latest.dat...")
-    subprocess.run(["python", "pyasn_util_convert.py", "--single", "rib.latest.bz2", "rib.latest.dat"], check=True)
+    subprocess.run(["pyasn_util_convert.py", "--single", "rib.latest.bz2", "rib.latest.dat"], check=True)
 
 def main():
     # 執行下載與轉換
