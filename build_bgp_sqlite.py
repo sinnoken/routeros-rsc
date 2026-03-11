@@ -33,6 +33,21 @@ def main():
 
     print("Loading BGP database...")
     asndb = pyasn.pyasn('rib.latest.dat')
+
+   # 確保刪除舊檔案
+    if os.path.exists(db_name):
+        try:
+            os.remove(db_name)
+            print(f"Deleted existing {db_name}")
+        except OSError as e:
+            print(f"Error deleting {db_name}: {e}")
+            # 如果刪不掉，至少嘗試清空表
+            conn = sqlite3.connect(db_name)
+            conn.execute("DROP TABLE IF EXISTS bgp")
+            conn.close()
+
+    conn = sqlite3.connect(db_name)
+    c = conn.cursor()
     
     conn = sqlite3.connect(db_name)
     c = conn.cursor()
