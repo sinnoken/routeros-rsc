@@ -33,6 +33,7 @@ jobs:
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         find . -name '*.txt' -exec git add {} +
+        find . -name '*.sqlite' -exec git add {} +
         git commit -m 'Add asn_{asn}_prefixes.txt'
         git push
       env:
