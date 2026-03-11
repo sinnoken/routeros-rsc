@@ -70,13 +70,14 @@ def main():
     print("Inserting to SQLite...")
     c.executemany("INSERT INTO bgp VALUES (?, ?)", ((item[2], item[3]) for item in raw_data))
     c.execute("CREATE INDEX idx_asn ON bgp(asn)")
+
+    # ... 之前的代碼 ...
+    print("Optimizing SQLite file...")
+    c.execute("PRAGMA optimize")
+    c.execute("VACUUM") 
     conn.commit()
-    c.execute("VACUUM")
-    
-   
     conn.close()
-    
-    print("Process complete.")
+    print("Process complete. File size:", os.path.getsize(db_name) / 1024 / 1024, "MB")
 
 if __name__ == "__main__":
     main()
