@@ -23,7 +23,7 @@ jobs:
         pip install pyasn
 
     - name: Download BGP data & Run Python script
-      run: python extract_asn_prefixes.py 45102
+      run: python asn-prefix-extractor.py 45102
 
     - name: Commit and push changes
       run: |
