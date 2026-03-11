@@ -25,6 +25,9 @@ jobs:
     - name: Download BGP data & Run Python script
       run: python asn-prefix-extractor.py 45102
 
+    - name: Download BGP data & Run Python script & export sqlite
+      run: python build_bgp_sqlite.py
+
     - name: Commit and push changes
       run: |
         git config --global user.name 'github-actions[bot]'
