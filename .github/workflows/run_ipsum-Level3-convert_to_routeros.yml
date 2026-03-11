@@ -49,6 +49,7 @@ jobs:
       uses: actions-js/push@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
+        force: true
 
     - name: Notify the commit on Telegram
       uses: appleboy/telegram-action@master
