@@ -70,8 +70,10 @@ def main():
     print("Inserting to SQLite...")
     c.executemany("INSERT INTO bgp VALUES (?, ?)", ((item[2], item[3]) for item in raw_data))
     c.execute("CREATE INDEX idx_asn ON bgp(asn)")
-    
     conn.commit()
+    c.execute("VACUUM")
+    
+   
     conn.close()
     
     print("Process complete.")
