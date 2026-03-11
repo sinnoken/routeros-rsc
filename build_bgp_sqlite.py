@@ -73,13 +73,7 @@ def main():
     
     conn.commit()
     conn.close()
-
-    # 壓縮並清理
-    print(f"Compressing to {gz_name}...")
-    with open(db_name, 'rb') as f_in, gzip.open(gz_name, 'wb', compresslevel=9) as f_out:
-        shutil.copyfileobj(f_in, f_out)
     
-    os.remove(db_name) # 刪除巨大的原始 sqlite
     print("Process complete.")
 
 if __name__ == "__main__":
