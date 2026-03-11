@@ -1,68 +1,80 @@
 # IPsum Threat Intelligence Feed Processor
 
-這個 Python 程式用於從 IPsum 項目中下載威脅情報資料，並生成適用於 RouterOS 的防火牆地址列表配置文件。
+This Python utility is designed to fetch threat intelligence data from the **IPsum project** and generate optimized firewall address list configuration files (.rsc) specifically for MikroTik RouterOS.
 
-## 功能
+## Features
 
-- 從多個 URL 下載 IP 地址清單。
-- 驗證並去重 IP 地址。
-- 生成 RouterOS 防火牆地址列表的配置指令。
-- 支援多線程處理以加速下載和處理過程。
+* **Multi-Source Fetching:** Downloads IP address lists from multiple configured URLs.
+* **Validation & De-duplication:** Automatically validates IP formats and removes duplicates for a cleaner list.
+* **RouterOS Optimization:** Generates ready-to-use MikroTik firewall address-list commands.
+* **High Performance:** Utilizes multi-threading to significantly speed up the download and processing workflow.
 
-## Mikrotik RouterOS v6 & v7
+## MikroTik RouterOS v6 & v7 Setup
 
-1. Script which will download the drop list and update
+### 1. Update Script
 
-```
+This script handles the downloading of the blacklist and refreshes the local address list.
+
+```routeros
 /system script add name="downloadBlackList" owner="HybridNetworks" source={
     /tool fetch url="https://github.com/sinnoken/routeros-rsc/raw/refs/heads/main/rsc/STAMPARM-IPSUM-LEVEL-3.rsc" mode=https;
     :delay 5;
     /ip firewall address-list remove [find where list="STAMPARM-IPSUM-LEVEL-3"];
     :delay 5;
-    /import file-name=HN-BLACKLIST-SPAMHAUS.rsc;
+    /import file-name=STAMPARM-IPSUM-LEVEL-3.rsc;
     :delay 5;
-    /file remove HN-BLACKLIST-SPAMHAUS.rsc;
+    /file remove STAMPARM-IPSUM-LEVEL-3.rsc;
 }
-```
-
-2. Schedule the download and application of the blacklist
 
 ```
+
+### 2. Automation Scheduler
+
+Set a schedule to automatically update the blacklist every 3 days.
+
+```routeros
 /system scheduler add comment="BlackList" interval=3d \
-    name="BlackListUpdate" on-event=downloadBlackListBox \
+    name="BlackListUpdate" on-event=downloadBlackList \
     start-date=jan/01/1970 start-time=10:10:10
-```
-
-3. Blacklist blocking by [RAW](https://wiki.mikrotik.com/wiki/Manual:IP/Firewall/Raw) firewall rules
 
 ```
+
+### 3. Blocking with RAW Firewall Rules
+
+For optimal performance and lower CPU usage, use [IP Firewall RAW](https://wiki.mikrotik.com/wiki/Manual:IP/Firewall/Raw) to drop traffic.
+
+```routeros
 /ip firewall raw
 add action=drop chain=prerouting comment="STAMPARM-IPSUM-LEVEL-3" \
     src-address-list=STAMPARM-IPSUM-LEVEL-3
+
+```
+
+---
+
+## Usage
+
+1. **Environment:** Ensure you have **Python 3.x** and the `requests` library installed.
+2. **Clone:** Download or clone this repository to your local machine.
+3. **Execute:** Run the processor script:
+```bash
+python script_name.py
+
 ```
 
 
-## 使用方法
+4. **Output:** The generated `.rsc` configuration files will be saved in the `./rsc/` directory.
 
-1. 確保已安裝 Python 3.x 和 `requests` 套件。
-2. 將程式碼克隆或下載到本地。
-3. 執行程式：
+## Requirements
 
-   ```bash
-   python script_name.py
+* Python 3.x
+* `requests` library
 
-4. 生成的 .rsc 配置文件將儲存在 ./rsc/ 目錄中。
+## Important Notes
 
-## 需求
+* **Compatibility:** Verify that your RouterOS version supports the generated commands (compatible with most v6 and v7 builds).
+* **Customization:** You can modify the `urls` list within the script to target different IPsum threat levels (e.g., level 1 to level 8).
 
-- Python 3.x
-- requests 套件
+## Contributing
 
-## 注意事項
-
-- 請確保目標設備的 RouterOS 版本支援生成的配置指令。
-- 根據需要調整 urls 列表以匹配不同的威脅情報等級。
-
-## 貢獻
-
-歡迎提交問題報告和功能請求，或通過提交 Pull Request 來貢獻代碼。
+Contributions are welcome! Please feel free to submit **Issue reports**, **Feature requests**, or **Pull Requests** to improve the code.
