@@ -4,10 +4,24 @@ import ipaddress
 import argparse
 
 def download_and_convert():
-    print("Downloading latest BGP data...")
-    subprocess.run(["pyasn_util_download.py", "--latest", "--filename", "rib.latest.bz2"], check=True)
-    print("Converting rib.latest.bz2 to rib.latest.dat...")
-    subprocess.run(["pyasn_util_convert.py", "--single", "rib.latest.bz2", "rib.latest.dat"], check=True)
+    target_dat = "rib.latest.dat"
+    target_bz2 = "rib.latest.bz2"
+    target_names = "asnames.json"
+    
+    # 檢查是否需要更新 (1小時內不重複下載)
+    need_update = not os.path.exists(target_dat) or (time.time() - os.path.getmtime(target_dat) > 3600)
+    
+    if not need_update:
+        print(f"Using cached data.")
+        return False 
+
+    print("Downloading/Converting BGP data & AS Names...")
+    subprocess.run([sys.executable, "-m", "pyasn.scripts.pyasn_util_download", "--latest", "--filename", target_bz2], check=True)
+    subprocess.run([sys.executable, "-m", "pyasn.scripts.pyasn_util_convert", "--single", target_bz2, target_dat], check=True)
+    subprocess.run([sys.executable, "-m", "pyasn.scripts.pyasn_util_asnames", "-o", target_names], check=True)
+    
+    if os.path.exists(target_bz2): os.remove(target_bz2)
+    return True
 
 def main(asn):
     download_and_convert()
