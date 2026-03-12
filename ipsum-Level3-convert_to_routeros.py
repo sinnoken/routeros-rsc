@@ -33,7 +33,13 @@ def process_url(session, url):
     ip_list = response.text.splitlines()
 
     # 使用集合來去重和驗證 IP 地址
-    valid_ips = {ipaddress.ip_address(line.split()[0]) for line in ip_list if line and not line.startswith('#')}
+    valid_ips = {
+        ip_obj for line in ip_list 
+        if line and not line.startswith('#') 
+        and (ip_obj := ipaddress.ip_address(line.split()[0])).is_global 
+        and not ip_obj.is_multicast        # 雙重保險排除 Multicast
+        and not ip_obj.is_reserved         # 排除保留位址
+    }
     sorted_ips = sorted(valid_ips)
 
     # 生成 RouterOS 指令
