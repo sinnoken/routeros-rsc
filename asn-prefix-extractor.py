@@ -2,6 +2,10 @@ import subprocess
 import pyasn
 import ipaddress
 import argparse
+import os
+import time
+import sys
+import json
 
 def download_and_convert():
     target_dat = "rib.latest.dat"
