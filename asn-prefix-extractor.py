@@ -18,11 +18,13 @@ def download_and_convert():
     if not need_update:
         print(f"Using cached data.")
         return False 
-
-    print("Downloading/Converting BGP data & AS Names...")
-    subprocess.run([sys.executable, "-m", "pyasn.scripts.pyasn_util_download", "--latest", "--filename", target_bz2], check=True)
-    subprocess.run([sys.executable, "-m", "pyasn.scripts.pyasn_util_convert", "--single", target_bz2, target_dat], check=True)
-    subprocess.run([sys.executable, "-m", "pyasn.scripts.pyasn_util_asnames", "-o", target_names], check=True)
+ 
+    print("Downloading latest BGP data...")
+    subprocess.run(["pyasn_util_download.py", "--latest", "--filename", target_bz2 ], check=True)
+    print("Converting rib.latest.bz2 to rib.latest.dat...")
+    subprocess.run(["pyasn_util_convert.py", "--single", "rib.latest.bz2", target_dat ], check=True)
+    print("Converting rib.latest.bz2 to rib.latest.dat...")
+    subprocess.run(["pyasn.scripts.pyasn_util_asnames", "-o", target_names ], check=True)
     
     if os.path.exists(target_bz2): os.remove(target_bz2)
     return True
