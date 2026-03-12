@@ -5,59 +5,61 @@ import subprocess
 import pyasn
 import sqlite3
 import ipaddress
-import gzip
-import shutil
+import json
 
 def download_and_convert():
     target_dat = "rib.latest.dat"
     target_bz2 = "rib.latest.bz2"
-    if os.path.exists(target_dat) and (time.time() - os.path.getmtime(target_dat) < 3600):
-        print(f"Using cached {target_dat} (less than 1 hour old).")
-        return False # 沒有重新下載
+    target_names = "asnames.json"
     
-    print("Downloading/Converting latest BGP data...")
+    # 檢查是否需要更新 (1小時內不重複下載)
+    need_update = not os.path.exists(target_dat) or (time.time() - os.path.getmtime(target_dat) > 3600)
+    
+    if not need_update:
+        print(f"Using cached data.")
+        return False 
+
+    print("Downloading/Converting BGP data & AS Names...")
     subprocess.run([sys.executable, "-m", "pyasn.scripts.pyasn_util_download", "--latest", "--filename", target_bz2], check=True)
     subprocess.run([sys.executable, "-m", "pyasn.scripts.pyasn_util_convert", "--single", target_bz2, target_dat], check=True)
+    subprocess.run([sys.executable, "-m", "pyasn.scripts.pyasn_util_asnames", "-o", target_names], check=True)
+    
     if os.path.exists(target_bz2): os.remove(target_bz2)
-    return True # 有更新
+    return True
 
 def main():
-    has_updated = download_and_convert()
+    download_and_convert()
     db_name = "bgp.sqlite"
-    gz_name = "bgp.sqlite.gz"
+    names_file = "asnames.json"
 
-    # 如果沒更新且 .gz 已存在，可以選擇直接結束
-    if not has_updated and os.path.exists(gz_name):
-        print("No update needed.")
-        return
-
-    print("Loading BGP database...")
+    print("Loading datasets...")
     asndb = pyasn.pyasn('rib.latest.dat')
-
-   # 確保刪除舊檔案
-    if os.path.exists(db_name):
-        try:
-            os.remove(db_name)
-            print(f"Deleted existing {db_name}")
-        except OSError as e:
-            print(f"Error deleting {db_name}: {e}")
-            # 如果刪不掉，至少嘗試清空表
-            conn = sqlite3.connect(db_name)
-            conn.execute("DROP TABLE IF EXISTS bgp")
-            conn.close()
-
-    conn = sqlite3.connect(db_name)
-    c = conn.cursor()
     
+    with open(names_file, 'r', encoding='utf-8') as f:
+        as_map = json.load(f)
+
+    if os.path.exists(db_name):
+        os.remove(db_name)
+
     conn = sqlite3.connect(db_name)
     c = conn.cursor()
     c.execute("PRAGMA journal_mode = OFF")
     c.execute("PRAGMA synchronous = OFF")
-    c.execute("CREATE TABLE bgp (asn INTEGER, prefix TEXT)")
     
+    # --- 建立兩張表 ---
+    # 1. 路由表 (IP 網段)
+    c.execute("CREATE TABLE bgp (asn INTEGER, prefix TEXT)")
+    # 2. ASN 資訊表 (公司名稱)
+    c.execute("CREATE TABLE as_info (asn INTEGER PRIMARY KEY, name TEXT)")
+    
+    # --- 處理 as_info 資料 ---
+    print("Populating as_info table...")
+    name_data = [(int(asn), name) for asn, name in as_map.items()]
+    c.executemany("INSERT INTO as_info VALUES (?, ?)", name_data)
+
+    # --- 處理 bgp 資料 ---
     print("Extracting nodes from Radix tree...")
     raw_data = []
-    # 修正後的提取邏輯
     for node in asndb.radix.nodes():
         try:
             net = ipaddress.ip_network(node.prefix, strict=False)
@@ -67,18 +69,21 @@ def main():
     print(f"Sorting {len(raw_data)} records...")
     raw_data.sort(key=lambda x: (x[0], x[1]))
 
-    print("Inserting to SQLite...")
+    print("Inserting to bgp table...")
     c.executemany("INSERT INTO bgp VALUES (?, ?)", ((item[2], item[3]) for item in raw_data))
-    c.execute("CREATE INDEX idx_asn ON bgp(asn)")
+    
+    # 建立索引優化查詢速度
+    c.execute("CREATE INDEX idx_bgp_asn ON bgp(asn)")
+    c.execute("CREATE INDEX idx_bgp_prefix ON bgp(prefix)")
 
     conn.commit()
     
-    print("Optimizing database size (VACUUM)...")
+    print("Vacuuming...")
     conn.isolation_level = None
     conn.execute("VACUUM")
-    conn.isolation_level = "" # 恢復預設
     conn.close()
-    print("Process complete. File size:", os.path.getsize(db_name) / 1024 / 1024, "MB")
+    
+    print(f"Done! Database '{db_name}' is ready.")
 
 if __name__ == "__main__":
     main()
