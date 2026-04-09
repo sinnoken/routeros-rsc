@@ -2,7 +2,7 @@
 # Source: https://ipv64.net/blocklists/countries/ipv64_blocklist_v6_TW.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: This file is auto-generated. Manual edits may be overwritten.
-# Generated on: 2026-04-08 04:38:36 UTC+0000
+# Generated on: 2026-04-09 04:35:28 UTC+0000
 
 /ipv6 firewall address-list add address=::ffff:1.32.200.0/117           comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
 /ipv6 firewall address-list add address=::ffff:1.32.208.0/117           comment=Taiwan IPv6 blocklist list=IPV64.NET-IPV64_BLOCKLIST_V6_TW
