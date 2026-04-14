@@ -1,0 +1,65 @@
+name: CIDR Aggregator
+on:
+  schedule:
+    - cron: '0 0 * * 1' # 每週一凌晨 0 點執行
+  workflow_dispatch:      # 允許手動點擊執行
+
+jobs:
+  aggregate-cidr:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write       # 確保有寫入倉庫的權限
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch and Aggregate CIDR
+        run: |
+          # 1. 下載並過濾註解行與空白行 (保留所有潛在的 IP)
+          echo "正在下載 Maltrail 靜態清單..."
+          curl -s -f https://raw.githubusercontent.com/stamparm/maltrail/master/trails/static/mass_scanner.txt | grep -v '^#' | grep -v '^$' > raw_ips.txt
+          
+          # 如果 curl 失敗 (例如 404)，提早退出，保護原來的清單不被覆蓋
+          if [ ! -s raw_ips.txt ]; then
+            echo "錯誤：下載失敗或來源檔案為空。"
+            exit 1
+          fi
+
+          # 2. Python 聚合處理 (加入 try-except 容錯機制)
+          echo "開始進行 CIDR 聚合計算..."
+          python3 -c "
+          import ipaddress
+          import sys
+
+          valid_ips = []
+          with open('raw_ips.txt', 'r') as f:
+              for line in f:
+                  ip_str = line.strip()
+                  try:
+                      # 驗證是否為合法 IP (支援 IPv4/IPv6)，strict=False 允許包含 /32 等後綴
+                      valid_ips.append(ipaddress.ip_network(ip_str, strict=False))
+                  except ValueError:
+                      # 如果遇到非 IP 的亂碼，印出警告但不中斷程式
+                      print(f'⚠️ 警告：忽略無效的 IP 格式 -> {ip_str}')
+
+          # 執行聚合演算法
+          cidrs = ipaddress.collapse_addresses(valid_ips)
+
+          # 寫入最終檔案
+          with open('mass_scanner_cidr.txt', 'w') as f:
+              for net in cidrs:
+                  f.write(str(net) + '\n')
+          "
+
+          # 3. 安全性檢查：確保生成的檔案不是空的
+          if [ ! -s mass_scanner_cidr.txt ]; then
+            echo "錯誤：產出的 CIDR 清單為空，終止 Commit！"
+            exit 1
+          fi
+          
+          echo "✅ 轉換成功！產出清單行數：$(wc -l < mass_scanner_cidr.txt)"
+
+      - name: Commit and Push
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update: Aggregated Maltrail CIDR list"
+          file_pattern: 'mass_scanner_cidr.txt'
