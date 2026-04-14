@@ -14,21 +14,21 @@ jobs:
 
       - name: Fetch and Aggregate CIDR
         run: |
-          # 1. 下載並強力過濾
-          # sed 's/#.*$//' : 移除行內註解 (從 # 開始到結尾)
-          # awk '{$1=$1;print}' : 移除行首行尾的空白字元
-          # grep -v '^$' : 移除空行
-          echo "正在下載並清理 Maltrail 清單..."
+          # 1. 下載並過濾
+          # sed 's/#.*$//' : 移除行內註解
+          # grep -v ':' : 【新增】過濾掉所有 IPv6 (IPv6 必含冒號)
+          # awk '{$1=$1;print}' : 移除空白
+          echo "正在下載並清理 Maltrail 清單 (僅保留 IPv4)..."
           curl -s -f https://raw.githubusercontent.com/stamparm/maltrail/master/trails/static/mass_scanner.txt | \
-          sed 's/#.*$//' | awk '{$1=$1;print}' | grep -v '^$' | sort -u > raw_ips.txt
+          sed 's/#.*$//' | grep -v ':' | awk '{$1=$1;print}' | grep -v '^$' | sort -u > raw_ips.txt
           
           if [ ! -s raw_ips.txt ]; then
-            echo "錯誤：檔案為空，可能是來源網址失效。"
+            echo "錯誤：檔案為空。"
             exit 1
           fi
 
-          # 2. Python 聚合處理 (維持不變，內部的 line.strip() 會進一步確保乾淨)
-          echo "開始進行 CIDR 聚合計算..."
+          # 2. Python 聚合處理
+          echo "開始進行 IPv4 CIDR 聚合..."
           python3 -c "
           import ipaddress
           import sys
@@ -40,12 +40,14 @@ jobs:
                       ip_str = line.strip()
                       if not ip_str: continue
                       try:
-                          # 這裡會處理掉 74.82.47.2 這種純 IP
                           net = ipaddress.ip_network(ip_str, strict=False)
-                          valid_ips.append(net)
+                          # 【關鍵修正】只保留 IPv4
+                          if net.version == 4:
+                              valid_ips.append(net)
                       except ValueError:
-                          print(f'⚠️ 警告：忽略無效格式 -> {ip_str}')
+                          continue # 忽略錯誤格式
               
+              # 排序與聚合現在只會處理 IPv4，不會再噴錯
               valid_ips.sort()
               cidrs = ipaddress.collapse_addresses(valid_ips)
 
