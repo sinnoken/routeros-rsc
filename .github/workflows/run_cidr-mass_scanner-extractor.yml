@@ -14,40 +14,49 @@ jobs:
 
       - name: Fetch and Aggregate CIDR
         run: |
-          # 1. 下載並過濾註解行與空白行 (保留所有潛在的 IP)
+          # 1. 下載、過濾、並初步進行唯一排序 (sort -u)
           echo "正在下載 Maltrail 靜態清單..."
-          curl -s -f https://raw.githubusercontent.com/stamparm/maltrail/master/trails/static/mass_scanner.txt | grep -v '^#' | grep -v '^$' > raw_ips.txt
+          curl -s -f https://raw.githubusercontent.com/stamparm/maltrail/master/trails/static/mass_scanner.txt | \
+          grep -v '^#' | grep -v '^$' | sort -u > raw_ips.txt
           
-          # 如果 curl 失敗 (例如 404)，提早退出，保護原來的清單不被覆蓋
+          # 如果 curl 失敗 (例如 404)，提早退出
           if [ ! -s raw_ips.txt ]; then
             echo "錯誤：下載失敗或來源檔案為空。"
             exit 1
           fi
 
-          # 2. Python 聚合處理 (加入 try-except 容錯機制)
+          # 2. Python 聚合處理
           echo "開始進行 CIDR 聚合計算..."
           python3 -c "
           import ipaddress
           import sys
 
           valid_ips = []
-          with open('raw_ips.txt', 'r') as f:
-              for line in f:
-                  ip_str = line.strip()
-                  try:
-                      # 驗證是否為合法 IP (支援 IPv4/IPv6)，strict=False 允許包含 /32 等後綴
-                      valid_ips.append(ipaddress.ip_network(ip_str, strict=False))
-                  except ValueError:
-                      # 如果遇到非 IP 的亂碼，印出警告但不中斷程式
-                      print(f'⚠️ 警告：忽略無效的 IP 格式 -> {ip_str}')
+          try:
+              with open('raw_ips.txt', 'r') as f:
+                  for line in f:
+                      ip_str = line.strip()
+                      try:
+                          # strict=False 會自動處理如 1.1.1.1/24 這種不規範的網段寫法
+                          net = ipaddress.ip_network(ip_str, strict=False)
+                          valid_ips.append(net)
+                      except ValueError:
+                          print(f'⚠️ 警告：忽略無效格式 -> {ip_str}')
+              
+              # 【關鍵修正】在聚合前必須先排序
+              # ipaddress 對象排序時會自動按位址大小排列
+              valid_ips.sort()
 
-          # 執行聚合演算法
-          cidrs = ipaddress.collapse_addresses(valid_ips)
+              # 執行聚合演算法
+              cidrs = ipaddress.collapse_addresses(valid_ips)
 
-          # 寫入最終檔案
-          with open('mass_scanner_cidr.txt', 'w') as f:
-              for net in cidrs:
-                  f.write(str(net) + '\n')
+              # 寫入最終檔案
+              with open('mass_scanner_cidr.txt', 'w') as f:
+                  for net in cidrs:
+                      f.write(str(net) + '\n')
+          except Exception as e:
+              print(f'❌ 發生非預期錯誤: {e}')
+              sys.exit(1)
           "
 
           # 3. 安全性檢查：確保生成的檔案不是空的
@@ -56,10 +65,10 @@ jobs:
             exit 1
           fi
           
-          echo "✅ 轉換成功！產出清單行數：$(wc -l < mass_scanner_cidr.txt)"
+          echo "✅ 轉換成功！原始 IP 數：$(wc -l < raw_ips.txt)，聚合後網段數：$(wc -l < mass_scanner_cidr.txt)"
 
       - name: Commit and Push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Update: Aggregated Maltrail CIDR list"
+          commit_message: "Update: Aggregated Maltrail CIDR list [skip ci]"
           file_pattern: 'mass_scanner_cidr.txt'
