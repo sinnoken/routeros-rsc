@@ -8,32 +8,31 @@ jobs:
   aggregate-cidr:
     runs-on: ubuntu-latest
     permissions:
-      contents: write       # 確保有寫入倉庫的權限
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
       - name: Fetch and Aggregate CIDR
         run: |
-          # 1. 下載並過濾
-          # sed 's/#.*$//' : 移除行內註解
-          # grep -v ':' : 【新增】過濾掉所有 IPv6 (IPv6 必含冒號)
-          # awk '{$1=$1;print}' : 移除空白
-          echo "正在下載並清理 Maltrail 清單 (僅保留 IPv4)..."
+          # 1. 下載並清理 (保留 IPv4 與 IPv6)
+          echo "正在下載並清理 Maltrail 清單..."
           curl -s -f https://raw.githubusercontent.com/stamparm/maltrail/master/trails/static/mass_scanner.txt | \
-          sed 's/#.*$//' | grep -v ':' | awk '{$1=$1;print}' | grep -v '^$' | sort -u > raw_ips.txt
+          sed 's/#.*$//' | awk '{$1=$1;print}' | grep -v '^$' | sort -u > raw_ips.txt
           
           if [ ! -s raw_ips.txt ]; then
             echo "錯誤：檔案為空。"
             exit 1
           fi
 
-          # 2. Python 聚合處理
-          echo "開始進行 IPv4 CIDR 聚合..."
+          # 2. Python 分流處理
+          echo "開始進行 CIDR 聚合計算 (IPv4 & IPv6)..."
           python3 -c "
           import ipaddress
           import sys
 
-          valid_ips = []
+          ipv4_list = []
+          ipv6_list = []
+
           try:
               with open('raw_ips.txt', 'r') as f:
                   for line in f:
@@ -41,34 +40,43 @@ jobs:
                       if not ip_str: continue
                       try:
                           net = ipaddress.ip_network(ip_str, strict=False)
-                          # 【關鍵修正】只保留 IPv4
                           if net.version == 4:
-                              valid_ips.append(net)
+                              ipv4_list.append(net)
+                          elif net.version == 6:
+                              ipv6_list.append(net)
                       except ValueError:
-                          continue # 忽略錯誤格式
-              
-              # 排序與聚合現在只會處理 IPv4，不會再噴錯
-              valid_ips.sort()
-              cidrs = ipaddress.collapse_addresses(valid_ips)
+                          continue
 
+              # 分別排序與聚合
+              ipv4_list.sort()
+              ipv6_list.sort()
+              
+              ipv4_collapsed = ipaddress.collapse_addresses(ipv4_list)
+              ipv6_collapsed = ipaddress.collapse_addresses(ipv6_list)
+
+              # 寫入 IPv4 檔案
               with open('mass_scanner_cidr.txt', 'w') as f:
-                  for net in cidrs:
+                  for net in ipv4_collapsed:
                       f.write(str(net) + '\n')
+              
+              # 寫入 IPv6 檔案
+              with open('mass_scanner_cidr_v6.txt', 'w') as f:
+                  for net in ipv6_collapsed:
+                      f.write(str(net) + '\n')
+                      
           except Exception as e:
               print(f'❌ 錯誤: {e}')
               sys.exit(1)
           "
 
-          # 3. 安全性檢查：確保生成的檔案不是空的
-          if [ ! -s mass_scanner_cidr.txt ]; then
-            echo "錯誤：產出的 CIDR 清單為空，終止 Commit！"
-            exit 1
-          fi
-          
-          echo "✅ 轉換成功！原始 IP 數：$(wc -l < raw_ips.txt)，聚合後網段數：$(wc -l < mass_scanner_cidr.txt)"
+          # 3. 安全性檢查：確保檔案有產生
+          echo "✅ 轉換成功！"
+          echo "IPv4 網段數：$(wc -l < mass_scanner_cidr.txt)"
+          echo "IPv6 網段數：$(wc -l < mass_scanner_cidr_v6.txt)"
 
       - name: Commit and Push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Update: Aggregated Maltrail CIDR list [skip ci]"
-          file_pattern: 'mass_scanner_cidr.txt'
+          commit_message: "Update: Aggregated Maltrail CIDR list (v4 & v6) [skip ci]"
+          # 這裡設定要追蹤並提交的檔案模式
+          file_pattern: 'mass_scanner_cidr.txt mass_scanner_cidr_v6.txt'
