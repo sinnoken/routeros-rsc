@@ -1,6 +1,6 @@
 # Maltrail Mass Scanner List
 # Source: https://github.com/stamparm/maltrail
-# Generated on: 2026-04-14 11:16:39 UTC+0000
+# Generated on: 2026-04-15 13:53:23 UTC+0000
 
 /ip firewall address-list remove [find list=MALTRAIL-SCANNER]
 /ip firewall address-list add address=5.63.151.100/30 comment=Maltrail-Scanner list=MALTRAIL-SCANNER
