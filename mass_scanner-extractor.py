@@ -38,13 +38,14 @@ try:
             continue
 
         try:
+            # strict=False 允許處理 1.1.1.1/24 這類不規範格式
             net = ipaddress.ip_network(ip_str, strict=False)
             if net.version == 4:
                 original_ips_v4.append(net)
             elif net.version == 6:
                 original_ips_v6.append(net)
                 
-            # 如果這行有註解，就記錄下來 (使用 set 防止重複註解)
+            # 確實記錄帶有註解的網段 (使用 set 防止相同網段的重複註解)
             if comment:
                 if net not in ip_comments:
                     ip_comments[net] = set()
@@ -58,7 +59,7 @@ try:
         sys.exit(1)
         
     print(f"成功取得 {len(original_ips_v4) + len(original_ips_v6)} 筆 IP。")
-    print("開始合併網段並整併註解...")
+    print("開始合併網段並重新整併註解...")
 
     original_ips_v4.sort()
     original_ips_v6.sort()
@@ -67,23 +68,26 @@ try:
     ipv4_collapsed = list(ipaddress.collapse_addresses(original_ips_v4))
     ipv6_collapsed = list(ipaddress.collapse_addresses(original_ips_v6))
 
-    # 3. 將原本的註解重新對應到合併後的網段上
-    def build_collapsed_comments(original_nets, collapsed_nets, comments_map):
+    # 3. [優化核心] 精準將舊註解對應到新合併的網段
+    def build_collapsed_comments(collapsed_nets, comments_map, version):
         result_map = {}
-        for orig_net in original_nets:
-            if orig_net not in comments_map:
+        # 只遍歷「有註解的 IP」，大幅節省效能
+        for orig_net, comments in comments_map.items():
+            # 確保不會跨版本比對 (防崩潰與錯置)
+            if orig_net.version != version:
                 continue
-            # 尋找這個原始 IP 被合併到了哪個新網段 (subnet_of 是 Python 3.7+ 內建功能)
+                
+            # 尋找這個有註解的 IP 被合併到了哪個新網段
             for c_net in collapsed_nets:
                 if orig_net.subnet_of(c_net):
                     if c_net not in result_map:
                         result_map[c_net] = set()
-                    result_map[c_net].update(comments_map[orig_net])
-                    break
+                    result_map[c_net].update(comments)
+                    break # 找到專屬歸屬就跳出，確保唯一對應
         return result_map
 
-    v4_comments_map = build_collapsed_comments(original_ips_v4, ipv4_collapsed, ip_comments)
-    v6_comments_map = build_collapsed_comments(original_ips_v6, ipv6_collapsed, ip_comments)
+    v4_comments_map = build_collapsed_comments(ipv4_collapsed, ip_comments, 4)
+    v6_comments_map = build_collapsed_comments(ipv6_collapsed, ip_comments, 6)
 
     gen_time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC+0000')
     
@@ -101,10 +105,11 @@ try:
             for net in collapsed_list:
                 # 判斷這個合併後的網段有沒有對應的註解
                 if net in comments_map and comments_map[net]:
-                    # 將多個註解用逗號合併，並限制長度以免 RouterOS 報錯
+                    # 將多個註解用逗號合併
                     merged_comment = ", ".join(sorted(comments_map[net]))
-                    if len(merged_comment) > 120:
-                        merged_comment = merged_comment[:117] + "..."
+                    # 避免 RouterOS comment 過長報錯 (保留約 110 字元)
+                    if len(merged_comment) > 110:
+                        merged_comment = merged_comment[:107] + "..."
                     comment_str = f'Maltrail: {merged_comment}'
                 else:
                     comment_str = 'Maltrail-Scanner'
