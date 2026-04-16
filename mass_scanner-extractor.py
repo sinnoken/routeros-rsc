@@ -142,6 +142,7 @@ def write_rsc(
 
 # ── 主程式 ────────────────────────────────────────────────────────────────────
 def main() -> None:
+    global MAX_COMMENT_LEN
     # ── CLI 參數 ──────────────────────────────────────────────────────────────
     parser = argparse.ArgumentParser(
         description="將 Maltrail mass_scanner 清單轉換為 MikroTik RouterOS .rsc 格式",
@@ -181,7 +182,7 @@ def main() -> None:
     args = parser.parse_args()
 
     # 將 CLI 參數套用到全域常數（只影響本次執行）
-    global MAX_COMMENT_LEN
+    
     MAX_COMMENT_LEN = args.max_comment
 
     # ── 以下邏輯完全不變 ──────────────────────────────────────────────────────
