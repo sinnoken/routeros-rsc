@@ -33,12 +33,34 @@ def fetch_data(url: str, retries: int = RETRY_COUNT) -> str:
     sys.exit(1)
 
 
-# ── 2. 解析（一次迴圈，回傳分版本的結構）────────────────────────────────────
+# ── 2. 擷取網域名稱 ───────────────────────────────────────────────────────────
+def extract_domain(hostname: str) -> str:
+    """
+    從 hostname 擷取有意義的機構網域。
+
+    範例：
+      researchscanner01.eecs.berkeley.edu → berkeley.edu
+      scanners.labs.rapid7.com            → rapid7.com
+      pinger1a.netsec.colostate.edu       → colostate.edu
+    """
+    parts = hostname.strip().split(".")
+    if len(parts) >= 2:
+        return ".".join(parts[-2:])
+    return hostname
+
+
+# ── 3. 解析（一次迴圈，回傳分版本的結構）────────────────────────────────────
 def parse_lines(data: str) -> tuple[
     list[ipaddress.IPv4Network],
     list[ipaddress.IPv6Network],
     dict,
 ]:
+    """
+    解析每一行，回傳：
+      - v4_nets  : IPv4 網段清單
+      - v6_nets  : IPv6 網段清單
+      - comments : {network: set[str]} 原始網段對應的所有網域註解
+    """
     v4_nets, v6_nets = [], []
     comments: dict[ipaddress.IPv4Network | ipaddress.IPv6Network, set[str]] = {}
 
@@ -65,17 +87,26 @@ def parse_lines(data: str) -> tuple[
             v6_nets.append(net)
 
         if comment:
-            comments.setdefault(net, set()).add(comment)
+            domain = extract_domain(comment)
+            comments.setdefault(net, set()).add(domain)
 
     return v4_nets, v6_nets, comments
 
 
-# ── 3. 核心優化：O(log N) 二分搜尋取代 O(M×N) 線性掃描 ────────────────────
+# ── 4. 核心優化：O(log N) 二分搜尋取代 O(M×N) 線性掃描 ────────────────────
 def build_collapsed_comments(
     collapsed: list,
     comments: dict,
     version: int,
 ) -> dict:
+    """
+    將原始網段的註解對應到合併後的網段。
+
+    策略：
+      - collapsed 由 collapse_addresses 產生，已排序，直接使用。
+      - 對每個有註解的原始網段，用二分搜尋定位候選的合併網段，
+        將複雜度從 O(M×N) 降至 O(M×log N)。
+    """
     if not collapsed or not comments:
         return {}
 
@@ -102,21 +133,24 @@ def build_collapsed_comments(
     return result
 
 
-# ── 4. 截斷工具（在 token 邊界截斷）────────────────────────────────────────
+# ── 5. 截斷工具（在 token 邊界截斷）────────────────────────────────────────
 def truncate_comment(text: str, max_len: int = MAX_COMMENT_LEN) -> str:
+    """在逗號邊界截斷，避免切斷單字。"""
     if len(text) <= max_len:
         return text
     cut = text[:max_len].rsplit(",", 1)[0]
     return cut.rstrip() + ", ..."
 
 
-# ── 5. 輸出 RSC ───────────────────────────────────────────────────────────────
+# ── 6. 輸出 RSC ───────────────────────────────────────────────────────────────
 def write_rsc(
     filename: str,
     collapsed: list,
     comments_map: dict,
     is_v6: bool = False,
+    max_comment: int = MAX_COMMENT_LEN,
 ) -> None:
+    """將合併後的網段寫入 MikroTik RouterOS .rsc 格式。"""
     cmd_path = "/ipv6 firewall address-list" if is_v6 else "/ip firewall address-list"
     list_name = "MALTRAIL-SCANNER-V6" if is_v6 else "MALTRAIL-SCANNER"
     gen_time = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC+0000")
@@ -131,7 +165,7 @@ def write_rsc(
             tags = comments_map.get(net)
             if tags:
                 merged = ", ".join(sorted(tags))
-                comment = f"Maltrail: {truncate_comment(merged)}"
+                comment = f"Maltrail: {truncate_comment(merged, max_comment)}"
             else:
                 comment = "Maltrail-Scanner"
 
@@ -142,11 +176,9 @@ def write_rsc(
 
 # ── 主程式 ────────────────────────────────────────────────────────────────────
 def main() -> None:
-    global MAX_COMMENT_LEN
-    # ── CLI 參數 ──────────────────────────────────────────────────────────────
     parser = argparse.ArgumentParser(
         description="將 Maltrail mass_scanner 清單轉換為 MikroTik RouterOS .rsc 格式",
-        formatter_class=argparse.ArgumentDefaultsHelpFormatter,  # 顯示預設值
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
     parser.add_argument(
         "--url",
@@ -181,11 +213,6 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    # 將 CLI 參數套用到全域常數（只影響本次執行）
-    
-    MAX_COMMENT_LEN = args.max_comment
-
-    # ── 以下邏輯完全不變 ──────────────────────────────────────────────────────
     print("正在從 Maltrail 下載清單...")
     data = fetch_data(args.url, retries=args.retries)
 
@@ -208,8 +235,8 @@ def main() -> None:
     v6_map = build_collapsed_comments(v6_collapsed, comments, 6)
 
     print("寫入 RSC 檔案...")
-    write_rsc(args.output_v4, v4_collapsed, v4_map, is_v6=False)
-    write_rsc(args.output_v6, v6_collapsed, v6_map, is_v6=True)
+    write_rsc(args.output_v4, v4_collapsed, v4_map, is_v6=False, max_comment=args.max_comment)
+    write_rsc(args.output_v6, v6_collapsed, v6_map, is_v6=True,  max_comment=args.max_comment)
 
     print("✅ 轉換成功！")
     print(f"   {args.output_v4}：{len(v4_collapsed) + 4} 行")
