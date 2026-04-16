@@ -1,6 +1,6 @@
 # Maltrail Mass Scanner List
 # Source: https://github.com/stamparm/maltrail
-# Generated on: 2026-04-15 14:11:19 UTC+0000
+# Generated on: 2026-04-16 00:11:43 UTC+0000
 
 /ip firewall address-list remove [find list=MALTRAIL-SCANNER]
 /ip firewall address-list add address=5.63.151.100/30 comment="Maltrail: scanners.labs.rapid7.com" list=MALTRAIL-SCANNER
@@ -502,25 +502,25 @@
 /ip firewall address-list add address=57.129.64.237/32 comment="Maltrail: scanner.modat.io" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=64.62.156.10/31 comment="Maltrail: scan-60-0.shadowserver.org, scan-60-1.shadowserver.org" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=64.62.156.12/30 comment="Maltrail: scan-60-2.shadowserver.org, scan-60-3.shadowserver.org, scan-60-4.shadowserver.org, scan-60-5.shadowserver.org" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=64.62.156.16/28 comment="Maltrail: scan-60-10.shadowserver.org, scan-60-11.shadowserver.org, scan-60-12.shadowserver.org, scan-60-13.shadowser..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=64.62.156.32/29 comment="Maltrail: scan-61-10.shadowserver.org, scan-61-11.shadowserver.org, scan-61-12.shadowserver.org, scan-61-13.shadowser..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=64.62.156.16/28 comment="Maltrail: scan-60-10.shadowserver.org, scan-60-11.shadowserver.org, scan-60-12.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=64.62.156.32/29 comment="Maltrail: scan-61-10.shadowserver.org, scan-61-11.shadowserver.org, scan-61-12.shadowserver.org, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=64.62.156.40/30 comment="Maltrail: scan-62-2.shadowserver.org, scan-62-3.shadowserver.org, scan-62-4.shadowserver.org, scan-62-5.shadowserver.org" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=64.62.156.45/32 comment="Maltrail: scan-62-7.shadowserver.org" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=64.62.156.46/31 comment="Maltrail: scan-62-8.shadowserver.org, scan-62-9.shadowserver.org" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=64.62.156.48/28 comment="Maltrail: scan-62-10.shadowserver.org, scan-62-11.shadowserver.org, scan-62-12.shadowserver.org, scan-62-13.shadowser..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=64.62.156.64/27 comment="Maltrail: scan-63-12.shadowserver.org, scan-63-13.shadowserver.org, scan-64-0.shadowserver.org, scan-64-1.shadowserve..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=64.62.156.96/28 comment="Maltrail: scan-66-10.shadowserver.org, scan-66-11.shadowserver.org, scan-66-12.shadowserver.org, scan-66-13.shadowser..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=64.62.156.112/29 comment="Maltrail: scan-67-10.shadowserver.org, scan-67-11.shadowserver.org, scan-67-4.shadowserver.org, scan-67-5.shadowserve..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=64.62.156.48/28 comment="Maltrail: scan-62-10.shadowserver.org, scan-62-11.shadowserver.org, scan-62-12.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=64.62.156.64/27 comment="Maltrail: scan-63-12.shadowserver.org, scan-63-13.shadowserver.org, scan-64-0.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=64.62.156.96/28 comment="Maltrail: scan-66-10.shadowserver.org, scan-66-11.shadowserver.org, scan-66-12.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=64.62.156.112/29 comment="Maltrail: scan-67-10.shadowserver.org, scan-67-11.shadowserver.org, scan-67-4.shadowserver.org, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=64.62.156.120/31 comment="Maltrail: scan-67-12.shadowserver.org, scan-67-13.shadowserver.org" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=64.62.197.2/31 comment="Maltrail: scan-36a.shadowserver.org, scan-36b.shadowserver.org" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=64.62.197.4/30 comment="Maltrail: scan-36c.shadowserver.org, scan-36d.shadowserver.org, scan-36e.shadowserver.org, scan-36f.shadowserver.org" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=64.62.197.8/29 comment="Maltrail: scan-36g.shadowserver.org, scan-36h.shadowserver.org, scan-36i.shadowserver.org, scan-36j.shadowserver.org,..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=64.62.197.16/28 comment="Maltrail: scan-36o.shadowserver.org, scan-44a.shadowserver.org, scan-44b.shadowserver.org, scan-44c.shadowserver.org,..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=64.62.197.32/27 comment="Maltrail: scan-37a.shadowserver.org, scan-37b.shadowserver.org, scan-37c.shadowserver.org, scan-37d.shadowserver.org,..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=64.62.197.64/26 comment="Maltrail: scan-38c.shadowserver.org, scan-38d.shadowserver.org, scan-38e.shadowserver.org, scan-38f.shadowserver.org,..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=64.62.197.128/26 comment="Maltrail: scan-40g.shadowserver.org, scan-40h.shadowserver.org, scan-40i.shadowserver.org, scan-40j.shadowserver.org,..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=64.62.197.192/27 comment="Maltrail: scan-42k.shadowserver.org, scan-42l.shadowserver.org, scan-42m.shadowserver.org, scan-42n.shadowserver.org,..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=64.62.197.224/28 comment="Maltrail: scan-43aa.shadowserver.org, scan-43ab.shadowserver.org, scan-43ac.shadowserver.org, scan-43m.shadowserver.o..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=64.62.197.8/29 comment="Maltrail: scan-36g.shadowserver.org, scan-36h.shadowserver.org, scan-36i.shadowserver.org, scan-36j.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=64.62.197.16/28 comment="Maltrail: scan-36o.shadowserver.org, scan-44a.shadowserver.org, scan-44b.shadowserver.org, scan-44c.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=64.62.197.32/27 comment="Maltrail: scan-37a.shadowserver.org, scan-37b.shadowserver.org, scan-37c.shadowserver.org, scan-37d.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=64.62.197.64/26 comment="Maltrail: scan-38c.shadowserver.org, scan-38d.shadowserver.org, scan-38e.shadowserver.org, scan-38f.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=64.62.197.128/26 comment="Maltrail: scan-40g.shadowserver.org, scan-40h.shadowserver.org, scan-40i.shadowserver.org, scan-40j.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=64.62.197.192/27 comment="Maltrail: scan-42k.shadowserver.org, scan-42l.shadowserver.org, scan-42m.shadowserver.org, scan-42n.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=64.62.197.224/28 comment="Maltrail: scan-43aa.shadowserver.org, scan-43ab.shadowserver.org, scan-43ac.shadowserver.org, scan-43m.shadowserver.org, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=64.62.197.240/31 comment="Maltrail: scan-43ad.shadowserver.org, scan-43ae.shadowserver.org, scan-51n.shadowserver.org, scan-51o.shadowserver.org" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=64.125.239.0/24 comment="Maltrail: riskiq.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=64.225.4.95/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
@@ -664,22 +664,22 @@
 /ip firewall address-list add address=64.227.182.163/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=65.49.1.10/31 comment="Maltrail: scan-52a.shadowserver.org, scan-52b.shadowserver.org" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=65.49.1.12/30 comment="Maltrail: scan-52c.shadowserver.org, scan-52d.shadowserver.org, scan-52e.shadowserver.org, scan-52f.shadowserver.org" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=65.49.1.16/28 comment="Maltrail: scan-52g.shadowserver.org, scan-52h.shadowserver.org, scan-52i.shadowserver.org, scan-52j.shadowserver.org,..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=65.49.1.32/28 comment="Maltrail: scan-53i.shadowserver.org, scan-53j.shadowserver.org, scan-53k.shadowserver.org, scan-53l.shadowserver.org,..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=65.49.1.48/29 comment="Maltrail: scan-54k.shadowserver.org, scan-54l.shadowserver.org, scan-54m.shadowserver.org, scan-54n.shadowserver.org,..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=65.49.1.16/28 comment="Maltrail: scan-52g.shadowserver.org, scan-52h.shadowserver.org, scan-52i.shadowserver.org, scan-52j.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=65.49.1.32/28 comment="Maltrail: scan-53i.shadowserver.org, scan-53j.shadowserver.org, scan-53k.shadowserver.org, scan-53l.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=65.49.1.48/29 comment="Maltrail: scan-54k.shadowserver.org, scan-54l.shadowserver.org, scan-54m.shadowserver.org, scan-54n.shadowserver.org, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=65.49.1.56/30 comment="Maltrail: scan-55e.shadowserver.org, scan-55f.shadowserver.org, scan-55g.shadowserver.org, scan-55h.shadowserver.org" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=65.49.1.60/31 comment="Maltrail: scan-55i.shadowserver.org, scan-55j.shadowserver.org" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=65.49.1.63/32 comment="Maltrail: scan-55l.shadowserver.org" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=65.49.1.64/27 comment="Maltrail: scan-55m.shadowserver.org, scan-55n.shadowserver.org, scan-56a.shadowserver.org, scan-56b.shadowserver.org,..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=65.49.1.96/28 comment="Maltrail: scan-58c.shadowserver.org, scan-58d.shadowserver.org, scan-58e.shadowserver.org, scan-58f.shadowserver.org,..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=65.49.1.112/29 comment="Maltrail: scan-59e.shadowserver.org, scan-59f.shadowserver.org, scan-59g.shadowserver.org, scan-59h.shadowserver.org,..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=65.49.1.64/27 comment="Maltrail: scan-55m.shadowserver.org, scan-55n.shadowserver.org, scan-56a.shadowserver.org, scan-56b.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=65.49.1.96/28 comment="Maltrail: scan-58c.shadowserver.org, scan-58d.shadowserver.org, scan-58e.shadowserver.org, scan-58f.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=65.49.1.112/29 comment="Maltrail: scan-59e.shadowserver.org, scan-59f.shadowserver.org, scan-59g.shadowserver.org, scan-59h.shadowserver.org, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=65.49.1.120/31 comment="Maltrail: scan-59m.shadowserver.org, scan-59n.shadowserver.org" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=65.49.20.66/31 comment="Maltrail: scan-17.shadowserver.org, scan-18.shadowserver.org" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=65.49.20.68/30 comment="Maltrail: scan-17a.shadowserver.org, scan-18a.shadowserver.org, scan-19.shadowserver.org, scan-20.shadowserver.org" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=65.49.20.72/29 comment="Maltrail: scan-17b.shadowserver.org, scan-17c.shadowserver.org, scan-18b.shadowserver.org, scan-18c.shadowserver.org,..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=65.49.20.80/28 comment="Maltrail: scan-17d.shadowserver.org, scan-17e.shadowserver.org, scan-17f.shadowserver.org, scan-17g.shadowserver.org,..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=65.49.20.96/28 comment="Maltrail: scan-17h.shadowserver.org, scan-17i.shadowserver.org, scan-17j.shadowserver.org, scan-17k.shadowserver.org,..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=65.49.20.112/29 comment="Maltrail: scan-17l.shadowserver.org, scan-17m.shadowserver.org, scan-18l.shadowserver.org, scan-18m.shadowserver.org,..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=65.49.20.72/29 comment="Maltrail: scan-17b.shadowserver.org, scan-17c.shadowserver.org, scan-18b.shadowserver.org, scan-18c.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=65.49.20.80/28 comment="Maltrail: scan-17d.shadowserver.org, scan-17e.shadowserver.org, scan-17f.shadowserver.org, scan-17g.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=65.49.20.96/28 comment="Maltrail: scan-17h.shadowserver.org, scan-17i.shadowserver.org, scan-17j.shadowserver.org, scan-17k.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=65.49.20.112/29 comment="Maltrail: scan-17l.shadowserver.org, scan-17m.shadowserver.org, scan-18l.shadowserver.org, scan-18m.shadowserver.org, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=65.49.20.120/30 comment="Maltrail: scan-17n.shadowserver.org, scan-18n.shadowserver.org, scan-19m.shadowserver.org, scan-20m.shadowserver.org" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=65.49.20.124/31 comment="Maltrail: scan-19n.shadowserver.org, scan-20n.shadowserver.org" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=65.49.20.126/32 comment="Maltrail: scan-17o.shadowserver.org" list=MALTRAIL-SCANNER
@@ -699,53 +699,53 @@
 /ip firewall address-list add address=66.240.236.119/32 comment="Maltrail: census6.shodan.io" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.1/32 comment="Maltrail: researchscanner01.eecs.berkeley.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.2/31 comment="Maltrail: researchscanner02.eecs.berkeley.edu, researchscanner03.eecs.berkeley.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=67.21.36.4/30 comment="Maltrail: researchscanner04.eecs.berkeley.edu, researchscanner05.eecs.berkeley.edu, researchscanner06.eecs.berkeley.e..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=67.21.36.8/29 comment="Maltrail: researchscanner08.eecs.berkeley.edu, researchscanner09.eecs.berkeley.edu, researchscanner10.eecs.berkeley.e..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=67.21.36.16/28 comment="Maltrail: researchscanner16.eecs.berkeley.edu, researchscanner17.eecs.berkeley.edu, researchscanner18.eecs.berkeley.e..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=67.21.36.32/28 comment="Maltrail: researchscanner32.eecs.berkeley.edu, researchscanner33.eecs.berkeley.edu, researchscanner34.eecs.berkeley.e..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=67.21.36.48/29 comment="Maltrail: researchscanner48.eecs.berkeley.edu, researchscanner49.eecs.berkeley.edu, researchscanner50.eecs.berkeley.e..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=67.21.36.4/30 comment="Maltrail: researchscanner04.eecs.berkeley.edu, researchscanner05.eecs.berkeley.edu, researchscanner06.eecs.berkeley.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=67.21.36.8/29 comment="Maltrail: researchscanner08.eecs.berkeley.edu, researchscanner09.eecs.berkeley.edu, researchscanner10.eecs.berkeley.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=67.21.36.16/28 comment="Maltrail: researchscanner16.eecs.berkeley.edu, researchscanner17.eecs.berkeley.edu, researchscanner18.eecs.berkeley.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=67.21.36.32/28 comment="Maltrail: researchscanner32.eecs.berkeley.edu, researchscanner33.eecs.berkeley.edu, researchscanner34.eecs.berkeley.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=67.21.36.48/29 comment="Maltrail: researchscanner48.eecs.berkeley.edu, researchscanner49.eecs.berkeley.edu, researchscanner50.eecs.berkeley.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.57/32 comment="Maltrail: researchscanner57.eecs.berkeley.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.58/31 comment="Maltrail: researchscanner58.eecs.berkeley.edu, researchscanner59.eecs.berkeley.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=67.21.36.60/30 comment="Maltrail: researchscanner60.eecs.berkeley.edu, researchscanner61.eecs.berkeley.edu, researchscanner62.eecs.berkeley.e..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=67.21.36.64/29 comment="Maltrail: researchscanner64.eecs.berkeley.edu, researchscanner65.eecs.berkeley.edu, researchscanner66.eecs.berkeley.e..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=67.21.36.72/30 comment="Maltrail: researchscanner72.eecs.berkeley.edu, researchscanner73.eecs.berkeley.edu, researchscanner74.eecs.berkeley.e..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=67.21.36.60/30 comment="Maltrail: researchscanner60.eecs.berkeley.edu, researchscanner61.eecs.berkeley.edu, researchscanner62.eecs.berkeley.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=67.21.36.64/29 comment="Maltrail: researchscanner64.eecs.berkeley.edu, researchscanner65.eecs.berkeley.edu, researchscanner66.eecs.berkeley.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=67.21.36.72/30 comment="Maltrail: researchscanner72.eecs.berkeley.edu, researchscanner73.eecs.berkeley.edu, researchscanner74.eecs.berkeley.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.76/31 comment="Maltrail: researchscanner76.eecs.berkeley.edu, researchscanner77.eecs.berkeley.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.79/32 comment="Maltrail: researchscanner79.eecs.berkeley.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=67.21.36.80/28 comment="Maltrail: researchscanner80.eecs.berkeley.edu, researchscanner81.eecs.berkeley.edu, researchscanner82.eecs.berkeley.e..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=67.21.36.96/27 comment="Maltrail: researchscanner100.eecs.berkeley.edu, researchscanner101.eecs.berkeley.edu, researchscanner102.eecs.berkele..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=67.21.36.128/30 comment="Maltrail: researchscanner128.eecs.berkeley.edu, researchscanner129.eecs.berkeley.edu, researchscanner130.eecs.berkele..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=67.21.36.80/28 comment="Maltrail: researchscanner80.eecs.berkeley.edu, researchscanner81.eecs.berkeley.edu, researchscanner82.eecs.berkeley.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=67.21.36.96/27 comment="Maltrail: researchscanner100.eecs.berkeley.edu, researchscanner101.eecs.berkeley.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=67.21.36.128/30 comment="Maltrail: researchscanner128.eecs.berkeley.edu, researchscanner129.eecs.berkeley.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.133/32 comment="Maltrail: researchscanner133.eecs.berkeley.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.134/31 comment="Maltrail: researchscanner134.eecs.berkeley.edu, researchscanner135.eecs.berkeley.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=67.21.36.136/29 comment="Maltrail: researchscanner136.eecs.berkeley.edu, researchscanner137.eecs.berkeley.edu, researchscanner138.eecs.berkele..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=67.21.36.144/29 comment="Maltrail: researchscanner144.eecs.berkeley.edu, researchscanner145.eecs.berkeley.edu, researchscanner146.eecs.berkele..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=67.21.36.136/29 comment="Maltrail: researchscanner136.eecs.berkeley.edu, researchscanner137.eecs.berkeley.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=67.21.36.144/29 comment="Maltrail: researchscanner144.eecs.berkeley.edu, researchscanner145.eecs.berkeley.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.152/31 comment="Maltrail: researchscanner152.eecs.berkeley.edu, researchscanner153.eecs.berkeley.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.155/32 comment="Maltrail: researchscanner155.eecs.berkeley.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=67.21.36.156/30 comment="Maltrail: researchscanner156.eecs.berkeley.edu, researchscanner157.eecs.berkeley.edu, researchscanner158.eecs.berkele..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=67.21.36.160/29 comment="Maltrail: researchscanner160.eecs.berkeley.edu, researchscanner161.eecs.berkeley.edu, researchscanner162.eecs.berkele..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=67.21.36.156/30 comment="Maltrail: researchscanner156.eecs.berkeley.edu, researchscanner157.eecs.berkeley.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=67.21.36.160/29 comment="Maltrail: researchscanner160.eecs.berkeley.edu, researchscanner161.eecs.berkeley.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.170/31 comment="Maltrail: researchscanner170.eecs.berkeley.edu, researchscanner171.eecs.berkeley.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=67.21.36.172/30 comment="Maltrail: researchscanner172.eecs.berkeley.edu, researchscanner173.eecs.berkeley.edu, researchscanner174.eecs.berkele..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=67.21.36.176/29 comment="Maltrail: researchscanner176.eecs.berkeley.edu, researchscanner177.eecs.berkeley.edu, researchscanner178.eecs.berkele..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=67.21.36.184/30 comment="Maltrail: researchscanner184.eecs.berkeley.edu, researchscanner185.eecs.berkeley.edu, researchscanner186.eecs.berkele..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=67.21.36.172/30 comment="Maltrail: researchscanner172.eecs.berkeley.edu, researchscanner173.eecs.berkeley.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=67.21.36.176/29 comment="Maltrail: researchscanner176.eecs.berkeley.edu, researchscanner177.eecs.berkeley.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=67.21.36.184/30 comment="Maltrail: researchscanner184.eecs.berkeley.edu, researchscanner185.eecs.berkeley.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.188/31 comment="Maltrail: researchscanner188.eecs.berkeley.edu, researchscanner189.eecs.berkeley.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.190/32 comment="Maltrail: researchscanner190.eecs.berkeley.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.192/32 comment="Maltrail: researchscanner192.eecs.berkeley.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.194/31 comment="Maltrail: researchscanner194.eecs.berkeley.edu, researchscanner195.eecs.berkeley.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.196/31 comment="Maltrail: researchscanner196.eecs.berkeley.edu, researchscanner197.eecs.berkeley.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.198/32 comment="Maltrail: researchscanner198.eecs.berkeley.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=67.21.36.200/30 comment="Maltrail: researchscanner200.eecs.berkeley.edu, researchscanner201.eecs.berkeley.edu, researchscanner202.eecs.berkele..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=67.21.36.200/30 comment="Maltrail: researchscanner200.eecs.berkeley.edu, researchscanner201.eecs.berkeley.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.204/31 comment="Maltrail: researchscanner204.eecs.berkeley.edu, researchscanner205.eecs.berkeley.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.207/32 comment="Maltrail: researchscanner207.eecs.berkeley.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.209/32 comment="Maltrail: researchscanner209.eecs.berkeley.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.210/31 comment="Maltrail: researchscanner210.eecs.berkeley.edu, researchscanner211.eecs.berkeley.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=67.21.36.212/30 comment="Maltrail: researchscanner212.eecs.berkeley.edu, researchscanner213.eecs.berkeley.edu, researchscanner214.eecs.berkele..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=67.21.36.216/29 comment="Maltrail: researchscanner216.eecs.berkeley.edu, researchscanner217.eecs.berkeley.edu, researchscanner218.eecs.berkele..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=67.21.36.224/30 comment="Maltrail: researchscanner224.eecs.berkeley.edu, researchscanner225.eecs.berkeley.edu, researchscanner226.eecs.berkele..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=67.21.36.212/30 comment="Maltrail: researchscanner212.eecs.berkeley.edu, researchscanner213.eecs.berkeley.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=67.21.36.216/29 comment="Maltrail: researchscanner216.eecs.berkeley.edu, researchscanner217.eecs.berkeley.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=67.21.36.224/30 comment="Maltrail: researchscanner224.eecs.berkeley.edu, researchscanner225.eecs.berkeley.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.228/31 comment="Maltrail: researchscanner228.eecs.berkeley.edu, researchscanner229.eecs.berkeley.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.230/32 comment="Maltrail: researchscanner230.eecs.berkeley.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.232/31 comment="Maltrail: researchscanner232.eecs.berkeley.edu, researchscanner233.eecs.berkeley.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.235/32 comment="Maltrail: researchscanner235.eecs.berkeley.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=67.21.36.236/30 comment="Maltrail: researchscanner236.eecs.berkeley.edu, researchscanner237.eecs.berkeley.edu, researchscanner238.eecs.berkele..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=67.21.36.240/29 comment="Maltrail: researchscanner240.eecs.berkeley.edu, researchscanner241.eecs.berkeley.edu, researchscanner242.eecs.berkele..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=67.21.36.236/30 comment="Maltrail: researchscanner236.eecs.berkeley.edu, researchscanner237.eecs.berkeley.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=67.21.36.240/29 comment="Maltrail: researchscanner240.eecs.berkeley.edu, researchscanner241.eecs.berkeley.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.248/31 comment="Maltrail: researchscanner248.eecs.berkeley.edu, researchscanner249.eecs.berkeley.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.250/32 comment="Maltrail: researchscanner250.eecs.berkeley.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=67.21.36.253/32 comment="Maltrail: researchscanner.eecs.berkeley.edu" list=MALTRAIL-SCANNER
@@ -980,9 +980,9 @@
 /ip firewall address-list add address=74.82.47.1/32 comment="Maltrail: (unknown)" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=74.82.47.2/31 comment="Maltrail: scan-09.shadowserver.org, scan-10.shadowserver.org" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=74.82.47.4/30 comment="Maltrail: scan-09a.shadowserver.org, scan-10a.shadowserver.org, scan-11.shadowserver.org, scan-12.shadowserver.org" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=74.82.47.8/29 comment="Maltrail: scan-09b.shadowserver.org, scan-09c.shadowserver.org, scan-10b.shadowserver.org, scan-10c.shadowserver.org,..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=74.82.47.16/28 comment="Maltrail: scan-09d.shadowserver.org, scan-09e.shadowserver.org, scan-09f.shadowserver.org, scan-09g.shadowserver.org,..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=74.82.47.32/27 comment="Maltrail: (unknown), scan-09h.shadowserver.org, scan-09i.shadowserver.org, scan-09j.shadowserver.org, scan-09l.shadow..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=74.82.47.8/29 comment="Maltrail: scan-09b.shadowserver.org, scan-09c.shadowserver.org, scan-10b.shadowserver.org, scan-10c.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=74.82.47.16/28 comment="Maltrail: scan-09d.shadowserver.org, scan-09e.shadowserver.org, scan-09f.shadowserver.org, scan-09g.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=74.82.47.32/27 comment="Maltrail: (unknown), scan-09h.shadowserver.org, scan-09i.shadowserver.org, scan-09j.shadowserver.org, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=74.207.228.73/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=74.207.228.186/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=74.207.228.243/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
@@ -2182,13 +2182,13 @@
 /ip firewall address-list add address=137.184.234.148/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=137.184.236.130/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=137.184.236.210/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=137.226.113.8/29 comment="Maltrail: researchscan1.comsys.rwth-aachen.de, researchscan2.comsys.rwth-aachen.de, researchscan3.comsys.rwth-aachen...." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=137.226.113.16/29 comment="Maltrail: researchscan10.comsys.rwth-aachen.de, researchscan11.comsys.rwth-aachen.de, researchscan12.comsys.rwth-aach..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=137.226.113.24/30 comment="Maltrail: researchscan17.comsys.rwth-aachen.de, researchscan18.comsys.rwth-aachen.de, researchscan19.comsys.rwth-aach..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=137.226.113.8/29 comment="Maltrail: researchscan1.comsys.rwth-aachen.de, researchscan2.comsys.rwth-aachen.de, researchscan3.comsys.rwth-aachen.de, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=137.226.113.16/29 comment="Maltrail: researchscan10.comsys.rwth-aachen.de, researchscan11.comsys.rwth-aachen.de, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=137.226.113.24/30 comment="Maltrail: researchscan17.comsys.rwth-aachen.de, researchscan18.comsys.rwth-aachen.de, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=137.226.113.28/32 comment="Maltrail: researchscan21.comsys.rwth-aachen.de" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=137.226.113.30/31 comment="Maltrail: researchscan22.comsys.rwth-aachen.de, researchscan23.comsys.rwth-aachen.de" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=137.226.113.32/29 comment="Maltrail: researchscan24.comsys.rwth-aachen.de, researchscan25.comsys.rwth-aachen.de, researchscan26.comsys.rwth-aach..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=137.226.113.40/30 comment="Maltrail: researchscan32.comsys.rwth-aachen.de, researchscan33.comsys.rwth-aachen.de, researchscan34.comsys.rwth-aach..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=137.226.113.32/29 comment="Maltrail: researchscan24.comsys.rwth-aachen.de, researchscan25.comsys.rwth-aachen.de, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=137.226.113.40/30 comment="Maltrail: researchscan32.comsys.rwth-aachen.de, researchscan33.comsys.rwth-aachen.de, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=137.226.113.44/31 comment="Maltrail: researchscan36.comsys.rwth-aachen.de, researchscan37.comsys.rwth-aachen.de" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=137.226.113.56/32 comment="Maltrail: researchscan48.comsys.rwth-aachen.de" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=138.68.0.169/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
@@ -2628,111 +2628,111 @@
 /ip firewall address-list add address=139.177.205.248/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.121.1/32 comment="Maltrail: researchscan001.eecs.umich.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.121.2/31 comment="Maltrail: researchscan002.eecs.umich.edu, researchscan003.eecs.umich.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.121.4/30 comment="Maltrail: researchscan004.eecs.umich.edu, researchscan005.eecs.umich.edu, researchscan006.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.121.4/30 comment="Maltrail: researchscan004.eecs.umich.edu, researchscan005.eecs.umich.edu, researchscan006.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.121.8/31 comment="Maltrail: researchscan008.eecs.umich.edu, researchscan009.eecs.umich.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.121.11/32 comment="Maltrail: researchscan011.eecs.umich.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.121.12/30 comment="Maltrail: researchscan012.eecs.umich.edu, researchscan013.eecs.umich.edu, researchscan014.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.121.16/28 comment="Maltrail: researchscan016.eecs.umich.edu, researchscan017.eecs.umich.edu, researchscan018.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.121.32/30 comment="Maltrail: researchscan032.eecs.umich.edu, researchscan033.eecs.umich.edu, researchscan034.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.121.12/30 comment="Maltrail: researchscan012.eecs.umich.edu, researchscan013.eecs.umich.edu, researchscan014.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.121.16/28 comment="Maltrail: researchscan016.eecs.umich.edu, researchscan017.eecs.umich.edu, researchscan018.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.121.32/30 comment="Maltrail: researchscan032.eecs.umich.edu, researchscan033.eecs.umich.edu, researchscan034.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.121.37/32 comment="Maltrail: researchscan037.eecs.umich.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.121.38/31 comment="Maltrail: researchscan038.eecs.umich.edu, researchscan039.eecs.umich.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.121.40/29 comment="Maltrail: researchscan040.eecs.umich.edu, researchscan041.eecs.umich.edu, researchscan042.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.121.48/28 comment="Maltrail: researchscan048.eecs.umich.edu, researchscan049.eecs.umich.edu, researchscan050.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.121.64/29 comment="Maltrail: researchscan064.eecs.umich.edu, researchscan065.eecs.umich.edu, researchscan066.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.121.72/30 comment="Maltrail: researchscan072.eecs.umich.edu, researchscan073.eecs.umich.edu, researchscan074.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.121.40/29 comment="Maltrail: researchscan040.eecs.umich.edu, researchscan041.eecs.umich.edu, researchscan042.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.121.48/28 comment="Maltrail: researchscan048.eecs.umich.edu, researchscan049.eecs.umich.edu, researchscan050.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.121.64/29 comment="Maltrail: researchscan064.eecs.umich.edu, researchscan065.eecs.umich.edu, researchscan066.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.121.72/30 comment="Maltrail: researchscan072.eecs.umich.edu, researchscan073.eecs.umich.edu, researchscan074.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.121.76/32 comment="Maltrail: researchscan076.eecs.umich.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.121.78/31 comment="Maltrail: researchscan078.eecs.umich.edu, researchscan079.eecs.umich.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.121.80/28 comment="Maltrail: researchscan080.eecs.umich.edu, researchscan081.eecs.umich.edu, researchscan082.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.121.96/28 comment="Maltrail: researchscan096.eecs.umich.edu, researchscan097.eecs.umich.edu, researchscan098.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.121.80/28 comment="Maltrail: researchscan080.eecs.umich.edu, researchscan081.eecs.umich.edu, researchscan082.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.121.96/28 comment="Maltrail: researchscan096.eecs.umich.edu, researchscan097.eecs.umich.edu, researchscan098.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.121.113/32 comment="Maltrail: researchscan113.eecs.umich.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.121.114/31 comment="Maltrail: researchscan114.eecs.umich.edu, researchscan115.eecs.umich.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.121.116/30 comment="Maltrail: researchscan116.eecs.umich.edu, researchscan117.eecs.umich.edu, researchscan118.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.121.120/29 comment="Maltrail: researchscan120.eecs.umich.edu, researchscan121.eecs.umich.edu, researchscan122.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.121.128/27 comment="Maltrail: researchscan128.eecs.umich.edu, researchscan129.eecs.umich.edu, researchscan130.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.121.160/28 comment="Maltrail: researchscan160.eecs.umich.edu, researchscan161.eecs.umich.edu, researchscan162.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.121.116/30 comment="Maltrail: researchscan116.eecs.umich.edu, researchscan117.eecs.umich.edu, researchscan118.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.121.120/29 comment="Maltrail: researchscan120.eecs.umich.edu, researchscan121.eecs.umich.edu, researchscan122.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.121.128/27 comment="Maltrail: researchscan128.eecs.umich.edu, researchscan129.eecs.umich.edu, researchscan130.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.121.160/28 comment="Maltrail: researchscan160.eecs.umich.edu, researchscan161.eecs.umich.edu, researchscan162.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.121.177/32 comment="Maltrail: researchscan177.eecs.umich.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.121.178/31 comment="Maltrail: researchscan178.eecs.umich.edu, researchscan179.eecs.umich.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.121.180/30 comment="Maltrail: researchscan180.eecs.umich.edu, researchscan181.eecs.umich.edu, researchscan182.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.121.184/29 comment="Maltrail: researchscan184.eecs.umich.edu, researchscan185.eecs.umich.edu, researchscan186.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.121.180/30 comment="Maltrail: researchscan180.eecs.umich.edu, researchscan181.eecs.umich.edu, researchscan182.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.121.184/29 comment="Maltrail: researchscan184.eecs.umich.edu, researchscan185.eecs.umich.edu, researchscan186.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.121.192/31 comment="Maltrail: researchscan192.eecs.umich.edu, researchscan193.eecs.umich.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.121.194/32 comment="Maltrail: researchscan194.eecs.umich.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.121.196/30 comment="Maltrail: researchscan196.eecs.umich.edu, researchscan197.eecs.umich.edu, researchscan198.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.121.200/29 comment="Maltrail: researchscan200.eecs.umich.edu, researchscan201.eecs.umich.edu, researchscan202.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.121.208/28 comment="Maltrail: researchscan208.eecs.umich.edu, researchscan209.eecs.umich.edu, researchscan210.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.121.224/28 comment="Maltrail: researchscan224.eecs.umich.edu, researchscan225.eecs.umich.edu, researchscan226.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.121.240/29 comment="Maltrail: researchscan240.eecs.umich.edu, researchscan241.eecs.umich.edu, researchscan242.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.121.248/30 comment="Maltrail: researchscan248.eecs.umich.edu, researchscan249.eecs.umich.edu, researchscan250.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.121.196/30 comment="Maltrail: researchscan196.eecs.umich.edu, researchscan197.eecs.umich.edu, researchscan198.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.121.200/29 comment="Maltrail: researchscan200.eecs.umich.edu, researchscan201.eecs.umich.edu, researchscan202.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.121.208/28 comment="Maltrail: researchscan208.eecs.umich.edu, researchscan209.eecs.umich.edu, researchscan210.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.121.224/28 comment="Maltrail: researchscan224.eecs.umich.edu, researchscan225.eecs.umich.edu, researchscan226.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.121.240/29 comment="Maltrail: researchscan240.eecs.umich.edu, researchscan241.eecs.umich.edu, researchscan242.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.121.248/30 comment="Maltrail: researchscan248.eecs.umich.edu, researchscan249.eecs.umich.edu, researchscan250.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.121.252/31 comment="Maltrail: researchscan252.eecs.umich.edu, researchscan253.eecs.umich.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.121.254/32 comment="Maltrail: researchscan254.eecs.umich.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.122.1/32 comment="Maltrail: researchscan256.eecs.umich.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.122.2/31 comment="Maltrail: researchscan257.eecs.umich.edu, researchscan258.eecs.umich.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.122.4/30 comment="Maltrail: researchscan259.eecs.umich.edu, researchscan260.eecs.umich.edu, researchscan261.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.122.8/29 comment="Maltrail: researchscan263.eecs.umich.edu, researchscan264.eecs.umich.edu, researchscan265.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.122.16/28 comment="Maltrail: researchscan271.eecs.umich.edu, researchscan272.eecs.umich.edu, researchscan273.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.122.32/27 comment="Maltrail: researchscan287.eecs.umich.edu, researchscan288.eecs.umich.edu, researchscan289.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.122.64/29 comment="Maltrail: researchscan319.eecs.umich.edu, researchscan320.eecs.umich.edu, researchscan321.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.122.4/30 comment="Maltrail: researchscan259.eecs.umich.edu, researchscan260.eecs.umich.edu, researchscan261.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.122.8/29 comment="Maltrail: researchscan263.eecs.umich.edu, researchscan264.eecs.umich.edu, researchscan265.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.122.16/28 comment="Maltrail: researchscan271.eecs.umich.edu, researchscan272.eecs.umich.edu, researchscan273.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.122.32/27 comment="Maltrail: researchscan287.eecs.umich.edu, researchscan288.eecs.umich.edu, researchscan289.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.122.64/29 comment="Maltrail: researchscan319.eecs.umich.edu, researchscan320.eecs.umich.edu, researchscan321.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.122.72/31 comment="Maltrail: researchscan327.eecs.umich.edu, researchscan328.eecs.umich.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.122.74/32 comment="Maltrail: researchscan329.eecs.umich.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.122.76/30 comment="Maltrail: researchscan331.eecs.umich.edu, researchscan332.eecs.umich.edu, researchscan333.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.122.80/28 comment="Maltrail: researchscan335.eecs.umich.edu, researchscan336.eecs.umich.edu, researchscan337.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.122.96/27 comment="Maltrail: researchscan351.eecs.umich.edu, researchscan352.eecs.umich.edu, researchscan353.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.122.128/28 comment="Maltrail: researchscan383.eecs.umich.edu, researchscan384.eecs.umich.edu, researchscan385.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.122.144/29 comment="Maltrail: researchscan399.eecs.umich.edu, researchscan400.eecs.umich.edu, researchscan401.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.122.152/30 comment="Maltrail: researchscan407.eecs.umich.edu, researchscan408.eecs.umich.edu, researchscan409.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.122.76/30 comment="Maltrail: researchscan331.eecs.umich.edu, researchscan332.eecs.umich.edu, researchscan333.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.122.80/28 comment="Maltrail: researchscan335.eecs.umich.edu, researchscan336.eecs.umich.edu, researchscan337.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.122.96/27 comment="Maltrail: researchscan351.eecs.umich.edu, researchscan352.eecs.umich.edu, researchscan353.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.122.128/28 comment="Maltrail: researchscan383.eecs.umich.edu, researchscan384.eecs.umich.edu, researchscan385.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.122.144/29 comment="Maltrail: researchscan399.eecs.umich.edu, researchscan400.eecs.umich.edu, researchscan401.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.122.152/30 comment="Maltrail: researchscan407.eecs.umich.edu, researchscan408.eecs.umich.edu, researchscan409.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.122.157/32 comment="Maltrail: researchscan412.eecs.umich.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.122.158/31 comment="Maltrail: researchscan413.eecs.umich.edu, researchscan414.eecs.umich.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.122.160/30 comment="Maltrail: researchscan415.eecs.umich.edu, researchscan416.eecs.umich.edu, researchscan417.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.122.160/30 comment="Maltrail: researchscan415.eecs.umich.edu, researchscan416.eecs.umich.edu, researchscan417.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.122.164/31 comment="Maltrail: researchscan419.eecs.umich.edu, researchscan420.eecs.umich.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.122.167/32 comment="Maltrail: researchscan422.eecs.umich.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.122.169/32 comment="Maltrail: researchscan424.eecs.umich.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.122.170/31 comment="Maltrail: researchscan425.eecs.umich.edu, researchscan426.eecs.umich.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.122.172/30 comment="Maltrail: researchscan427.eecs.umich.edu, researchscan428.eecs.umich.edu, researchscan429.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.122.176/28 comment="Maltrail: researchscan431.eecs.umich.edu, researchscan432.eecs.umich.edu, researchscan433.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.122.192/29 comment="Maltrail: researchscan447.eecs.umich.edu, researchscan448.eecs.umich.edu, researchscan449.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.122.200/30 comment="Maltrail: researchscan455.eecs.umich.edu, researchscan456.eecs.umich.edu, researchscan457.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.122.172/30 comment="Maltrail: researchscan427.eecs.umich.edu, researchscan428.eecs.umich.edu, researchscan429.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.122.176/28 comment="Maltrail: researchscan431.eecs.umich.edu, researchscan432.eecs.umich.edu, researchscan433.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.122.192/29 comment="Maltrail: researchscan447.eecs.umich.edu, researchscan448.eecs.umich.edu, researchscan449.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.122.200/30 comment="Maltrail: researchscan455.eecs.umich.edu, researchscan456.eecs.umich.edu, researchscan457.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.122.205/32 comment="Maltrail: researchscan460.eecs.umich.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.122.206/31 comment="Maltrail: researchscan461.eecs.umich.edu, researchscan462.eecs.umich.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.122.208/30 comment="Maltrail: researchscan463.eecs.umich.edu, researchscan464.eecs.umich.edu, researchscan465.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.122.208/30 comment="Maltrail: researchscan463.eecs.umich.edu, researchscan464.eecs.umich.edu, researchscan465.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.122.212/31 comment="Maltrail: researchscan467.eecs.umich.edu, researchscan468.eecs.umich.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.122.215/32 comment="Maltrail: researchscan470.eecs.umich.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.122.216/29 comment="Maltrail: researchscan471.eecs.umich.edu, researchscan472.eecs.umich.edu, researchscan473.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.122.224/28 comment="Maltrail: researchscan479.eecs.umich.edu, researchscan480.eecs.umich.edu, researchscan481.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.122.240/29 comment="Maltrail: researchscan495.eecs.umich.edu, researchscan496.eecs.umich.edu, researchscan497.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.122.248/30 comment="Maltrail: researchscan503.eecs.umich.edu, researchscan504.eecs.umich.edu, researchscan505.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.122.216/29 comment="Maltrail: researchscan471.eecs.umich.edu, researchscan472.eecs.umich.edu, researchscan473.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.122.224/28 comment="Maltrail: researchscan479.eecs.umich.edu, researchscan480.eecs.umich.edu, researchscan481.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.122.240/29 comment="Maltrail: researchscan495.eecs.umich.edu, researchscan496.eecs.umich.edu, researchscan497.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.122.248/30 comment="Maltrail: researchscan503.eecs.umich.edu, researchscan504.eecs.umich.edu, researchscan505.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.122.252/31 comment="Maltrail: researchscan507.eecs.umich.edu, researchscan508.eecs.umich.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.122.254/32 comment="Maltrail: researchscan509.eecs.umich.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.123.2/31 comment="Maltrail: researchscan512.eecs.umich.edu, researchscan513.eecs.umich.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.123.4/30 comment="Maltrail: researchscan514.eecs.umich.edu, researchscan515.eecs.umich.edu, researchscan516.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.123.8/29 comment="Maltrail: researchscan518.eecs.umich.edu, researchscan519.eecs.umich.edu, researchscan520.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.123.16/28 comment="Maltrail: researchscan526.eecs.umich.edu, researchscan527.eecs.umich.edu, researchscan528.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.123.32/28 comment="Maltrail: researchscan542.eecs.umich.edu, researchscan543.eecs.umich.edu, researchscan544.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.123.48/30 comment="Maltrail: researchscan558.eecs.umich.edu, researchscan559.eecs.umich.edu, researchscan560.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.123.4/30 comment="Maltrail: researchscan514.eecs.umich.edu, researchscan515.eecs.umich.edu, researchscan516.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.123.8/29 comment="Maltrail: researchscan518.eecs.umich.edu, researchscan519.eecs.umich.edu, researchscan520.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.123.16/28 comment="Maltrail: researchscan526.eecs.umich.edu, researchscan527.eecs.umich.edu, researchscan528.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.123.32/28 comment="Maltrail: researchscan542.eecs.umich.edu, researchscan543.eecs.umich.edu, researchscan544.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.123.48/30 comment="Maltrail: researchscan558.eecs.umich.edu, researchscan559.eecs.umich.edu, researchscan560.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.123.52/31 comment="Maltrail: researchscan562.eecs.umich.edu, researchscan563.eecs.umich.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.123.55/32 comment="Maltrail: researchscan565.eecs.umich.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.123.56/29 comment="Maltrail: researchscan566.eecs.umich.edu, researchscan567.eecs.umich.edu, researchscan568.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.123.56/29 comment="Maltrail: researchscan566.eecs.umich.edu, researchscan567.eecs.umich.edu, researchscan568.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.123.64/31 comment="Maltrail: researchscan574.eecs.umich.edu, researchscan575.eecs.umich.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.123.67/32 comment="Maltrail: researchscan577.eecs.umich.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.123.68/30 comment="Maltrail: researchscan578.eecs.umich.edu, researchscan579.eecs.umich.edu, researchscan580.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.123.72/29 comment="Maltrail: researchscan582.eecs.umich.edu, researchscan583.eecs.umich.edu, researchscan584.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.123.80/28 comment="Maltrail: researchscan590.eecs.umich.edu, researchscan591.eecs.umich.edu, researchscan592.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.123.96/27 comment="Maltrail: researchscan606.eecs.umich.edu, researchscan607.eecs.umich.edu, researchscan608.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.123.128/27 comment="Maltrail: researchscan638.eecs.umich.edu, researchscan639.eecs.umich.edu, researchscan640.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.123.68/30 comment="Maltrail: researchscan578.eecs.umich.edu, researchscan579.eecs.umich.edu, researchscan580.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.123.72/29 comment="Maltrail: researchscan582.eecs.umich.edu, researchscan583.eecs.umich.edu, researchscan584.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.123.80/28 comment="Maltrail: researchscan590.eecs.umich.edu, researchscan591.eecs.umich.edu, researchscan592.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.123.96/27 comment="Maltrail: researchscan606.eecs.umich.edu, researchscan607.eecs.umich.edu, researchscan608.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.123.128/27 comment="Maltrail: researchscan638.eecs.umich.edu, researchscan639.eecs.umich.edu, researchscan640.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.123.160/31 comment="Maltrail: researchscan670.eecs.umich.edu, researchscan671.eecs.umich.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.123.163/32 comment="Maltrail: researchscan673.eecs.umich.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.123.164/30 comment="Maltrail: researchscan674.eecs.umich.edu, researchscan675.eecs.umich.edu, researchscan676.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.123.168/29 comment="Maltrail: researchscan678.eecs.umich.edu, researchscan679.eecs.umich.edu, researchscan680.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.123.176/28 comment="Maltrail: researchscan686.eecs.umich.edu, researchscan687.eecs.umich.edu, researchscan688.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.123.192/30 comment="Maltrail: researchscan702.eecs.umich.edu, researchscan703.eecs.umich.edu, researchscan704.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.123.164/30 comment="Maltrail: researchscan674.eecs.umich.edu, researchscan675.eecs.umich.edu, researchscan676.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.123.168/29 comment="Maltrail: researchscan678.eecs.umich.edu, researchscan679.eecs.umich.edu, researchscan680.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.123.176/28 comment="Maltrail: researchscan686.eecs.umich.edu, researchscan687.eecs.umich.edu, researchscan688.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.123.192/30 comment="Maltrail: researchscan702.eecs.umich.edu, researchscan703.eecs.umich.edu, researchscan704.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.123.197/32 comment="Maltrail: researchscan707.eecs.umich.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.123.198/31 comment="Maltrail: researchscan708.eecs.umich.edu, researchscan709.eecs.umich.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.123.200/29 comment="Maltrail: researchscan710.eecs.umich.edu, researchscan711.eecs.umich.edu, researchscan712.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.123.208/30 comment="Maltrail: researchscan718.eecs.umich.edu, researchscan719.eecs.umich.edu, researchscan720.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.123.200/29 comment="Maltrail: researchscan710.eecs.umich.edu, researchscan711.eecs.umich.edu, researchscan712.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.123.208/30 comment="Maltrail: researchscan718.eecs.umich.edu, researchscan719.eecs.umich.edu, researchscan720.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.123.212/31 comment="Maltrail: researchscan722.eecs.umich.edu, researchscan723.eecs.umich.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.123.215/32 comment="Maltrail: researchscan725.eecs.umich.edu" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.123.216/29 comment="Maltrail: researchscan726.eecs.umich.edu, researchscan727.eecs.umich.edu, researchscan728.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.123.224/28 comment="Maltrail: researchscan734.eecs.umich.edu, researchscan735.eecs.umich.edu, researchscan736.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.123.240/29 comment="Maltrail: researchscan750.eecs.umich.edu, researchscan751.eecs.umich.edu, researchscan752.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=141.212.123.248/30 comment="Maltrail: researchscan758.eecs.umich.edu, researchscan759.eecs.umich.edu, researchscan760.eecs.umich.edu, researchsca..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.123.216/29 comment="Maltrail: researchscan726.eecs.umich.edu, researchscan727.eecs.umich.edu, researchscan728.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.123.224/28 comment="Maltrail: researchscan734.eecs.umich.edu, researchscan735.eecs.umich.edu, researchscan736.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.123.240/29 comment="Maltrail: researchscan750.eecs.umich.edu, researchscan751.eecs.umich.edu, researchscan752.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=141.212.123.248/30 comment="Maltrail: researchscan758.eecs.umich.edu, researchscan759.eecs.umich.edu, researchscan760.eecs.umich.edu, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.123.252/31 comment="Maltrail: researchscan762.eecs.umich.edu, researchscan763.eecs.umich.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=141.212.123.254/32 comment="Maltrail: researchscan764.eecs.umich.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=142.93.4.117/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
@@ -3425,7 +3425,7 @@
 /ip firewall address-list add address=157.245.74.26/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=157.245.74.205/32 comment="Maltrail: do-prod-eu-central-scanner-0610-2.do.binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=157.245.76.148/32 comment="Maltrail: do-prod-eu-central-scanner-0106-8.do.binaryedge.ninja, do-prod-eu-central-scanner-0610-25.do.binaryedge.ninja" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=157.245.77.151/32 comment="Maltrail: do-prod-eu-central-scanner-0106-3.do.binaryedge.ninja, do-prod-eu-central-scanner-0610-10.do.binaryedge.nin..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=157.245.77.151/32 comment="Maltrail: do-prod-eu-central-scanner-0106-3.do.binaryedge.ninja, do-prod-eu-central-scanner-0610-10.do.binaryedge.ninja, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=157.245.77.163/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=157.245.89.179/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=157.245.95.13/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
@@ -5734,20 +5734,20 @@
 /ip firewall address-list add address=178.128.255.225/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=184.105.139.66/31 comment="Maltrail: scan-00.shadowserver.org, scan-01.shadowserver.org" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=184.105.139.68/30 comment="Maltrail: scan-01a.shadowserver.org, scan-02.shadowserver.org, scan-03.shadowserver.org, scan-04.shadowserver.org" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=184.105.139.72/29 comment="Maltrail: scan-01c.shadowserver.org, scan-01d.shadowserver.org, scan-02a.shadowserver.org, scan-02b.shadowserver.org,..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=184.105.139.80/28 comment="Maltrail: scan-01e.shadowserver.org, scan-01f.shadowserver.org, scan-01g.shadowserver.org, scan-01h.shadowserver.org,..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=184.105.139.96/28 comment="Maltrail: scan-01i.shadowserver.org, scan-01j.shadowserver.org, scan-01k.shadowserver.org, scan-01l.shadowserver.org,..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=184.105.139.112/29 comment="Maltrail: scan-01m.shadowserver.org, scan-01n.shadowserver.org, scan-02k.shadowserver.org, scan-02l.shadowserver.org,..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=184.105.139.72/29 comment="Maltrail: scan-01c.shadowserver.org, scan-01d.shadowserver.org, scan-02a.shadowserver.org, scan-02b.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=184.105.139.80/28 comment="Maltrail: scan-01e.shadowserver.org, scan-01f.shadowserver.org, scan-01g.shadowserver.org, scan-01h.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=184.105.139.96/28 comment="Maltrail: scan-01i.shadowserver.org, scan-01j.shadowserver.org, scan-01k.shadowserver.org, scan-01l.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=184.105.139.112/29 comment="Maltrail: scan-01m.shadowserver.org, scan-01n.shadowserver.org, scan-02k.shadowserver.org, scan-02l.shadowserver.org, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=184.105.139.120/30 comment="Maltrail: scan-01o.shadowserver.org, scan-02m.shadowserver.org, scan-03l.shadowserver.org, scan-04m.shadowserver.org" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=184.105.139.124/31 comment="Maltrail: scan-02n.shadowserver.org, scan-03m.shadowserver.org" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=184.105.139.126/32 comment="Maltrail: scan-00a.shadowserver.org" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=184.105.143.133/32 comment="Maltrail: dnsscan.shadowserver.org" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=184.105.247.194/31 comment="Maltrail: scan-13.shadowserver.org, scan-14.shadowserver.org" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=184.105.247.196/30 comment="Maltrail: scan-13a.shadowserver.org, scan-14a.shadowserver.org, scan-15.shadowserver.org, scan-16.shadowserver.org" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=184.105.247.200/29 comment="Maltrail: scan-13b.shadowserver.org, scan-13c.shadowserver.org, scan-14b.shadowserver.org, scan-14c.shadowserver.org,..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=184.105.247.208/28 comment="Maltrail: scan-13d.shadowserver.org, scan-13e.shadowserver.org, scan-13f.shadowserver.org, scan-13g.shadowserver.org,..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=184.105.247.224/28 comment="Maltrail: scan-13h.shadowserver.org, scan-13i.shadowserver.org, scan-13j.shadowserver.org, scan-13k.shadowserver.org,..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=184.105.247.240/29 comment="Maltrail: scan-13l.shadowserver.org, scan-13m.shadowserver.org, scan-14l.shadowserver.org, scan-14m.shadowserver.org,..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=184.105.247.200/29 comment="Maltrail: scan-13b.shadowserver.org, scan-13c.shadowserver.org, scan-14b.shadowserver.org, scan-14c.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=184.105.247.208/28 comment="Maltrail: scan-13d.shadowserver.org, scan-13e.shadowserver.org, scan-13f.shadowserver.org, scan-13g.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=184.105.247.224/28 comment="Maltrail: scan-13h.shadowserver.org, scan-13i.shadowserver.org, scan-13j.shadowserver.org, scan-13k.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=184.105.247.240/29 comment="Maltrail: scan-13l.shadowserver.org, scan-13m.shadowserver.org, scan-14l.shadowserver.org, scan-14m.shadowserver.org, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=184.105.247.248/30 comment="Maltrail: scan-13n.shadowserver.org, scan-14n.shadowserver.org, scan-15m.shadowserver.org, scan-16m.shadowserver.org" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=184.105.247.252/31 comment="Maltrail: scan-15n.shadowserver.org, scan-16n.shadowserver.org, scan-21b.shadowserver.org" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=184.105.247.254/32 comment="Maltrail: scan-13o.shadowserver.org" list=MALTRAIL-SCANNER
@@ -5764,7 +5764,7 @@
 /ip firewall address-list add address=185.142.239.16/32 comment="Maltrail: red2.census.shodan.io" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=185.165.190.17/32 comment="Maltrail: purple.census.shodan.io" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=185.165.190.34/32 comment="Maltrail: red.census.shodan.io." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=185.173.35.0/24 comment="Maltrail: 185.173.35.1.netsystemsresearch.com, 185.173.35.13.netsystemsresearch.com, 185.173.35.17.netsystemsresearch..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=185.173.35.0/24 comment="Maltrail: 185.173.35.1.netsystemsresearch.com, 185.173.35.13.netsystemsresearch.com, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=185.181.102.18/32 comment="Maltrail: turtle.census.shodan.io" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=185.216.140.27/32 comment="Maltrail: scanner.openportstats.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=185.216.140.32/32 comment="Maltrail: scanner.openportstats.com" list=MALTRAIL-SCANNER
@@ -7628,10 +7628,10 @@
 /ip firewall address-list add address=216.117.2.180/32 comment="Maltrail: shodan.io (parking)" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=216.218.206.66/31 comment="Maltrail: scan-05.shadowserver.org, scan-06.shadowserver.org" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=216.218.206.68/30 comment="Maltrail: scan-05a.shadowserver.org, scan-06a.shadowserver.org, scan-07.shadowserver.org, scan-08.shadowserver.org" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=216.218.206.72/29 comment="Maltrail: scan-05b.shadowserver.org, scan-05c.shadowserver.org, scan-06b.shadowserver.org, scan-06c.shadowserver.org,..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=216.218.206.80/28 comment="Maltrail: scan-05d.shadowserver.org, scan-05e.shadowserver.org, scan-05f.shadowserver.org, scan-05g.shadowserver.org,..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=216.218.206.96/28 comment="Maltrail: scan-05h.shadowserver.org, scan-05i.shadowserver.org, scan-05j.shadowserver.org, scan-05k.shadowserver.org,..." list=MALTRAIL-SCANNER
-/ip firewall address-list add address=216.218.206.112/29 comment="Maltrail: scan-05l.shadowserver.org, scan-05m.shadowserver.org, scan-06l.shadowserver.org, scan-06m.shadowserver.org,..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=216.218.206.72/29 comment="Maltrail: scan-05b.shadowserver.org, scan-05c.shadowserver.org, scan-06b.shadowserver.org, scan-06c.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=216.218.206.80/28 comment="Maltrail: scan-05d.shadowserver.org, scan-05e.shadowserver.org, scan-05f.shadowserver.org, scan-05g.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=216.218.206.96/28 comment="Maltrail: scan-05h.shadowserver.org, scan-05i.shadowserver.org, scan-05j.shadowserver.org, scan-05k.shadowserver.org, ..." list=MALTRAIL-SCANNER
+/ip firewall address-list add address=216.218.206.112/29 comment="Maltrail: scan-05l.shadowserver.org, scan-05m.shadowserver.org, scan-06l.shadowserver.org, scan-06m.shadowserver.org, ..." list=MALTRAIL-SCANNER
 /ip firewall address-list add address=216.218.206.120/30 comment="Maltrail: scan-05n.shadowserver.org, scan-06n.shadowserver.org, scan-07m.shadowserver.org, scan-08m.shadowserver.org" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=216.218.206.124/31 comment="Maltrail: scan-07n.shadowserver.org, scan-08n.shadowserver.org" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=216.218.206.126/32 comment="Maltrail: scan-05o.shadowserver.org" list=MALTRAIL-SCANNER
