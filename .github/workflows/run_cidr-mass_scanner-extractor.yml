@@ -15,8 +15,14 @@ jobs:
       - name: Fetch, Process, and Generate RSC
         run: python3 mass_scanner-extractor.py
 
+      - name: Move RSC files to rsc/ folder
+        run: |
+          mkdir -p rsc
+          mv mass_scanner.rsc rsc/mass_scanner.rsc
+          mv mass_scanner_v6.rsc rsc/mass_scanner_v6.rsc
+
       - name: Commit and Push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update: Maltrail Scanner RouterOS RSC list [skip ci]"
-          file_pattern: 'mass_scanner.rsc mass_scanner_v6.rsc'
+          file_pattern: 'rsc/mass_scanner.rsc rsc/mass_scanner_v6.rsc'
