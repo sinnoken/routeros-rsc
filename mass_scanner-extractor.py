@@ -1,128 +1,219 @@
 import urllib.request
+import urllib.error
 import ipaddress
 import sys
-from datetime import datetime
+import time
+import bisect
+import argparse
+from datetime import datetime, timezone
 
-url = "https://raw.githubusercontent.com/stamparm/maltrail/master/trails/static/mass_scanner.txt"
+# ── 設定區 ────────────────────────────────────────────────────────────────────
+URL = "https://raw.githubusercontent.com/stamparm/maltrail/master/trails/static/mass_scanner.txt"
+MAX_COMMENT_LEN = 110
+RETRY_COUNT = 3
+RETRY_DELAY = 2  # 秒
 
-original_ips_v4 = []
-original_ips_v6 = []
-# 用來儲存 IP 與其對應的註解
-ip_comments = {}
+OUTPUT_V4 = "mass_scanner.rsc"
+OUTPUT_V6 = "mass_scanner_v6.rsc"
 
-print("正在從 Maltrail 下載清單...")
 
-try:
-    # 1. 下載並解析資料與註解
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-    with urllib.request.urlopen(req) as response:
-        data = response.read().decode('utf-8')
-        
-    lines = data.splitlines()
-    
-    for line in lines:
-        line = line.strip()
-        if not line:
+# ── 1. 下載（含 retry）────────────────────────────────────────────────────────
+def fetch_data(url: str, retries: int = RETRY_COUNT) -> str:
+    """下載文字資料，失敗時自動重試。"""
+    for attempt in range(1, retries + 1):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                return resp.read().decode("utf-8")
+        except urllib.error.URLError as e:
+            print(f"  ⚠ 第 {attempt} 次失敗：{e}")
+            if attempt < retries:
+                time.sleep(RETRY_DELAY)
+    print("❌ 無法下載資料，已達最大重試次數。")
+    sys.exit(1)
+
+
+# ── 2. 解析（一次迴圈，回傳分版本的結構）────────────────────────────────────
+def parse_lines(data: str) -> tuple[
+    list[ipaddress.IPv4Network],
+    list[ipaddress.IPv6Network],
+    dict,
+]:
+    v4_nets, v6_nets = [], []
+    comments: dict[ipaddress.IPv4Network | ipaddress.IPv6Network, set[str]] = {}
+
+    for raw in data.splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#"):
             continue
-            
-        comment = ""
-        # 拆分 IP 與註解
-        if '#' in line:
-            parts = line.split('#', 1)
-            ip_str = parts[0].strip()
-            comment = parts[1].strip()
-        else:
-            ip_str = line
+
+        ip_str, _, comment = line.partition("#")
+        ip_str = ip_str.strip()
+        comment = comment.strip()
 
         if not ip_str:
             continue
 
         try:
-            # strict=False 允許處理 1.1.1.1/24 這類不規範格式
             net = ipaddress.ip_network(ip_str, strict=False)
-            if net.version == 4:
-                original_ips_v4.append(net)
-            elif net.version == 6:
-                original_ips_v6.append(net)
-                
-            # 確實記錄帶有註解的網段 (使用 set 防止相同網段的重複註解)
-            if comment:
-                if net not in ip_comments:
-                    ip_comments[net] = set()
-                ip_comments[net].add(comment)
-                
         except ValueError:
             continue
 
-    if not original_ips_v4 and not original_ips_v6:
+        if net.version == 4:
+            v4_nets.append(net)
+        else:
+            v6_nets.append(net)
+
+        if comment:
+            comments.setdefault(net, set()).add(comment)
+
+    return v4_nets, v6_nets, comments
+
+
+# ── 3. 核心優化：O(log N) 二分搜尋取代 O(M×N) 線性掃描 ────────────────────
+def build_collapsed_comments(
+    collapsed: list,
+    comments: dict,
+    version: int,
+) -> dict:
+    if not collapsed or not comments:
+        return {}
+
+    keys = [net.network_address for net in collapsed]
+    result: dict = {}
+
+    for orig_net, tags in comments.items():
+        if orig_net.version != version:
+            continue
+
+        idx = bisect.bisect_right(keys, orig_net.network_address) - 1
+
+        for i in range(idx, max(idx - 4, -1), -1):
+            if i < 0:
+                break
+            c_net = collapsed[i]
+            try:
+                if orig_net.subnet_of(c_net):
+                    result.setdefault(c_net, set()).update(tags)
+                    break
+            except TypeError:
+                break
+
+    return result
+
+
+# ── 4. 截斷工具（在 token 邊界截斷）────────────────────────────────────────
+def truncate_comment(text: str, max_len: int = MAX_COMMENT_LEN) -> str:
+    if len(text) <= max_len:
+        return text
+    cut = text[:max_len].rsplit(",", 1)[0]
+    return cut.rstrip() + ", ..."
+
+
+# ── 5. 輸出 RSC ───────────────────────────────────────────────────────────────
+def write_rsc(
+    filename: str,
+    collapsed: list,
+    comments_map: dict,
+    is_v6: bool = False,
+) -> None:
+    cmd_path = "/ipv6 firewall address-list" if is_v6 else "/ip firewall address-list"
+    list_name = "MALTRAIL-SCANNER-V6" if is_v6 else "MALTRAIL-SCANNER"
+    gen_time = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC+0000")
+
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write("# Maltrail Mass Scanner List\n")
+        f.write("# Source: https://github.com/stamparm/maltrail\n")
+        f.write(f"# Generated on: {gen_time}\n\n")
+        f.write(f"{cmd_path} remove [find list={list_name}]\n")
+
+        for net in collapsed:
+            tags = comments_map.get(net)
+            if tags:
+                merged = ", ".join(sorted(tags))
+                comment = f"Maltrail: {truncate_comment(merged)}"
+            else:
+                comment = "Maltrail-Scanner"
+
+            f.write(
+                f'{cmd_path} add address={net} comment="{comment}" list={list_name}\n'
+            )
+
+
+# ── 主程式 ────────────────────────────────────────────────────────────────────
+def main() -> None:
+    # ── CLI 參數 ──────────────────────────────────────────────────────────────
+    parser = argparse.ArgumentParser(
+        description="將 Maltrail mass_scanner 清單轉換為 MikroTik RouterOS .rsc 格式",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,  # 顯示預設值
+    )
+    parser.add_argument(
+        "--url",
+        default=URL,
+        help="來源清單的 URL",
+    )
+    parser.add_argument(
+        "--output-v4",
+        default=OUTPUT_V4,
+        metavar="FILE",
+        help="IPv4 輸出檔案名稱",
+    )
+    parser.add_argument(
+        "--output-v6",
+        default=OUTPUT_V6,
+        metavar="FILE",
+        help="IPv6 輸出檔案名稱",
+    )
+    parser.add_argument(
+        "--max-comment",
+        type=int,
+        default=MAX_COMMENT_LEN,
+        metavar="N",
+        help="RouterOS comment 最大字元數",
+    )
+    parser.add_argument(
+        "--retries",
+        type=int,
+        default=RETRY_COUNT,
+        metavar="N",
+        help="下載失敗時的最大重試次數",
+    )
+    args = parser.parse_args()
+
+    # 將 CLI 參數套用到全域常數（只影響本次執行）
+    global MAX_COMMENT_LEN
+    MAX_COMMENT_LEN = args.max_comment
+
+    # ── 以下邏輯完全不變 ──────────────────────────────────────────────────────
+    print("正在從 Maltrail 下載清單...")
+    data = fetch_data(args.url, retries=args.retries)
+
+    print("解析中...")
+    v4_nets, v6_nets, comments = parse_lines(data)
+
+    total = len(v4_nets) + len(v6_nets)
+    if total == 0:
         print("❌ 錯誤：解析後沒有找到任何有效的 IP。")
         sys.exit(1)
-        
-    print(f"成功取得 {len(original_ips_v4) + len(original_ips_v6)} 筆 IP。")
-    print("開始合併網段並重新整併註解...")
+    print(f"成功取得 {total} 筆 IP（IPv4: {len(v4_nets)}，IPv6: {len(v6_nets)}）。")
 
-    original_ips_v4.sort()
-    original_ips_v6.sort()
-    
-    # 2. 合併相鄰或重疊的網段
-    ipv4_collapsed = list(ipaddress.collapse_addresses(original_ips_v4))
-    ipv6_collapsed = list(ipaddress.collapse_addresses(original_ips_v6))
+    print("合併網段中...")
+    v4_collapsed = list(ipaddress.collapse_addresses(v4_nets))
+    v6_collapsed = list(ipaddress.collapse_addresses(v6_nets))
+    print(f"合併後：IPv4 {len(v4_collapsed)} 筆，IPv6 {len(v6_collapsed)} 筆。")
 
-    # 3. [優化核心] 精準將舊註解對應到新合併的網段
-    def build_collapsed_comments(collapsed_nets, comments_map, version):
-        result_map = {}
-        # 只遍歷「有註解的 IP」，大幅節省效能
-        for orig_net, comments in comments_map.items():
-            # 確保不會跨版本比對 (防崩潰與錯置)
-            if orig_net.version != version:
-                continue
-                
-            # 尋找這個有註解的 IP 被合併到了哪個新網段
-            for c_net in collapsed_nets:
-                if orig_net.subnet_of(c_net):
-                    if c_net not in result_map:
-                        result_map[c_net] = set()
-                    result_map[c_net].update(comments)
-                    break # 找到專屬歸屬就跳出，確保唯一對應
-        return result_map
+    print("對應註解中...")
+    v4_map = build_collapsed_comments(v4_collapsed, comments, 4)
+    v6_map = build_collapsed_comments(v6_collapsed, comments, 6)
 
-    v4_comments_map = build_collapsed_comments(ipv4_collapsed, ip_comments, 4)
-    v6_comments_map = build_collapsed_comments(ipv6_collapsed, ip_comments, 6)
+    print("寫入 RSC 檔案...")
+    write_rsc(args.output_v4, v4_collapsed, v4_map, is_v6=False)
+    write_rsc(args.output_v6, v6_collapsed, v6_map, is_v6=True)
 
-    gen_time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC+0000')
-    
-    # 4. 定義寫入函式並輸出
-    def write_rsc(filename, collapsed_list, comments_map, is_v6=False):
-        cmd_path = '/ipv6 firewall address-list' if is_v6 else '/ip firewall address-list'
-        list_name = 'MALTRAIL-SCANNER-V6' if is_v6 else 'MALTRAIL-SCANNER'
-        
-        with open(filename, 'w') as f:
-            f.write(f'# Maltrail Mass Scanner List\n')
-            f.write(f'# Source: https://github.com/stamparm/maltrail\n')
-            f.write(f'# Generated on: {gen_time}\n\n')
-            f.write(f'{cmd_path} remove [find list={list_name}]\n')
-            
-            for net in collapsed_list:
-                # 判斷這個合併後的網段有沒有對應的註解
-                if net in comments_map and comments_map[net]:
-                    # 將多個註解用逗號合併
-                    merged_comment = ", ".join(sorted(comments_map[net]))
-                    # 避免 RouterOS comment 過長報錯 (保留約 110 字元)
-                    if len(merged_comment) > 110:
-                        merged_comment = merged_comment[:107] + "..."
-                    comment_str = f'Maltrail: {merged_comment}'
-                else:
-                    comment_str = 'Maltrail-Scanner'
-                    
-                f.write(f'{cmd_path} add address={net} comment="{comment_str}" list={list_name}\n')
-
-    write_rsc('mass_scanner.rsc', ipv4_collapsed, v4_comments_map, is_v6=False)
-    write_rsc('mass_scanner_v6.rsc', ipv6_collapsed, v6_comments_map, is_v6=True)
-            
     print("✅ 轉換成功！")
-    print(f"IPv4 RSC 行數：{len(ipv4_collapsed) + 4}")
-    print(f"IPv6 RSC 行數：{len(ipv6_collapsed) + 4}")
+    print(f"   {args.output_v4}：{len(v4_collapsed) + 4} 行")
+    print(f"   {args.output_v6}：{len(v6_collapsed) + 4} 行")
 
-except Exception as e:
-    print(f'❌ 錯誤: {e}')
-    sys.exit(1)
+
+if __name__ == "__main__":
+    main()
