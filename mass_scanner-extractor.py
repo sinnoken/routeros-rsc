@@ -8,7 +8,7 @@ import argparse
 from datetime import datetime, timezone
 
 # ── 設定區 ────────────────────────────────────────────────────────────────────
-URL = "https://raw.githubusercontent.com/stamparm/maltrail/master/trails/static/mass_scanner.txt"
+URL = "https://raw.githubusercontent.com/stamparm/maltrail/master/trails/static/mass_scanner_cidr.txt"
 MAX_COMMENT_LEN = 110
 RETRY_COUNT = 3
 RETRY_DELAY = 2  # 秒
