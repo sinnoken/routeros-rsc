@@ -1,14 +1,9 @@
 # Maltrail Mass Scanner List
-# Source: https://github.com/stamparm/maltrail
-# Generated on: 2026-04-16 02:29:28 UTC+0000
+# Source: https://github.com/stamparm/maltrail + Local Variable List
+# Generated on: 2026-04-18 10:10:59 UTC+0000
 
 /ip firewall address-list remove [find list=MALTRAIL-SCANNER]
-/ip firewall address-list add address=5.63.151.100/30 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=5.63.151.104/29 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=5.63.151.112/29 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=5.63.151.120/30 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=5.63.151.124/31 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=5.63.151.126/32 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=5.63.151.96/27 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=5.196.200.240/29 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=5.196.200.248/30 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=5.196.200.252/31 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
@@ -176,6 +171,11 @@
 /ip firewall address-list add address=45.55.65.149/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=45.55.129.42/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=45.55.129.210/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=45.55.151.3/32 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=45.55.153.86/32 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=45.55.158.168/32 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=45.55.185.224/32 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=45.55.186.92/32 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=45.56.66.86/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=45.56.66.117/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=45.56.66.231/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
@@ -649,11 +649,15 @@
 /ip firewall address-list add address=64.227.88.95/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=64.227.88.96/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=64.227.90.185/32 comment="Maltrail: shodan.io" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=64.227.99.138/32 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=64.227.101.200/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=64.227.103.2/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=64.227.106.132/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=64.227.106.214/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=64.227.107.110/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=64.227.108.146/32 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=64.227.109.89/32 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=64.227.110.161/32 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=64.227.115.62/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=64.227.126.182/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=64.227.127.136/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
@@ -683,6 +687,13 @@
 /ip firewall address-list add address=65.49.20.120/30 comment="Maltrail: shadowserver.org" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=65.49.20.124/31 comment="Maltrail: shadowserver.org" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=65.49.20.126/32 comment="Maltrail: shadowserver.org" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=66.132.148.0/24 comment="Maltrail: censys.com" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=66.132.153.0/24 comment="Maltrail: censys.com" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=66.132.159.0/24 comment="Maltrail: censys.com" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=66.132.172.0/24 comment="Maltrail: censys.com" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=66.132.186.0/24 comment="Maltrail: censys.com" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=66.132.195.0/24 comment="Maltrail: censys.com" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=66.132.224.0/24 comment="Maltrail: censys.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=66.228.39.149/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=66.228.39.215/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=66.228.39.247/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
@@ -927,6 +938,7 @@
 /ip firewall address-list add address=69.164.206.161/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=69.164.206.175/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=69.164.206.248/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=69.164.209.193/32 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=69.164.210.22/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=69.164.210.83/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=69.164.210.95/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
@@ -960,19 +972,7 @@
 /ip firewall address-list add address=71.6.165.200/32 comment="Maltrail: shodan.io" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=71.6.167.142/32 comment="Maltrail: shodan.io" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=71.6.199.23/32 comment="Maltrail: shodan.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=71.6.233.2/31 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=71.6.233.4/30 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=71.6.233.8/29 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=71.6.233.16/28 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=71.6.233.32/27 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=71.6.233.64/26 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=71.6.233.128/26 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=71.6.233.192/27 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=71.6.233.224/28 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=71.6.233.240/29 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=71.6.233.248/30 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=71.6.233.252/31 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=71.6.233.254/32 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=71.6.233.0/24 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=72.14.181.20/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=72.14.181.27/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=72.14.181.205/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
@@ -1023,18 +1023,14 @@
 /ip firewall address-list add address=85.159.212.179/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=85.159.213.23/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=85.159.213.162/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=87.236.176.0/24 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=88.80.186.64/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=88.80.186.70/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=88.80.186.72/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=88.80.186.80/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=88.80.189.129/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=88.80.189.220/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=88.202.190.132/30 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=88.202.190.136/29 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=88.202.190.144/29 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=88.202.190.152/30 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=88.202.190.156/31 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=88.202.190.158/32 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=88.202.190.128/27 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=89.248.160.193/32 comment="Maltrail: openportstats.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=89.248.162.161/32 comment="Maltrail: openportstats.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=89.248.167.131/32 comment="Maltrail: shodan.io" list=MALTRAIL-SCANNER
@@ -1354,6 +1350,7 @@
 /ip firewall address-list add address=107.150.52.82/32 comment="Maltrail: projectblindferret.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=107.150.52.84/31 comment="Maltrail: projectblindferret.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=107.150.52.86/32 comment="Maltrail: projectblindferret.com" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=107.170.65.169/32 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=107.170.192.5/32 comment="Maltrail: stretchoid.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=107.170.192.6/32 comment="Maltrail: stretchoid.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=107.170.192.8/32 comment="Maltrail: stretchoid.com" list=MALTRAIL-SCANNER
@@ -1833,16 +1830,12 @@
 /ip firewall address-list add address=108.178.61.58/32 comment="Maltrail-Scanner" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=109.74.202.145/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=109.74.206.41/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=109.123.117.228/30 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=109.123.117.232/29 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=109.123.117.240/29 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=109.123.117.248/30 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=109.123.117.252/31 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=109.123.117.254/32 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=109.123.117.224/27 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=109.237.26.92/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=128.9.29.128/30 comment="Maltrail: isi.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=128.9.63.138/32 comment="Maltrail: isi.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=128.199.1.215/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=128.199.8.140/32 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=128.199.10.254/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=128.199.11.153/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=128.199.15.113/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
@@ -3105,12 +3098,7 @@
 /ip firewall address-list add address=144.126.230.136/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=144.126.230.158/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=144.126.230.211/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=146.185.25.164/30 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=146.185.25.168/29 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=146.185.25.176/29 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=146.185.25.184/30 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=146.185.25.188/31 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=146.185.25.190/32 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=146.185.25.160/27 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=146.190.20.8/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=146.190.20.210/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=146.190.22.11/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
@@ -3490,6 +3478,8 @@
 /ip firewall address-list add address=157.245.232.100/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=157.245.240.124/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=157.245.240.161/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=157.245.243.118/32 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=157.245.245.246/32 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=157.245.246.185/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=157.245.250.139/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=157.245.254.227/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
@@ -3602,8 +3592,10 @@
 /ip firewall address-list add address=159.65.207.11/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=159.65.207.148/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=159.65.207.182/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=159.65.216.50/32 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=159.65.216.182/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=159.65.217.41/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=159.65.219.252/32 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=159.65.222.191/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=159.65.226.18/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=159.65.228.239/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
@@ -3955,20 +3947,9 @@
 /ip firewall address-list add address=161.35.235.121/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=161.35.235.186/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=161.35.239.17/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=162.142.125.1/32 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=162.142.125.2/31 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=162.142.125.4/30 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=162.142.125.8/29 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=162.142.125.16/28 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=162.142.125.32/27 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=162.142.125.64/26 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=162.142.125.128/26 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=162.142.125.192/27 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=162.142.125.224/28 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=162.142.125.240/29 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=162.142.125.248/30 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=162.142.125.252/31 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=162.142.125.254/32 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=162.142.125.0/24 comment="Maltrail: censys.com, censys.io" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=162.243.114.171/32 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=162.243.116.182/32 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=162.243.128.5/32 comment="Maltrail: stretchoid.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=162.243.128.6/32 comment="Maltrail: stretchoid.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=162.243.128.9/32 comment="Maltrail: stretchoid.com" list=MALTRAIL-SCANNER
@@ -4339,6 +4320,7 @@
 /ip firewall address-list add address=162.243.160.63/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=162.243.171.175/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=162.243.187.162/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=162.243.208.127/32 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=164.90.140.44/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=164.90.184.178/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=164.90.192.7/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
@@ -4806,48 +4788,9 @@
 /ip firewall address-list add address=167.71.252.133/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=167.71.254.26/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=167.71.254.71/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.138.1/32 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.138.2/31 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.138.4/30 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.138.8/29 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.138.16/28 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.138.32/27 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.138.64/26 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.138.128/26 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.138.192/27 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.138.224/28 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.138.240/29 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.138.248/30 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.138.252/31 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.138.254/32 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.145.1/32 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.145.2/31 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.145.4/30 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.145.8/29 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.145.16/28 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.145.32/27 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.145.64/26 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.145.128/26 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.145.192/27 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.145.224/28 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.145.240/29 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.145.248/30 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.145.252/31 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.145.254/32 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.146.1/32 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.146.2/31 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.146.4/30 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.146.8/29 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.146.16/28 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.146.32/27 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.146.64/26 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.146.128/26 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.146.192/27 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.146.224/28 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.146.240/29 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.146.248/30 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.146.252/31 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.94.146.254/32 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=167.94.138.0/24 comment="Maltrail: censys.com, censys.io" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=167.94.145.0/24 comment="Maltrail: censys.com, censys.io" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=167.94.146.0/24 comment="Maltrail: censys.com, censys.io" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=167.99.0.164/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=167.99.2.26/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=167.99.7.110/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
@@ -4981,6 +4924,7 @@
 /ip firewall address-list add address=167.99.223.83/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=167.99.228.40/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=167.99.233.163/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=167.99.234.119/32 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=167.99.234.160/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=167.99.237.222/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=167.99.238.205/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
@@ -5090,20 +5034,7 @@
 /ip firewall address-list add address=167.172.220.44/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=167.172.224.128/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=167.172.250.11/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.248.133.1/32 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.248.133.2/31 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.248.133.4/30 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.248.133.8/29 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.248.133.16/28 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.248.133.32/27 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.248.133.64/26 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.248.133.128/26 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.248.133.192/27 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.248.133.224/28 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.248.133.240/29 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.248.133.248/30 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.248.133.252/31 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=167.248.133.254/32 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=167.248.133.0/24 comment="Maltrail: censys.com, censys.io" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=168.1.128.32/27 comment="Maltrail-Scanner" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=168.1.128.64/27 comment="Maltrail-Scanner" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=169.45.161.160/27 comment="Maltrail-Scanner" list=MALTRAIL-SCANNER
@@ -5473,6 +5404,7 @@
 /ip firewall address-list add address=173.255.224.10/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=173.255.224.34/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=173.255.224.164/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=173.255.229.50/32 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=173.255.230.115/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=173.255.237.11/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=173.255.237.57/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
@@ -5773,6 +5705,7 @@
 /ip firewall address-list add address=185.216.140.185/32 comment="Maltrail: openportstats.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=185.216.140.249/32 comment="Maltrail: openportstats.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=185.232.64.20/30 comment="Maltrail-Scanner" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=185.247.137.0/24 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=188.138.9.50/32 comment="Maltrail: shodan.io" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=188.166.2.114/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=188.166.3.89/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
@@ -5952,6 +5885,7 @@
 /ip firewall address-list add address=192.241.147.164/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=192.241.148.40/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=192.241.157.232/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=192.241.179.235/32 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=192.241.192.8/31 comment="Maltrail: stretchoid.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=192.241.192.13/32 comment="Maltrail: stretchoid.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=192.241.192.14/32 comment="Maltrail: stretchoid.com" list=MALTRAIL-SCANNER
@@ -6742,6 +6676,7 @@
 /ip firewall address-list add address=192.241.239.40/30 comment="Maltrail: stretchoid.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=193.142.146.101/32 comment="Maltrail-Scanner" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=193.149.176.207/32 comment="Maltrail-Scanner" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=193.163.125.0/24 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=194.195.114.44/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=194.195.114.59/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=194.195.114.77/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
@@ -7403,34 +7338,7 @@
 /ip firewall address-list add address=198.211.112.100/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=198.211.113.19/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=198.211.113.71/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.154.1/32 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.154.2/31 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.154.4/30 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.154.8/29 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.154.16/28 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.154.32/27 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.154.64/26 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.154.128/26 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.154.192/27 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.154.224/28 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.154.240/29 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.154.248/30 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.154.252/31 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.154.254/32 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.155.1/32 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.155.2/31 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.155.4/30 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.155.8/29 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.155.16/28 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.155.32/27 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.155.64/26 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.155.128/26 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.155.192/27 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.155.224/28 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.155.240/29 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.155.248/30 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.155.252/31 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=199.45.155.254/32 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=199.45.154.0/23 comment="Maltrail: censys.com, censys.io" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=203.178.148.18/32 comment="Maltrail: isi.edu" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=204.48.21.103/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=204.48.22.201/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
@@ -7440,20 +7348,7 @@
 /ip firewall address-list add address=206.81.4.83/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=206.81.12.83/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=206.81.24.15/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=206.168.34.1/32 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=206.168.34.2/31 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=206.168.34.4/30 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=206.168.34.8/29 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=206.168.34.16/28 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=206.168.34.32/27 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=206.168.34.64/26 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=206.168.34.128/26 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=206.168.34.192/27 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=206.168.34.224/28 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=206.168.34.240/29 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=206.168.34.248/30 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=206.168.34.252/31 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=206.168.34.254/32 comment="Maltrail: censys.io" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=206.168.34.0/23 comment="Maltrail: censys.com, censys.io" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=206.189.0.244/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=206.189.3.107/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=206.189.5.79/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER

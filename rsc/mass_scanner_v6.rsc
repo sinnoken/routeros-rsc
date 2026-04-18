@@ -1,6 +1,6 @@
 # Maltrail Mass Scanner List
-# Source: https://github.com/stamparm/maltrail
-# Generated on: 2026-04-16 02:29:28 UTC+0000
+# Source: https://github.com/stamparm/maltrail + Local Variable List
+# Generated on: 2026-04-18 10:10:59 UTC+0000
 
 /ipv6 firewall address-list remove [find list=MALTRAIL-SCANNER-V6]
 /ipv6 firewall address-list add address=2400:6180:0:d0::3d:1/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
@@ -267,6 +267,14 @@
 /ipv6 firewall address-list add address=2400:6180:100:d0::a82:9001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
 /ipv6 firewall address-list add address=2400:6180:100:d0::a8e:b001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
 /ipv6 firewall address-list add address=2400:6180:100:d0::a93:9001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
+/ipv6 firewall address-list add address=2602:80d:1000:b0cc:e::/80 comment="Maltrail: censys.com" list=MALTRAIL-SCANNER-V6
+/ipv6 firewall address-list add address=2602:80d:1003::/112 comment="Maltrail: censys.com" list=MALTRAIL-SCANNER-V6
+/ipv6 firewall address-list add address=2602:80d:1004::/112 comment="Maltrail: censys.com" list=MALTRAIL-SCANNER-V6
+/ipv6 firewall address-list add address=2604:a880:0:202a::b41:8000/124 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER-V6
+/ipv6 firewall address-list add address=2604:a880:0:202a::b41:a000/124 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER-V6
+/ipv6 firewall address-list add address=2604:a880:0:202a::b41:b000/124 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER-V6
+/ipv6 firewall address-list add address=2604:a880:0:202a::b42:d000/124 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER-V6
+/ipv6 firewall address-list add address=2604:a880:0:202a::b42:e000/124 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER-V6
 /ipv6 firewall address-list add address=2604:a880:2:d0::23:c001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
 /ipv6 firewall address-list add address=2604:a880:2:d0::58:a001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
 /ipv6 firewall address-list add address=2604:a880:2:d0::63:d001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
@@ -720,6 +728,11 @@
 /ipv6 firewall address-list add address=2604:a880:4:1d0::6f2:2000/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
 /ipv6 firewall address-list add address=2604:a880:4:1d0::6f3:2000/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
 /ipv6 firewall address-list add address=2604:a880:4:1d0::6f3:4000/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
+/ipv6 firewall address-list add address=2604:a880:4:1d0::2fa6:a000/124 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER-V6
+/ipv6 firewall address-list add address=2604:a880:4:1d0::2fa6:b000/124 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER-V6
+/ipv6 firewall address-list add address=2604:a880:4:1d0::2fa6:c000/124 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER-V6
+/ipv6 firewall address-list add address=2604:a880:4:1d0::2fa6:d000/124 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER-V6
+/ipv6 firewall address-list add address=2604:a880:4:1d0::2fa6:e000/124 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER-V6
 /ipv6 firewall address-list add address=2604:a880:400:d0::52:a001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
 /ipv6 firewall address-list add address=2604:a880:400:d0::55:8001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
 /ipv6 firewall address-list add address=2604:a880:400:d0::62:f001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
@@ -1044,6 +1057,11 @@
 /ipv6 firewall address-list add address=2604:a880:400:d0::26b5:2001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
 /ipv6 firewall address-list add address=2604:a880:400:d0::26b6:1/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
 /ipv6 firewall address-list add address=2604:a880:400:d0::26b6:e001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
+/ipv6 firewall address-list add address=2604:a880:400:d1::91e4:a000/124 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER-V6
+/ipv6 firewall address-list add address=2604:a880:400:d1::91e4:b000/124 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER-V6
+/ipv6 firewall address-list add address=2604:a880:400:d1::91e4:c000/124 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER-V6
+/ipv6 firewall address-list add address=2604:a880:400:d1::91e4:d000/124 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER-V6
+/ipv6 firewall address-list add address=2604:a880:400:d1::91e4:e000/124 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER-V6
 /ipv6 firewall address-list add address=2604:a880:800:10::45:1001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
 /ipv6 firewall address-list add address=2604:a880:800:10::64:5001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
 /ipv6 firewall address-list add address=2604:a880:800:10::b4:7001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
@@ -1163,6 +1181,11 @@
 /ipv6 firewall address-list add address=2604:a880:800:10::bd9:4001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
 /ipv6 firewall address-list add address=2604:a880:800:10::bdc:4001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
 /ipv6 firewall address-list add address=2604:a880:800:10::be1:1001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
+/ipv6 firewall address-list add address=2604:a880:800:14::5633:8000/124 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER-V6
+/ipv6 firewall address-list add address=2604:a880:800:14::5633:9000/124 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER-V6
+/ipv6 firewall address-list add address=2604:a880:800:14::5633:a000/124 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER-V6
+/ipv6 firewall address-list add address=2604:a880:800:14::5633:b000/124 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER-V6
+/ipv6 firewall address-list add address=2604:a880:800:14::5633:c000/124 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER-V6
 /ipv6 firewall address-list add address=2604:a880:cad:d0::31:2001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
 /ipv6 firewall address-list add address=2604:a880:cad:d0::83:d001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
 /ipv6 firewall address-list add address=2604:a880:cad:d0::28a:8001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
@@ -1443,6 +1466,7 @@
 /ipv6 firewall address-list add address=2604:a880:cad:d0::f20:5001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
 /ipv6 firewall address-list add address=2604:a880:cad:d0::f20:6001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
 /ipv6 firewall address-list add address=2604:a880:cad:d0::f20:8001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
+/ipv6 firewall address-list add address=2620:96:e000:b0cc:e::/80 comment="Maltrail: censys.com" list=MALTRAIL-SCANNER-V6
 /ipv6 firewall address-list add address=2a03:b0c0:1:d0::12:1001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
 /ipv6 firewall address-list add address=2a03:b0c0:1:d0::48:a001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
 /ipv6 firewall address-list add address=2a03:b0c0:1:d0::bc:e001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
@@ -1984,3 +2008,4 @@
 /ipv6 firewall address-list add address=2a03:b0c0:3:d0::1c0d:6001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
 /ipv6 firewall address-list add address=2a03:b0c0:3:d0::1c0d:7001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
 /ipv6 firewall address-list add address=2a03:b0c0:3:d0::1c0d:e001/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
+/ipv6 firewall address-list add address=2a06:4880::/30 comment="Maltrail: internet-measurement.com" list=MALTRAIL-SCANNER-V6
