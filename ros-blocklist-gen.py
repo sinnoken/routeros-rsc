@@ -121,6 +121,13 @@ urls_info = [
         "source_url": "https://ipv64.net/blocklists/ipv64_blocklist_v4_tor_exit.txt",
         "comment": "ipv64.net-TorExitNodes",
         "type": "IPv4"
+    },
+    {
+        "list_name": "emergingthreats-Block-IPs",
+        "source_url": "https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt",
+        "comment": "Emerging Threats FW Block IPs",
+        "type": "IPv4",
+        "max_prefix": 8
     }
 ]
 
