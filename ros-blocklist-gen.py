@@ -6,11 +6,9 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-# 確保輸出目錄存在
 output_dir = './rsc/'
 os.makedirs(output_dir, exist_ok=True)
 
-# 設定下載的 URL 清單
 urls_info = [
     {
         "list_name": "stamparm/ipsum/level-1",
@@ -131,19 +129,14 @@ urls_info = [
     }
 ]
 
-# 預設最大前綴長度（前綴越短 = 網段越大）
-# 一般黑名單 /20 = 最多封 4096 個 IP
-# 國家封鎖清單 /16 = 最多封 65536 個 IP
 DEFAULT_MAX_PREFIX_V4 = 20
 DEFAULT_MAX_PREFIX_V6 = 48
 
 
 def create_session() -> requests.Session:
-    """建立帶有 Retry 機制的獨立 Session（每條執行緒各自建立）"""
     session = requests.Session()
     retry = Retry(
-        total=3,
-        backoff_factor=1,
+        total=3, backoff_factor=1,
         status_forcelist=[429, 500, 502, 503, 504],
         allowed_methods=["GET"]
     )
@@ -154,44 +147,46 @@ def create_session() -> requests.Session:
 
 
 def collapse_entries(valid_entries: set, max_prefix: int) -> list:
-    """
-    將 IP / CIDR 統一整併，並過濾掉前綴長度小於 max_prefix 的超大網段。
-
-    Args:
-        valid_entries : 包含 ip_address / ip_network 物件的集合
-        max_prefix    : 允許的最小前綴長度（越小 = 網段越大）
-                        e.g. IPv4 /20 = 4096 IPs，/16 = 65536 IPs
-
-    Returns:
-        整併後且通過前綴過濾的 network 物件清單（已排序）
-    """
     networks = set()
     for entry in valid_entries:
         if isinstance(entry, (ipaddress.IPv4Address, ipaddress.IPv6Address)):
-            # 單一 IP 轉成 /32 或 /128
             networks.add(ipaddress.ip_network(entry))
         else:
             networks.add(entry)
-
     collapsed = ipaddress.collapse_addresses(networks)
-
-    # 過濾掉超大網段，避免誤封整個 ISP
     return [net for net in collapsed if net.prefixlen >= max_prefix]
 
 
+def write_rsc(
+    output_file: str, comment: str, url: str,
+    before: int, after: int, saved: int, ratio: float,
+    max_prefix: int, prefix_cmd: str,
+    collapsed: list, list_name: str
+) -> None:
+    """將整併結果寫入 RSC 檔案"""
+    now_str = datetime.now().astimezone().strftime('%Y-%m-%d %H:%M:%S %Z%z')
+    with open(output_file, 'w', encoding='utf-8') as f:
+        f.write(f"# {comment}\n")
+        f.write(f"# Source: {url}\n")
+        f.write("# Converted for RouterOS by sinnoken/routeros-rsc\n")
+        f.write("# WARNING: Auto-generated. Do not edit manually.\n")
+        f.write(f"# Generated : {now_str}\n")
+        f.write(
+            f"# Entries   : {before} raw -> {after} after CIDR aggregation"
+            f" (saved {saved}, {ratio:.1f}%, max_prefix=/{max_prefix})\n\n"
+        )
+        for net in collapsed:
+            f.write(
+                f"{prefix_cmd} add address={net}"
+                f' comment="{comment}" list={list_name}\n'
+            )
+
+
 def process_url(url_info: dict) -> None:
-    """下載、解析、整併並輸出單一來源的 RSC 檔案"""
-    url         = url_info['source_url']
-    comment     = url_info['comment']
-    list_name   = url_info['list_name'].replace('/', '-').upper()
-    ip_type     = url_info['type']
-    output_file = os.path.join(output_dir, f'{list_name}.rsc')
+    url       = url_info['source_url']
+    comment   = url_info['comment']
+    list_name = url_info['list_name'].replace('/', '-').upper()
 
-    # 依 IP 版本決定預設最大前綴長度
-    default_prefix = DEFAULT_MAX_PREFIX_V4 if ip_type == "IPv4" else DEFAULT_MAX_PREFIX_V6
-    max_prefix = url_info.get('max_prefix', default_prefix)
-
-    # 每條執行緒獨立 Session（避免共用 Session 的執行緒安全問題）
     try:
         session  = create_session()
         response = session.get(url, timeout=30)
@@ -203,76 +198,72 @@ def process_url(url_info: dict) -> None:
     ip_list = response.text.splitlines()
     print(f"[INFO] [{list_name}] 下載到 {len(ip_list)} 行")
 
-    # 解析階段同時過濾 ip_type，避免浪費後續排序資源
-    valid_entries = set()
+    # ── 解析：不預設版本，直接分組 ──────────────────────────────
+    v4_entries: set = set()
+    v6_entries: set = set()
+
     for raw_line in ip_list:
         line = raw_line.strip()
         if not line or line.startswith('#'):
             continue
-        parts = line.split()
-        if not parts:
-            continue
-        ip_str = parts[0]
+        ip_str = line.split()[0]
 
-        # 嘗試解析為單一 IP
+        # 嘗試單一 IP
         try:
             ip = ipaddress.ip_address(ip_str)
-            if (ip_type == "IPv4" and ip.version == 4) or \
-               (ip_type == "IPv6" and ip.version == 6):
-                valid_entries.add(ip)
+            (v4_entries if ip.version == 4 else v6_entries).add(ip)
             continue
         except ValueError:
             pass
 
-        # 嘗試解析為網段 CIDR
+        # 嘗試 CIDR 網段
         try:
             net = ipaddress.ip_network(ip_str, strict=False)
-            if (ip_type == "IPv4" and net.version == 4) or \
-               (ip_type == "IPv6" and net.version == 6):
-                valid_entries.add(net)
+            (v4_entries if net.version == 4 else v6_entries).add(net)
         except ValueError:
-            pass  # 非合法 IP / CIDR，跳過
+            pass
 
-    if not valid_entries:
+    if not v4_entries and not v6_entries:
         print(f"[WARN] [{list_name}] 沒有有效 IP，跳過輸出")
         return
 
-    # CIDR 整併
-    before    = len(valid_entries)
-    collapsed = collapse_entries(valid_entries, max_prefix)
-    after     = len(collapsed)
-    saved     = before - after
-    ratio     = (saved / before * 100) if before > 0 else 0.0
-    print(f"[INFO] [{list_name}] CIDR 整併: {before} -> {after} 條（節省 {saved} 條，{ratio:.1f}%）")
+    # ── 依版本分別輸出 RSC ──────────────────────────────────────
+    groups = []
+    if v4_entries:
+        groups.append((v4_entries, 4, "IPv4",
+                       '/ip firewall address-list',
+                       url_info.get('max_prefix', DEFAULT_MAX_PREFIX_V4)))
+    if v6_entries:
+        groups.append((v6_entries, 6, "IPv6",
+                       '/ipv6 firewall address-list',
+                       url_info.get('max_prefix', DEFAULT_MAX_PREFIX_V6)))
 
-    # 生成 RouterOS 指令
-    prefix_cmd = '/ip firewall address-list' if ip_type == "IPv4" \
-                 else '/ipv6 firewall address-list'
+    for entries, ver, ver_label, prefix_cmd, max_prefix in groups:
+        # 混合清單時檔名加版本後綴，純單版本則沿用原名
+        suffix      = f"_v{ver}" if len(groups) > 1 else ""
+        output_file = os.path.join(output_dir, f"{list_name}{suffix}.rsc")
+        lname_out   = f"{list_name}{suffix}"
 
-    now_str = datetime.now().astimezone().strftime('%Y-%m-%d %H:%M:%S %Z%z')
+        before    = len(entries)
+        collapsed = collapse_entries(entries, max_prefix)
+        after     = len(collapsed)
+        saved     = before - after
+        ratio     = (saved / before * 100) if before > 0 else 0.0
 
-    with open(output_file, 'w', encoding='utf-8') as f:
-        f.write("# " + comment + "\n")
-        f.write("# Source: " + url + "\n")
-        f.write("# Converted for RouterOS by sinnoken/routeros-rsc\n")
-        f.write("# WARNING: Auto-generated. Do not edit manually.\n")
-        f.write("# Generated : " + now_str + "\n")
-        f.write(
-            "# Entries   : " + str(before) + " raw -> " + str(after) +
-            " after CIDR aggregation (saved " + str(saved) +
-            ", " + f"{ratio:.1f}" + "%, max_prefix=/" + str(max_prefix) + ")\n\n"
+        print(
+            f"[INFO] [{lname_out}] ({ver_label}) CIDR 整併: "
+            f"{before} -> {after} 條（節省 {saved} 條，{ratio:.1f}%）"
         )
-        for net in collapsed:
-            f.write(
-                prefix_cmd + ' add address=' + str(net) +
-                ' comment="' + comment + '" list=' + list_name + "\n"
-            )
 
-    print(f"[OK]   [{list_name}] 已儲存 {output_file}（{after} 筆）")
+        write_rsc(
+            output_file, comment, url,
+            before, after, saved, ratio,
+            max_prefix, prefix_cmd, collapsed, lname_out
+        )
+        print(f"[OK]   [{lname_out}] 已儲存 {output_file}（{after} 筆）")
 
 
 def main() -> None:
-    """主函數：動態調整 worker 數，使用 as_completed 取得錯誤回報"""
     max_workers = min(len(urls_info), (os.cpu_count() or 1) * 4)
     print(f"[INFO] 啟動 {max_workers} 個 worker 處理 {len(urls_info)} 個來源...\n")
 
