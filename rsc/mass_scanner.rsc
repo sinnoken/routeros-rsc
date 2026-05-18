@@ -1,6 +1,6 @@
 # Maltrail Mass Scanner List
 # Source: https://github.com/stamparm/maltrail + Local Variable List
-# Generated on: 2026-05-11 01:58:38 UTC+0000
+# Generated on: 2026-05-18 02:08:26 UTC+0000
 
 /ip firewall address-list remove [find list=MALTRAIL-SCANNER]
 /ip firewall address-list add address=5.63.151.96/27 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
