@@ -2,7 +2,7 @@
 # Source: https://ipv64.net/blocklists/ipv64_blocklist_v4_tor_exit.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-06-04 06:43:41 UTC+0000
+# Generated : 2026-06-05 06:24:31 UTC+0000
 # Entries   : 1337 raw -> 899 after CIDR aggregation (saved 438, 32.8%, max_prefix=/20)
 
 /ip firewall address-list add address=2.56.10.36/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
