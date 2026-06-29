@@ -1,6 +1,6 @@
 # Maltrail Mass Scanner List
 # Source: https://github.com/stamparm/maltrail + Local Variable List
-# Generated on: 2026-06-22 02:38:25 UTC+0000
+# Generated on: 2026-06-29 02:14:02 UTC+0000
 
 /ipv6 firewall address-list remove [find list=MALTRAIL-SCANNER-V6]
 /ipv6 firewall address-list add address=2400:6180:0:d0::3d:1/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6
