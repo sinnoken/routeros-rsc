@@ -2,7 +2,7 @@
 # Source: https://ipv64.net/blocklists/countries/ipv64_blocklist_v6_JP.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-07-24 05:21:20 UTC+0000
+# Generated : 2026-07-25 05:16:18 UTC+0000
 # Entries   : 10285 raw -> 8077 after CIDR aggregation (saved 2208, 21.5%, max_prefix=/32)
 
 /ipv6 firewall address-list add address=::ffff:1.0.16.0/116 comment="Japan IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_JP
