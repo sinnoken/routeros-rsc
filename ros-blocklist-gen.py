@@ -128,21 +128,21 @@ urls_info = [
         "max_prefix": 8
     },
     {
-        "list_name": "spamhaus-drop",
+        "list_name": "HN-BLACKLIST-SPAMHAUS",
         "source_url": "https://www.spamhaus.org/drop/drop.txt",
-        "comment": "Spamhaus DROP (IPv4)",
+        "comment": "SPAMHAUS-DROP",
         "type": "IPv4"
     },
     {
         "list_name": "spamhaus-edrop",
         "source_url": "https://www.spamhaus.org/drop/edrop.txt",
-        "comment": "Spamhaus EDROP (IPv4)",
+        "comment": "SPAMHAUS-DROP",
         "type": "IPv4"
     },
     {
         "list_name": "spamhaus-dropv6",
         "source_url": "https://www.spamhaus.org/drop/dropv6.txt",
-        "comment": "Spamhaus DROPv6 (IPv6)",
+        "comment": "SPAMHAUS-DROP",
         "type": "IPv6"
     }
 ]
