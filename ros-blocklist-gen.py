@@ -126,6 +126,24 @@ urls_info = [
         "comment": "Emerging Threats FW Block IPs",
         "type": "IPv4",
         "max_prefix": 8
+    },
+    {
+        "list_name": "spamhaus-drop",
+        "source_url": "https://www.spamhaus.org/drop/drop.txt",
+        "comment": "Spamhaus DROP (IPv4)",
+        "type": "IPv4"
+    },
+    {
+        "list_name": "spamhaus-edrop",
+        "source_url": "https://www.spamhaus.org/drop/edrop.txt",
+        "comment": "Spamhaus EDROP (IPv4)",
+        "type": "IPv4"
+    },
+    {
+        "list_name": "spamhaus-dropv6",
+        "source_url": "https://www.spamhaus.org/drop/dropv6.txt",
+        "comment": "Spamhaus DROPv6 (IPv6)",
+        "type": "IPv6"
     }
 ]
 
