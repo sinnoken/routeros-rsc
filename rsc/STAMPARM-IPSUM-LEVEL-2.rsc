@@ -2,7 +2,7 @@
 # Source: https://github.com/stamparm/ipsum/raw/refs/heads/master/levels/2.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-08-09 03:43:21 UTC+0000
+# Generated : 2026-08-09 06:46:19 UTC+0000
 # Entries   : 33395 raw -> 25934 after CIDR aggregation (saved 7461, 22.3%, max_prefix=/20)
 
 /ip firewall address-list add address=1.0.164.165/32 comment="stamparm/ipsum/level-2" list=STAMPARM-IPSUM-LEVEL-2
