@@ -60,12 +60,20 @@ def main():
         
         if all_v4_rules:
             f.write("/ip firewall address-list\n")
+            # 先寫入清除指令
+            for asn in asn_list:
+                f.write(f"remove [find list={asn.upper()}]\n")
+            # 再寫入新增指令
             for rule in all_v4_rules:
                 f.write(rule + "\n")
             f.write("\n")
             
         if all_v6_rules:
             f.write("/ipv6 firewall address-list\n")
+            # 先寫入清除指令
+            for asn in asn_list:
+                f.write(f"remove [find list={asn.upper()}]\n")
+            # 再寫入新增指令
             for rule in all_v6_rules:
                 f.write(rule + "\n")
 
