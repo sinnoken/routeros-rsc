@@ -1,12 +1,13 @@
 import requests
 import ipaddress
 import sys
+import os
 
-# 產出的單一檔案名稱
-OUTPUT_FILE = "mikrotik_as_lists.rsc"
+# 將輸出路徑改為 rsc/ 內，以符合 Release 抓取規則
+OUTPUT_DIR = "rsc"
+OUTPUT_FILE = f"{OUTPUT_DIR}/mikrotik_as_lists.rsc"
 
 def fetch_and_aggregate(asn):
-    """負責抓取單一 ASN 的資料並執行聚合"""
     url = f"https://stat.ripe.net/data/announced-prefixes/data.json?resource={asn}"
     print(f"正在抓取 {asn} 的路由資訊...")
     
@@ -30,18 +31,16 @@ def fetch_and_aggregate(asn):
     return collapsed_v4, collapsed_v6
 
 def main():
-    # 從外部命令列參數取得 ASN 列表 (排除第 0 個腳本名稱)
     asn_list = sys.argv[1:]
     
     if not asn_list:
-        print("錯誤: 未傳入任何 ASN。請在執行時加入參數，例如: python ros-asn-addresslist-gen.py AS45102 AS13335")
+        print("錯誤: 未傳入任何 ASN。")
         sys.exit(1)
 
     all_v4_rules = []
     all_v6_rules = []
     
     for asn in asn_list:
-        # 將 ASN 轉為大寫，確保格式一致
         asn_upper = asn.upper()
         v4_nets, v6_nets = fetch_and_aggregate(asn_upper)
         
@@ -51,6 +50,9 @@ def main():
         for cidr in v6_nets:
             all_v6_rules.append(f"add list={asn_upper} address={cidr}")
             
+    # 確保輸出目錄存在
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+
     print(f"\n準備寫入至 {OUTPUT_FILE} ...")
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         f.write(f"# Auto-generated MikroTik Address List for {', '.join(asn_list).upper()}\n")
