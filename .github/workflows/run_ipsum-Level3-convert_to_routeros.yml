@@ -3,9 +3,18 @@ name: Convert stamparm/ipsum list of bad IPs(level3) to RouterOS addressList
 on:
   schedule:
   - cron: "0 2 * * *"
-
+  
   workflow_dispatch:
-
+    # --- 新增：允許手動輸入 ASN ---
+    inputs:
+      custom_asns:
+        description: '輸入要查詢的 ASN (以空格分隔)'
+        required: false
+        default: 'AS45102'
+env:
+  # --- 新增：預設排程執行的 ASN 列表 ---
+  DEFAULT_ASNS: "AS45102"
+  
 jobs:
   convert:
     runs-on: ubuntu-latest
@@ -41,7 +50,18 @@ jobs:
     - name: Run python ros-blocklist-gen.py
       run: python ./ros-blocklist-gen.py
       continue-on-error: true
-
+    # --- 新增：執行 ASN 抓取與聚合腳本 ---
+    - name: Run python ros-asn-addresslist-gen.py
+      run: |
+        if [ "${{ github.event.inputs.custom_asns }}" != "" ]; then
+          RUN_ASNS="${{ github.event.inputs.custom_asns }}"
+        else
+          RUN_ASNS="${{ env.DEFAULT_ASNS }}"
+        fi
+        echo "即將處理以下 ASN: $RUN_ASNS"
+        python ./ros-asn-addresslist-gen.py $RUN_ASNS
+      continue-on-error: true
+    # -----------------------------------
     - name: Generate tag name
       run: echo "TAG_NAME=$(date +%F-%H-%M)" >> $GITHUB_ENV
 
