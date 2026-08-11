@@ -5,7 +5,19 @@ on:
   - cron: "0 2 * * *"
   
   workflow_dispatch:
-    # --- 新增：允許手動輸入 ASN ---
+    # ASN 對照：
+    #   AS45102 = Alibaba Cloud (阿里雲國際)
+    #   AS14061 = DigitalOcean
+    # 其他常見雲端/VPS ASN 可參考：
+    #   AS16509 / AS14618 = Amazon AWS
+    #   AS8075           = Microsoft Azure
+    #   AS15169 / AS396982 = Google
+    #   AS37963          = Alibaba Cloud 中國
+    #   AS132203         = Tencent Cloud
+    #   AS20473          = Vultr
+    #   AS63949          = Linode / Akamai
+    #   AS31898          = Oracle Cloud
+    #   AS36351          = IBM Cloud
     inputs:
       custom_asns:
         description: '輸入要查詢的 ASN (以空格分隔)'
