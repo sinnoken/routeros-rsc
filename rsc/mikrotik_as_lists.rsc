@@ -125,6 +125,7 @@ add list=AS45102 address=47.246.150.0/23
 add list=AS45102 address=47.246.152.0/21
 add list=AS45102 address=47.246.160.0/19
 add list=AS45102 address=47.246.192.0/20
+add list=AS45102 address=47.246.208.0/23
 add list=AS45102 address=47.250.0.0/15
 add list=AS45102 address=47.252.0.0/15
 add list=AS45102 address=47.254.0.0/16
@@ -154,6 +155,7 @@ add list=AS45102 address=149.129.16.0/21
 add list=AS45102 address=149.129.32.0/19
 add list=AS45102 address=149.129.64.0/18
 add list=AS45102 address=149.129.128.0/17
+add list=AS45102 address=156.227.20.0/24
 add list=AS45102 address=156.236.17.0/24
 add list=AS45102 address=161.117.0.0/16
 add list=AS45102 address=170.33.20.0/22
@@ -192,7 +194,6 @@ remove [find list=AS45102]
 add list=AS45102 address=2400:3200::/48
 add list=AS45102 address=2400:3200:baba::/48
 add list=AS45102 address=2400:b200:4100::/46
-add list=AS45102 address=2401:8680:4102::/48
 add list=AS45102 address=2401:b180:4100::/48
 add list=AS45102 address=2404:2280:1000::/36
 add list=AS45102 address=2404:2280:2000::/35
