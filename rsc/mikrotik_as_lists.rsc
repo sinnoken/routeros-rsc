@@ -214,8 +214,7 @@ add list=AS45102 address=240b:400b::/32
 add list=AS45102 address=240b:400c::/30
 add list=AS45102 address=240b:4010:fffe::/47
 add list=AS45102 address=240b:4011::/32
-add list=AS45102 address=240b:4012::/48
-add list=AS45102 address=240b:4013::/32
+add list=AS45102 address=240b:4012::/31
 add list=AS45102 address=240b:4014::/30
 add list=AS45102 address=240b:4018::/30
 add list=AS45102 address=240b:401f::/32
