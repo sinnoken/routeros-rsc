@@ -2,8 +2,8 @@
 # Source: https://www.spamhaus.org/drop/drop.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-08-14 04:09:24 UTC+0000
-# Entries   : 1685 raw -> 1334 after CIDR aggregation (saved 351, 20.8%, max_prefix=/20)
+# Generated : 2026-08-15 02:52:19 UTC+0000
+# Entries   : 1683 raw -> 1332 after CIDR aggregation (saved 351, 20.9%, max_prefix=/20)
 
 /ip firewall address-list add address=1.10.16.0/20 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS
 /ip firewall address-list add address=2.26.75.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS
@@ -347,7 +347,6 @@
 /ip firewall address-list add address=94.74.164.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS
 /ip firewall address-list add address=94.74.191.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS
 /ip firewall address-list add address=94.103.188.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS
-/ip firewall address-list add address=94.141.122.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS
 /ip firewall address-list add address=94.154.35.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS
 /ip firewall address-list add address=94.154.43.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS
 /ip firewall address-list add address=94.154.46.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS
@@ -455,7 +454,6 @@
 /ip firewall address-list add address=103.184.162.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS
 /ip firewall address-list add address=103.185.134.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS
 /ip firewall address-list add address=103.185.162.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS
-/ip firewall address-list add address=103.192.184.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS
 /ip firewall address-list add address=103.192.228.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS
 /ip firewall address-list add address=103.193.148.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS
 /ip firewall address-list add address=103.193.150.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS
