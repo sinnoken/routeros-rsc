@@ -2,7 +2,7 @@
 # Source: https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-08-16 03:00:13 UTC+0000
+# Generated : 2026-08-17 03:00:16 UTC+0000
 # Entries   : 1708 raw -> 1609 after CIDR aggregation (saved 99, 5.8%, max_prefix=/8)
 
 /ip firewall address-list add address=1.10.16.0/20 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS
