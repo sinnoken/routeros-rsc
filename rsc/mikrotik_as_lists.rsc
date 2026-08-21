@@ -87,6 +87,7 @@ add list=AS45102 address=47.77.24.0/22
 add list=AS45102 address=47.77.32.0/19
 add list=AS45102 address=47.77.64.0/19
 add list=AS45102 address=47.77.96.0/20
+add list=AS45102 address=47.77.112.0/23
 add list=AS45102 address=47.77.128.0/17
 add list=AS45102 address=47.78.0.0/15
 add list=AS45102 address=47.80.0.0/13
