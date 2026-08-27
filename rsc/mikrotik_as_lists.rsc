@@ -195,6 +195,7 @@ remove [find list=AS45102]
 add list=AS45102 address=2400:3200::/48
 add list=AS45102 address=2400:3200:baba::/48
 add list=AS45102 address=2400:b200:4100::/46
+add list=AS45102 address=2401:8680:4100::/48
 add list=AS45102 address=2401:b180:4100::/48
 add list=AS45102 address=2404:2280:1000::/36
 add list=AS45102 address=2404:2280:2000::/35
