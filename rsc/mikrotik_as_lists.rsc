@@ -55,7 +55,8 @@ add list=AS45102 address=43.96.116.0/24
 add list=AS45102 address=43.96.118.0/23
 add list=AS45102 address=43.96.120.0/24
 add list=AS45102 address=43.96.122.0/24
-add list=AS45102 address=43.96.124.0/24
+add list=AS45102 address=43.96.124.0/23
+add list=AS45102 address=43.96.126.0/24
 add list=AS45102 address=43.98.0.0/15
 add list=AS45102 address=43.100.0.0/15
 add list=AS45102 address=43.102.0.0/17
@@ -158,6 +159,7 @@ add list=AS45102 address=149.129.64.0/18
 add list=AS45102 address=149.129.128.0/17
 add list=AS45102 address=156.227.20.0/24
 add list=AS45102 address=156.236.17.0/24
+add list=AS45102 address=156.245.1.0/24
 add list=AS45102 address=161.117.0.0/16
 add list=AS45102 address=170.33.20.0/22
 add list=AS45102 address=170.33.24.0/24
