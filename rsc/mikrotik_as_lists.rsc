@@ -175,9 +175,6 @@ add list=AS45102 address=170.33.72.0/23
 add list=AS45102 address=170.33.76.0/22
 add list=AS45102 address=170.33.80.0/22
 add list=AS45102 address=170.33.84.0/24
-add list=AS45102 address=170.33.88.0/24
-add list=AS45102 address=170.33.90.0/24
-add list=AS45102 address=170.33.92.0/23
 add list=AS45102 address=170.33.104.0/22
 add list=AS45102 address=170.33.112.0/23
 add list=AS45102 address=170.33.114.0/24
@@ -199,7 +196,6 @@ remove [find list=AS45102]
 add list=AS45102 address=2400:3200::/48
 add list=AS45102 address=2400:3200:baba::/48
 add list=AS45102 address=2400:b200:4100::/46
-add list=AS45102 address=2401:8680:4100::/48
 add list=AS45102 address=2401:8680:4102::/48
 add list=AS45102 address=2401:b180:4100::/48
 add list=AS45102 address=2404:2280:1000::/36
