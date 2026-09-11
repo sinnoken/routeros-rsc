@@ -31,7 +31,7 @@ jobs:
         run: |
           python3 ros-internet-scanners-gen.py \
             --source-dir upstream/cidr \
-            --output internet-scanners.rsc \
+            --output rsc/internet-scanners.rsc \
             --list-name internet-scanners
 
       - name: Commit & push if changed
