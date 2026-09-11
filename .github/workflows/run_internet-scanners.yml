@@ -5,10 +5,6 @@ on:
     # 每天 UTC 03:00（台北時間 11:00）自動執行，可自行調整 cron
     - cron: "0 3 * * *"
   workflow_dispatch: {}   # 允許在 GitHub Actions 頁面手動點擊執行
-  push:
-    paths:
-      - "generate_rsc.py"
-      - ".github/workflows/update-rsc.yml"
 
 permissions:
   contents: write
@@ -33,7 +29,7 @@ jobs:
 
       - name: Generate merged .rsc
         run: |
-          python3 generate_rsc.py \
+          python3 ros-internet-scanners-gen.py \
             --source-dir upstream/cidr \
             --output internet-scanners.rsc \
             --list-name internet-scanners
