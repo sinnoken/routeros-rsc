@@ -1,0 +1,51 @@
+name: Update Mikrotik internet-scanners.rsc
+
+on:
+  schedule:
+    # 每天 UTC 03:00（台北時間 11:00）自動執行，可自行調整 cron
+    - cron: "0 3 * * *"
+  workflow_dispatch: {}   # 允許在 GitHub Actions 頁面手動點擊執行
+  push:
+    paths:
+      - "generate_rsc.py"
+      - ".github/workflows/update-rsc.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v4
+
+      - name: Checkout upstream OpenFilters/internet-scanners
+        uses: actions/checkout@v4
+        with:
+          repository: OpenFilters/internet-scanners
+          path: upstream
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Generate merged .rsc
+        run: |
+          python3 generate_rsc.py \
+            --source-dir upstream/cidr \
+            --output internet-scanners.rsc \
+            --list-name internet-scanners
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- internet-scanners.rsc; then
+            echo "No changes, skip commit."
+          else
+            git add internet-scanners.rsc
+            git commit -m "chore: update internet-scanners.rsc ($(date -u +'%Y-%m-%d'))"
+            git push
+          fi
