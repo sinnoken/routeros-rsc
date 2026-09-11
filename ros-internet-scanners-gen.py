@@ -89,7 +89,30 @@ def sort_key(cidr_str: str):
     return (net.version, int(net.network_address), net.prefixlen)
 
 
-def build_rsc(entries, list_name: str, include_inactive: bool) -> str:
+def collapse_entries(entries):
+    """
+    對每個 family (v4/v6) 使用 ipaddress.collapse_addresses() 合併相鄰/重疊/
+    被包含的網段，回傳精簡後的 dict。
+    合併後單一網段可能來自多個來源，comment 會標記為 "merged"；
+    若合併後某網段其實對應到原本單一未變動的來源，則保留原本來源名稱。
+    """
+    result = {"v4": {}, "v6": {}}
+    for fam, table in entries.items():
+        if not table:
+            continue
+        nets = [ipaddress.ip_network(c) for c in table]
+        collapsed = list(ipaddress.collapse_addresses(nets))
+        for net in collapsed:
+            norm = str(net)
+            if norm in table:
+                # 這個網段合併前後沒變，保留原本來源
+                result[fam][norm] = table[norm]
+            else:
+                result[fam][norm] = "merged"
+    return result
+
+
+def build_rsc(entries, list_name: str, include_inactive: bool, collapsed: bool = False) -> str:
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
     v4_items = sorted(entries["v4"].items(), key=lambda kv: sort_key(kv[0]))
     v6_items = sorted(entries["v6"].items(), key=lambda kv: sort_key(kv[0]))
@@ -103,6 +126,8 @@ def build_rsc(entries, list_name: str, include_inactive: bool) -> str:
     lines.append(f"# Entries  : IPv4={len(v4_items)}  IPv6={len(v6_items)}")
     if include_inactive:
         lines.append("# 註: 已包含 inactive/ (歷史/已停用) 區段")
+    if collapsed:
+        lines.append("# 註: 已使用 --collapse 合併相鄰/重疊/被包含的網段")
     lines.append("# ===================================================================")
     lines.append("")
 
@@ -157,6 +182,12 @@ def main():
         action="store_true",
         help="連同 inactive/ 目錄內已停用的區段一併匯入",
     )
+    parser.add_argument(
+        "--collapse",
+        action="store_true",
+        help="合併相鄰/重疊的 CIDR 為最精簡的網段 (使用 ipaddress.collapse_addresses)。"
+        "合併後的 comment 會標註為 merged，無法保留原始來源名稱",
+    )
     args = parser.parse_args()
 
     tmp_dir = None
@@ -176,8 +207,15 @@ def main():
             print("[!] 沒有讀到任何 CIDR 項目，請確認來源路徑是否正確", file=sys.stderr)
             sys.exit(1)
 
-        rsc_text = build_rsc(entries, args.list_name, args.include_inactive)
+        if args.collapse:
+            before = total
+            entries = collapse_entries(entries)
+            after = len(entries["v4"]) + len(entries["v6"])
+            print(f"[*] --collapse: {before} 筆 → {after} 筆", file=sys.stderr)
+
+        rsc_text = build_rsc(entries, args.list_name, args.include_inactive, collapsed=args.collapse)
         out_path = Path(args.output)
+        out_path.parent.mkdir(parents=True, exist_ok=True)
         out_path.write_text(rsc_text, encoding="utf-8")
 
         print(

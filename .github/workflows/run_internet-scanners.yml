@@ -30,6 +30,7 @@ jobs:
       - name: Generate merged .rsc
         run: |
           python3 ros-internet-scanners-gen.py \
+            --collapse \
             --source-dir upstream/cidr \
             --output rsc/internet-scanners.rsc \
             --list-name internet-scanners
