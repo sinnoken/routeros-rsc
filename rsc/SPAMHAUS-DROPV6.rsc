@@ -2,8 +2,8 @@
 # Source: https://www.spamhaus.org/drop/dropv6.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-09-25 07:13:19 UTC+0000
-# Entries   : 92 raw -> 33 after CIDR aggregation (saved 59, 64.1%, max_prefix=/48)
+# Generated : 2026-09-26 07:08:36 UTC+0000
+# Entries   : 91 raw -> 33 after CIDR aggregation (saved 58, 63.7%, max_prefix=/48)
 
 /ipv6 firewall address-list add address=2001:678:254::/48 comment="SPAMHAUS-DROP" list=SPAMHAUS-DROPV6
 /ipv6 firewall address-list add address=2001:678:6c0::/48 comment="SPAMHAUS-DROP" list=SPAMHAUS-DROPV6
