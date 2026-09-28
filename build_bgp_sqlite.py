@@ -5,12 +5,21 @@ import subprocess
 import pyasn
 import sqlite3
 import ipaddress
+from pathlib import Path
 import json
 
+# Simple path constants (no Config class)
+DATA_DIR = Path(__file__).parent
+RIB_DAT = DATA_DIR / "rib.latest.dat"
+RIB_BZ2 = DATA_DIR / "rib.latest.bz2"
+ASN_NAMES = DATA_DIR / "asnames.json"
+DB_PATH = DATA_DIR / "util" / "bgp.sqlite"
+NAMES_FILE = DATA_DIR / "asnames.json"
+
 def download_and_convert():
-    target_dat = "rib.latest.dat"
-    target_bz2 = "rib.latest.bz2"
-    target_names = "asnames.json"
+    target_dat = str(RIB_DAT)
+    target_bz2 = str(RIB_BZ2)
+    target_names = str(ASN_NAMES)
     
     # 檢查是否需要更新 (1小時內不重複下載)
     need_update = not os.path.exists(target_dat) or (time.time() - os.path.getmtime(target_dat) > 3600)
@@ -29,8 +38,8 @@ def download_and_convert():
 
 def main():
     download_and_convert()
-    db_name = "bgp.sqlite"
-    names_file = "asnames.json"
+    db_name = str(DB_PATH)
+    names_file = str(NAMES_FILE)
 
     print("Loading datasets...")
     asndb = pyasn.pyasn('rib.latest.dat')
