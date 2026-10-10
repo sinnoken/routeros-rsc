@@ -2,7 +2,7 @@
 # Source: https://ipv64.net/blocklists/countries/ipv64_blocklist_v6_CN.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-10-09 08:33:22 UTC+0000
+# Generated : 2026-10-10 08:10:44 UTC+0000
 # Entries   : 7395 raw -> 7317 after CIDR aggregation (saved 78, 1.1%, max_prefix=/32)
 
 /ipv6 firewall address-list add address=2001:218:0:2000::13a/128 comment="China IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_CN
