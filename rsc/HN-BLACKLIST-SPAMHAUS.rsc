@@ -2,7 +2,7 @@
 # Source: https://www.spamhaus.org/drop/drop.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-10-10 08:10:44 UTC+0000
+# Generated : 2026-10-11 08:22:19 UTC+0000
 # Entries   : 1683 raw -> 1341 after CIDR aggregation (saved 342, 20.3%, max_prefix=/20)
 
 /ip firewall address-list add address=1.10.16.0/20 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS
