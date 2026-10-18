@@ -2,8 +2,8 @@
 # Source: https://www.spamhaus.org/drop/drop.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-10-17 06:39:09 UTC+0000
-# Entries   : 1690 raw -> 1346 after CIDR aggregation (saved 344, 20.4%, max_prefix=/20)
+# Generated : 2026-10-18 07:00:52 UTC+0000
+# Entries   : 1691 raw -> 1347 after CIDR aggregation (saved 344, 20.3%, max_prefix=/20)
 
 /ip firewall address-list add address=1.10.16.0/20 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS
 /ip firewall address-list add address=2.26.75.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS
@@ -694,6 +694,7 @@
 /ip firewall address-list add address=185.11.61.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS
 /ip firewall address-list add address=185.14.192.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS
 /ip firewall address-list add address=185.19.40.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS
+/ip firewall address-list add address=185.30.160.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS
 /ip firewall address-list add address=185.30.168.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS
 /ip firewall address-list add address=185.34.147.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS
 /ip firewall address-list add address=185.36.80.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS
