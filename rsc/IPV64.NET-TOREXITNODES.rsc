@@ -2,8 +2,8 @@
 # Source: https://ipv64.net/blocklists/ipv64_blocklist_v4_tor_exit.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-10-19 07:23:44 UTC+0000
-# Entries   : 1205 raw -> 640 after CIDR aggregation (saved 565, 46.9%, max_prefix=/20)
+# Generated : 2026-10-20 07:14:54 UTC+0000
+# Entries   : 1186 raw -> 636 after CIDR aggregation (saved 550, 46.4%, max_prefix=/20)
 
 /ip firewall address-list add address=2.26.97.42/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=2.56.10.36/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -12,7 +12,6 @@
 /ip firewall address-list add address=5.44.252.164/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=5.45.102.93/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=5.104.86.6/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=5.181.177.69/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=5.230.249.72/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=5.253.247.27/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=5.255.101.10/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -39,7 +38,10 @@
 /ip firewall address-list add address=23.129.64.130/31 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=23.129.64.132/30 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=23.129.64.136/29 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=23.129.64.144/28 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=23.129.64.144/30 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=23.129.64.148/31 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=23.129.64.150/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=23.129.64.152/29 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=23.129.64.160/27 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=23.129.64.192/27 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=23.129.64.224/31 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -70,35 +72,32 @@
 /ip firewall address-list add address=31.133.0.122/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=31.133.0.235/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=36.255.97.124/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=37.48.65.88/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=37.48.70.156/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=37.77.56.238/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=37.114.50.18/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=37.114.50.27/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=37.114.50.142/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=37.114.63.5/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=37.187.74.97/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=37.221.208.71/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=37.221.209.150/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=37.228.129.63/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=37.228.129.128/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=37.228.129.162/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=37.228.129.168/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=37.228.129.189/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=37.228.129.241/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=37.252.189.216/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=43.131.2.16/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=44.30.4.69/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=45.9.2.77/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=45.9.148.50/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=45.9.156.22/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=45.9.156.110/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=45.9.156.131/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=45.9.156.144/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=45.9.156.182/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=45.9.156.184/31 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=45.9.156.238/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=45.9.168.62/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=45.9.168.69/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=45.9.168.92/31 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=45.9.168.114/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=45.9.168.116/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=45.9.168.192/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=45.12.3.80/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -106,10 +105,16 @@
 /ip firewall address-list add address=45.13.225.78/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=45.38.20.213/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=45.66.35.13/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=45.66.35.20/30 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=45.66.35.24/29 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=45.66.35.32/29 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=45.66.35.40/30 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=45.66.35.20/31 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=45.66.35.23/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=45.66.35.24/31 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=45.66.35.26/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=45.66.35.28/30 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=45.66.35.32/30 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=45.66.35.37/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=45.66.35.39/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=45.66.35.41/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=45.66.35.42/31 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=45.66.35.44/31 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=45.66.35.46/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=45.83.107.4/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -144,11 +149,11 @@
 /ip firewall address-list add address=51.81.222.62/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=51.91.18.151/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=51.158.151.177/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=54.36.108.162/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=57.129.91.235/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=61.220.100.193/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=62.84.176.89/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=62.133.45.2/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=62.164.141.162/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=62.182.84.146/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=64.188.93.178/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=64.190.76.2/31 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -165,7 +170,6 @@
 /ip firewall address-list add address=77.48.28.204/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=77.48.28.237/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=77.90.185.93/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=77.239.97.46/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=78.159.121.136/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=80.67.167.81/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=80.67.172.162/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -176,13 +180,12 @@
 /ip firewall address-list add address=81.232.160.94/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=82.39.155.148/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=82.47.0.200/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=82.65.141.110/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=82.71.108.163/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=82.118.248.205/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=82.153.138.184/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=82.197.182.161/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=82.221.100.12/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=82.221.100.134/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=82.221.100.222/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=82.221.128.191/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=82.221.131.5/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=82.221.131.71/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -190,11 +193,11 @@
 /ip firewall address-list add address=83.217.9.73/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=84.16.224.227/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=84.19.182.20/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=84.212.206.202/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=84.239.46.144/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=85.11.167.137/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=85.93.218.204/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=85.137.56.182/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=85.253.177.118/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=86.54.28.49/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=86.107.168.253/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=87.106.76.226/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -206,8 +209,8 @@
 /ip firewall address-list add address=87.118.122.51/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=87.243.108.53/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=89.58.7.15/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=89.58.41.156/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=89.125.13.177/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=89.147.108.90/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=89.147.110.82/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=89.147.110.118/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=89.147.110.251/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -226,6 +229,7 @@
 /ip firewall address-list add address=91.208.75.239/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=91.219.236.101/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=91.219.237.39/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=91.236.116.151/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=92.119.164.208/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=92.246.84.133/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=93.95.227.37/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -237,8 +241,10 @@
 /ip firewall address-list add address=93.99.104.128/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=93.99.104.194/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=93.113.25.109/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=93.123.12.112/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=94.16.115.121/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=94.16.121.91/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=94.72.103.33/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=94.142.241.194/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=94.142.244.16/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=94.156.152.2/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -258,21 +264,16 @@
 /ip firewall address-list add address=103.20.241.102/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=103.28.52.93/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=103.83.87.103/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=103.84.206.82/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=103.91.65.44/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=103.109.101.105/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=103.109.187.71/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=103.146.203.14/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=103.146.203.120/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=103.164.54.199/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=103.166.187.253/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=103.193.179.22/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=103.193.179.213/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=103.253.212.243/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=104.167.241.4/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=104.167.241.224/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=104.167.242.116/31 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=104.167.242.118/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=104.192.3.74/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=104.219.236.100/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=104.244.72.115/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -295,7 +296,6 @@
 /ip firewall address-list add address=109.71.252.97/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=109.71.252.182/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=109.169.33.163/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=109.228.160.190/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=109.237.27.11/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=112.145.239.76/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=113.20.28.236/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -321,7 +321,6 @@
 /ip firewall address-list add address=143.20.166.14/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=143.20.185.77/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=144.6.236.131/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=144.126.147.123/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=146.59.231.4/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=147.90.182.42/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=147.90.234.30/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -331,16 +330,14 @@
 /ip firewall address-list add address=147.90.234.116/31 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=147.90.234.118/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=147.90.234.167/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=147.90.234.213/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=147.90.234.223/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=147.90.235.34/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=147.90.235.154/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=147.90.235.226/31 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=147.90.235.227/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=147.90.235.249/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=148.135.75.210/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=149.56.44.47/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=149.202.79.101/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=149.202.79.129/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=150.40.117.43/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=150.40.126.28/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=150.40.126.34/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -350,10 +347,11 @@
 /ip firewall address-list add address=150.40.126.164/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=150.40.127.22/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=150.40.127.65/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=150.40.127.161/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=150.40.127.160/31 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=150.40.127.237/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=150.40.127.243/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=150.251.32.142/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=151.236.20.113/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=151.240.100.189/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=151.240.100.190/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=151.242.30.113/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -378,6 +376,7 @@
 /ip firewall address-list add address=162.251.5.152/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=165.73.242.163/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=166.70.207.2/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=167.17.47.200/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=167.179.117.50/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=168.222.241.36/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=171.25.193.20/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -397,6 +396,7 @@
 /ip firewall address-list add address=172.81.131.139/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=172.81.132.35/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=172.81.132.94/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=172.86.80.83/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=172.104.182.84/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=172.105.20.12/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=172.232.209.254/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -409,7 +409,9 @@
 /ip firewall address-list add address=176.65.148.3/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=176.65.148.133/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=176.65.149.96/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=176.65.149.105/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=176.118.193.33/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=176.121.81.51/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=178.17.170.225/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=178.17.171.74/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=178.17.171.102/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -418,7 +420,6 @@
 /ip firewall address-list add address=178.20.55.182/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=178.79.154.219/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=178.83.122.52/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=178.162.175.5/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=178.175.148.155/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=178.218.144.18/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=178.218.144.96/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -439,9 +440,9 @@
 /ip firewall address-list add address=185.56.171.94/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=185.67.82.114/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=185.82.219.109/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=185.93.89.96/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=185.100.85.24/31 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=185.100.85.132/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=185.100.86.181/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=185.100.87.41/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=185.100.87.136/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=185.100.87.140/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -450,8 +451,6 @@
 /ip firewall address-list add address=185.100.87.192/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=185.100.87.250/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=185.112.144.11/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=185.112.146.167/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=185.116.94.234/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=185.121.170.60/31 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=185.125.169.75/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=185.129.61.1/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -463,10 +462,6 @@
 /ip firewall address-list add address=185.129.62.62/31 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=185.129.62.64/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=185.130.47.58/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=185.132.53.37/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=185.132.53.45/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=185.132.53.47/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=185.132.53.58/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=185.132.53.121/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=185.132.53.199/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=185.150.28.13/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -477,6 +472,7 @@
 /ip firewall address-list add address=185.181.60.204/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=185.181.61.203/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=185.191.204.254/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=185.191.239.172/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=185.193.52.180/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=185.195.71.244/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=185.220.100.240/29 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -523,7 +519,6 @@
 /ip firewall address-list add address=185.247.224.89/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=185.252.232.218/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=185.254.196.141/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=186.240.149.160/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=188.68.36.28/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=188.239.191.25/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=190.103.179.5/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -551,11 +546,11 @@
 /ip firewall address-list add address=192.76.153.253/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=192.108.48.150/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=192.253.248.96/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=193.32.162.86/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=193.36.132.21/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=193.105.134.150/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=193.105.134.155/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=193.105.134.254/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=193.149.187.228/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=193.189.100.194/31 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=193.189.100.196/30 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=193.189.100.200/30 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -564,8 +559,8 @@
 /ip firewall address-list add address=193.200.229.243/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=193.218.118.89/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=193.218.118.128/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=193.218.118.173/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=193.238.152.133/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=193.239.232.102/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=193.239.232.235/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=194.15.112.133/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=194.15.113.102/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -592,10 +587,10 @@
 /ip firewall address-list add address=198.98.57.151/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=198.98.62.158/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=198.167.206.155/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=198.167.206.227/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=198.167.206.235/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=198.167.206.186/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=200.122.181.2/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=201.10.73.194/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=201.91.74.18/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=202.181.177.92/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=203.55.81.1/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=203.55.81.2/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -625,7 +620,6 @@
 /ip firewall address-list add address=204.194.29.4/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=205.185.113.8/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=205.185.113.180/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
-/ip firewall address-list add address=205.185.113.210/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=205.185.117.149/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=205.185.121.164/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=205.185.121.170/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -633,6 +627,7 @@
 /ip firewall address-list add address=206.206.192.178/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=207.246.62.85/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=209.38.145.86/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=209.99.190.69/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=209.141.45.141/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=212.21.66.6/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=212.69.167.80/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
@@ -645,3 +640,4 @@
 /ip firewall address-list add address=216.73.159.101/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=216.239.90.19/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
 /ip firewall address-list add address=217.60.78.198/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
+/ip firewall address-list add address=217.147.168.2/32 comment="ipv64.net-TorExitNodes" list=IPV64.NET-TOREXITNODES
