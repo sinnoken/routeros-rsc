@@ -2,7 +2,7 @@
 # Source: https://ipv64.net/blocklists/countries/ipv64_blocklist_v4_TW.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-10-20 07:14:54 UTC+0000
+# Generated : 2026-10-21 07:09:59 UTC+0000
 # Entries   : 1084 raw -> 655 after CIDR aggregation (saved 429, 39.6%, max_prefix=/16)
 
 /ip firewall address-list add address=1.200.0.0/16 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW
