@@ -1,0 +1,93 @@
+{
+  "_comment": "上游來源授權基準。check_upstream.py 以此比對；人工確認變更後更新對應欄位與 last_verified。",
+  "sources": [
+    {
+      "id": "ipsum",
+      "name": "stamparm/ipsum",
+      "used_in": ["rsc/STAMPARM-IPSUM-LEVEL-*.rsc", "rsc/ipsum-Level*.rsc"],
+      "redistribution": "allowed",
+      "github": {"repo": "stamparm/ipsum", "license_path": "LICENSE", "license_sha": "fdddb29aa445bf3d6a5d843d6dd77e10a9f99657", "spdx": "Unlicense"},
+      "feeds": ["https://github.com/stamparm/ipsum/raw/refs/heads/master/levels/3.txt"],
+      "obligations": "None (public domain)",
+      "last_verified": "2026-10-22"
+    },
+    {
+      "id": "internet-scanners",
+      "name": "OpenFilters/internet-scanners",
+      "used_in": ["rsc/internet-scanners.rsc"],
+      "redistribution": "allowed",
+      "github": {"repo": "OpenFilters/internet-scanners", "license_path": "LICENSE", "license_sha": "fdddb29aa445bf3d6a5d843d6dd77e10a9f99657", "spdx": "Unlicense"},
+      "obligations": "None (public domain)",
+      "last_verified": "2026-10-22"
+    },
+    {
+      "id": "maltrail",
+      "name": "stamparm/maltrail data/mass_scanner.txt",
+      "used_in": ["rsc/mass_scanner.rsc", "rsc/mass_scanner_v6.rsc"],
+      "redistribution": "allowed",
+      "github": {"repo": "stamparm/maltrail", "license_path": "LICENSE", "license_sha": "f6be4c5d85d94b124c1183fe0a7ae4906fa27cc3", "spdx": "MIT"},
+      "feeds": ["https://raw.githubusercontent.com/stamparm/maltrail/master/data/mass_scanner.txt"],
+      "header_patterns": ["Copyright \\(c\\) 2014-present Maltrail developers"],
+      "obligations": "Keep MIT copyright + permission notice (scripts/gen_mass_scanner.py MALTRAIL_NOTICE)",
+      "notes": "data/ is excluded from the Trails data license (Trails license §1.2(e)). Threat data moved to stamparm/trails in 2026.",
+      "last_verified": "2026-10-22"
+    },
+    {
+      "id": "trails",
+      "name": "stamparm/trails",
+      "used_in": ["util/trails-import.rsc (on-router download only)"],
+      "redistribution": "internal-use-only",
+      "github": {"repo": "stamparm/trails", "license_path": "LICENSE.md", "license_sha": "8448ca5e019050e3ac10c61baf08393fb2329f22", "spdx": "NOASSERTION"},
+      "obligations": "Must NOT appear in rsc/, Releases or workflows. Redistribution/feeds need written permission (sales@sekuripy.hr). Pre-existing MIT material up to commit e7d704c8 stays MIT; items become CC BY 4.0 three years after publication.",
+      "last_verified": "2026-10-22"
+    },
+    {
+      "id": "emergingthreats",
+      "name": "Emerging Threats fwrules",
+      "used_in": ["rsc/EMERGINGTHREATS-BLOCK-IPS.rsc"],
+      "redistribution": "allowed-with-notice",
+      "feeds": ["https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt"],
+      "header_patterns": ["Copyright \\(c\\) 2003-\\d{4}, Emerging Threats", "Redistribution and use in source and binary forms"],
+      "obligations": "Keep BSD copyright, conditions and disclaimer (copied by gen_blocklists.py extract_upstream_header)",
+      "last_verified": "2026-10-22"
+    },
+    {
+      "id": "spamhaus",
+      "name": "Spamhaus DROP / DROPv6",
+      "used_in": ["rsc/HN-BLACKLIST-SPAMHAUS.rsc", "rsc/SPAMHAUS-DROPV6.rsc"],
+      "redistribution": "allowed-with-notice",
+      "feeds": ["https://www.spamhaus.org/drop/drop.txt", "https://www.spamhaus.org/drop/dropv6.txt"],
+      "header_patterns": ["\\(c\\) \\d{4} The Spamhaus Project", "Last-Modified:"],
+      "terms_pages": ["https://www.spamhaus.org/drop/terms/", "https://www.spamhaus.com/faqs/drop/"],
+      "obligations": "Name Spamhaus as source, keep copyright line and timestamps at top of file, auto-fetch at most once per hour, no Spamhaus name in marketing. Text feeds may be deprecated in favour of JSON.",
+      "last_verified": "2026-10-22"
+    },
+    {
+      "id": "ipv64",
+      "name": "ipv64.net blocklists",
+      "used_in": ["rsc/IPV64.NET-*.rsc"],
+      "redistribution": "unknown",
+      "feeds": ["https://ipv64.net/blocklists/countries/ipv64_blocklist_v4_TW.txt"],
+      "obligations": "No license or terms found (site returns 403 to automated fetches). README marks it 'Not published'.",
+      "last_verified": "2026-10-22"
+    },
+    {
+      "id": "ripestat",
+      "name": "RIPEstat announced-prefixes",
+      "used_in": ["rsc/mikrotik_as_lists.rsc"],
+      "redistribution": "allowed-per-terms",
+      "terms_pages": ["https://www.ripe.net/about-us/legal/ripestat-service-terms-and-conditions/", "https://stat.ripe.net/docs/data_api"],
+      "obligations": "Send sourceapp=sinnoken-routeros-rsc; max 8 concurrent requests per IP; owner to register sourceapp with stat@ripe.net.",
+      "last_verified": "2026-10-22"
+    },
+    {
+      "id": "routeviews",
+      "name": "University of Oregon Route Views (via pyasn)",
+      "used_in": ["asn/", "util/bgp.sqlite"],
+      "redistribution": "not-verified",
+      "github": {"repo": "hadiasghari/pyasn", "license_path": "LICENSE", "license_sha": "1e9e68fb8ca5bc59ad9d87b58ff80d4fed788d3e", "spdx": "NOASSERTION"},
+      "obligations": "Terms of Route Views and CIDR Report (AS names) not yet verified. pyasn itself is MIT.",
+      "last_verified": "2026-10-22"
+    }
+  ]
+}
