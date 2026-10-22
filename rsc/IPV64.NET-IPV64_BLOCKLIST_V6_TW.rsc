@@ -2,7 +2,7 @@
 # Source: https://ipv64.net/blocklists/countries/ipv64_blocklist_v6_TW.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-10-21 07:10:00 UTC+0000
+# Generated : 2026-10-22 07:12:07 UTC+0000
 # Entries   : 325 raw -> 311 after CIDR aggregation (saved 14, 4.3%, max_prefix=/32)
 
 /ipv6 firewall address-list add address=2001:288::/32 comment="Taiwan IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_TW

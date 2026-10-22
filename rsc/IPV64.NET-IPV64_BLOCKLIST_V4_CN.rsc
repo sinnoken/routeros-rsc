@@ -2,7 +2,7 @@
 # Source: https://ipv64.net/blocklists/countries/ipv64_blocklist_v4_CN.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-10-21 07:10:00 UTC+0000
+# Generated : 2026-10-22 07:12:08 UTC+0000
 # Entries   : 8815 raw -> 4955 after CIDR aggregation (saved 3860, 43.8%, max_prefix=/16)
 
 /ip firewall address-list add address=1.0.1.0/24 comment="China IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_CN
