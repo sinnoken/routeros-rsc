@@ -29,7 +29,8 @@ def process_url(session, url):
     list_name = f'HN-BLACKLIST-IPSUM-L{level}'
     output_file = os.path.join(output_dir, f'ipsum-Level{level}.rsc')
 
-    response = session.get(url)
+    response = session.get(url, timeout=30)
+    response.raise_for_status()
     ip_list = response.text.splitlines()
 
     # 使用集合來去重和驗證 IP 地址
@@ -41,6 +42,14 @@ def process_url(session, url):
         and not ip_obj.is_reserved         # 排除保留位址
     }
     sorted_ips = sorted(valid_ips)
+
+    # 筆數驟降時視為上游異常，保留舊檔避免路由器匯入空清單
+    if os.path.exists(output_file):
+        with open(output_file) as f:
+            previous = sum(1 for line in f if ' add address=' in line)
+        if len(sorted_ips) < previous * 0.5:
+            print(f'[WARN] {output_file} 筆數由 {previous} 降為 {len(sorted_ips)}，保留舊檔')
+            return
 
     # 生成 RouterOS 指令
     commands = [
@@ -54,6 +63,7 @@ def process_url(session, url):
         f.write(f"# Source: https://github.com/stamparm/ipsum\n")
         f.write(f"# Converted for RouterOS by sinnoken/routeros-rsc\n")
         f.write(f"# WARNING: This file is auto-generated. Manual edits may be overwritten.\n")
+        f.write(f"# DEPRECATED: use rsc/STAMPARM-IPSUM-LEVEL-{level}.rsc (CIDR-aggregated, same source)\n")
         f.write(f"# Generated on: {datetime.now().astimezone().strftime('%Y-%m-%d %H:%M:%S %Z%z')}\n\n")
         f.writelines(commands)
 
@@ -63,7 +73,8 @@ def main():
     """主函數，使用多線程加速處理"""
     with requests.Session() as session:
         with ThreadPoolExecutor(max_workers=4) as executor:
-            executor.map(lambda url: process_url(session, url), urls)
+            # 取出結果才會拋出子執行緒中的例外，避免錯誤被靜默吞掉
+            list(executor.map(lambda url: process_url(session, url), urls))
 
 if __name__ == '__main__':
     main()

@@ -62,57 +62,49 @@ urls_info = [
         "list_name": "ipv64.net-ipv64_blocklist_v4_JP",
         "source_url": "https://ipv64.net/blocklists/countries/ipv64_blocklist_v4_JP.txt",
         "comment": "Japan IPv4 blocklist",
-        "type": "IPv4",
-        "max_prefix": 16
+        "type": "IPv4"
     },
     {
         "list_name": "ipv64.net-ipv64_blocklist_v6_JP",
         "source_url": "https://ipv64.net/blocklists/countries/ipv64_blocklist_v6_JP.txt",
         "comment": "Japan IPv6 blocklist",
-        "type": "IPv6",
-        "max_prefix": 32
+        "type": "IPv6"
     },
     {
         "list_name": "ipv64.net-ipv64_blocklist_v4_KR",
         "source_url": "https://ipv64.net/blocklists/countries/ipv64_blocklist_v4_KR.txt",
         "comment": "South Korea IPv4 blocklist",
-        "type": "IPv4",
-        "max_prefix": 16
+        "type": "IPv4"
     },
     {
         "list_name": "ipv64.net-ipv64_blocklist_v6_KR",
         "source_url": "https://ipv64.net/blocklists/countries/ipv64_blocklist_v6_KR.txt",
         "comment": "South Korea IPv6 blocklist",
-        "type": "IPv6",
-        "max_prefix": 32
+        "type": "IPv6"
     },
     {
         "list_name": "ipv64.net-ipv64_blocklist_v4_CN",
         "source_url": "https://ipv64.net/blocklists/countries/ipv64_blocklist_v4_CN.txt",
         "comment": "China IPv4 blocklist",
-        "type": "IPv4",
-        "max_prefix": 16
+        "type": "IPv4"
     },
     {
         "list_name": "ipv64.net-ipv64_blocklist_v6_CN",
         "source_url": "https://ipv64.net/blocklists/countries/ipv64_blocklist_v6_CN.txt",
         "comment": "China IPv6 blocklist",
-        "type": "IPv6",
-        "max_prefix": 32
+        "type": "IPv6"
     },
     {
         "list_name": "ipv64.net-ipv64_blocklist_v4_TW",
         "source_url": "https://ipv64.net/blocklists/countries/ipv64_blocklist_v4_TW.txt",
         "comment": "Taiwan IPv4 blocklist",
-        "type": "IPv4",
-        "max_prefix": 16
+        "type": "IPv4"
     },
     {
         "list_name": "ipv64.net-ipv64_blocklist_v6_TW",
         "source_url": "https://ipv64.net/blocklists/countries/ipv64_blocklist_v6_TW.txt",
         "comment": "Taiwan IPv6 blocklist",
-        "type": "IPv6",
-        "max_prefix": 32
+        "type": "IPv6"
     },
     {
         "list_name": "ipv64.net-TorExitNodes",
@@ -124,18 +116,11 @@ urls_info = [
         "list_name": "emergingthreats-Block-IPs",
         "source_url": "https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt",
         "comment": "Emerging Threats FW Block IPs",
-        "type": "IPv4",
-        "max_prefix": 8
+        "type": "IPv4"
     },
     {
         "list_name": "HN-BLACKLIST-SPAMHAUS",
         "source_url": "https://www.spamhaus.org/drop/drop.txt",
-        "comment": "SPAMHAUS-DROP",
-        "type": "IPv4"
-    },
-    {
-        "list_name": "spamhaus-edrop",
-        "source_url": "https://www.spamhaus.org/drop/edrop.txt",
         "comment": "SPAMHAUS-DROP",
         "type": "IPv4"
     },
@@ -147,8 +132,8 @@ urls_info = [
     }
 ]
 
-DEFAULT_MAX_PREFIX_V4 = 20
-DEFAULT_MAX_PREFIX_V6 = 48
+# 新清單筆數低於舊檔此比例時視為上游異常，保留舊檔不覆寫
+MIN_KEEP_RATIO = 0.5
 
 
 def create_session() -> requests.Session:
@@ -164,25 +149,35 @@ def create_session() -> requests.Session:
     return session
 
 
-def collapse_entries(valid_entries: set, max_prefix: int) -> list:
+def collapse_entries(valid_entries: set) -> list:
+    # 路由聚合只合併來源內既有的位址，不會擴大封鎖範圍，因此不需再依前綴長度過濾
     networks = set()
     for entry in valid_entries:
         if isinstance(entry, (ipaddress.IPv4Address, ipaddress.IPv6Address)):
             networks.add(ipaddress.ip_network(entry))
         else:
             networks.add(entry)
-    collapsed = ipaddress.collapse_addresses(networks)
-    return [net for net in collapsed if net.prefixlen >= max_prefix]
+    return list(ipaddress.collapse_addresses(networks))
+
+
+def count_existing_entries(output_file: str) -> int:
+    """計算既有 RSC 檔內的 add 筆數，檔案不存在時回傳 0"""
+    if not os.path.exists(output_file):
+        return 0
+    with open(output_file, encoding='utf-8') as f:
+        return sum(1 for line in f if ' add address=' in line)
 
 
 def write_rsc(
     output_file: str, comment: str, url: str,
     before: int, after: int, saved: int, ratio: float,
-    max_prefix: int, prefix_cmd: str,
+    prefix_cmd: str,
     collapsed: list, list_name: str
 ) -> None:
     """將整併結果寫入 RSC 檔案"""
     now_str = datetime.now().astimezone().strftime('%Y-%m-%d %H:%M:%S %Z%z')
+    # 先匯入暫存清單再改名，匯入期間正式清單不會是空的
+    staging = f"{list_name}-STAGING"
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(f"# {comment}\n")
         f.write(f"# Source: {url}\n")
@@ -191,13 +186,16 @@ def write_rsc(
         f.write(f"# Generated : {now_str}\n")
         f.write(
             f"# Entries   : {before} raw -> {after} after CIDR aggregation"
-            f" (saved {saved}, {ratio:.1f}%, max_prefix=/{max_prefix})\n\n"
+            f" (saved {saved}, {ratio:.1f}%)\n\n"
         )
+        f.write(f"{prefix_cmd} remove [find list={staging}]\n")
         for net in collapsed:
             f.write(
                 f"{prefix_cmd} add address={net}"
-                f' comment="{comment}" list={list_name}\n'
+                f' comment="{comment}" list={staging}\n'
             )
+        f.write(f"{prefix_cmd} remove [find list={list_name}]\n")
+        f.write(f"{prefix_cmd} set [find list={staging}] list={list_name}\n")
 
 
 def process_url(url_info: dict) -> None:
@@ -249,21 +247,19 @@ def process_url(url_info: dict) -> None:
     groups = []
     if v4_entries:
         groups.append((v4_entries, 4, "IPv4",
-                       '/ip firewall address-list',
-                       url_info.get('max_prefix', DEFAULT_MAX_PREFIX_V4)))
+                       '/ip firewall address-list'))
     if v6_entries:
         groups.append((v6_entries, 6, "IPv6",
-                       '/ipv6 firewall address-list',
-                       url_info.get('max_prefix', DEFAULT_MAX_PREFIX_V6)))
+                       '/ipv6 firewall address-list'))
 
-    for entries, ver, ver_label, prefix_cmd, max_prefix in groups:
+    for entries, ver, ver_label, prefix_cmd in groups:
         # 混合清單時檔名加版本後綴，純單版本則沿用原名
         suffix      = f"_v{ver}" if len(groups) > 1 else ""
         output_file = os.path.join(output_dir, f"{list_name}{suffix}.rsc")
         lname_out   = f"{list_name}{suffix}"
 
         before    = len(entries)
-        collapsed = collapse_entries(entries, max_prefix)
+        collapsed = collapse_entries(entries)
         after     = len(collapsed)
         saved     = before - after
         ratio     = (saved / before * 100) if before > 0 else 0.0
@@ -273,10 +269,18 @@ def process_url(url_info: dict) -> None:
             f"{before} -> {after} 條（節省 {saved} 條，{ratio:.1f}%）"
         )
 
+        previous = count_existing_entries(output_file)
+        if after < previous * MIN_KEEP_RATIO:
+            print(
+                f"[WARN] [{lname_out}] 筆數由 {previous} 降為 {after}，"
+                f"低於 {MIN_KEEP_RATIO:.0%}，疑似上游異常，保留舊檔"
+            )
+            continue
+
         write_rsc(
             output_file, comment, url,
             before, after, saved, ratio,
-            max_prefix, prefix_cmd, collapsed, lname_out
+            prefix_cmd, collapsed, lname_out
         )
         print(f"[OK]   [{lname_out}] 已儲存 {output_file}（{after} 筆）")
 
