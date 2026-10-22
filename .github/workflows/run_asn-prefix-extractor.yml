@@ -10,10 +10,10 @@ jobs:
     steps:
       
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.x'  # 使用你需要的 Python 版本
 
@@ -34,7 +34,11 @@ jobs:
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         find . -name '*.txt' -exec git add {} +
         find . -name '*.sqlite' -exec git add {} +
-        git commit -m 'Add asn_{asn}_prefixes.txt'
-        git push
+        if git diff --cached --quiet; then
+          echo "No changes, skip commit."
+        else
+          git commit -m 'Add asn_{asn}_prefixes.txt'
+          git push
+        fi
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

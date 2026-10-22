@@ -33,32 +33,21 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@main
+      uses: actions/checkout@v4
 
-    - uses: browser-actions/setup-chrome@v1
-      id: setup-chrome
-      with:
-        install-chromedriver: true
-    - run: ${{ steps.setup-chrome.outputs.chrome-path }} --version
-      
     - name: Set up Python
-      uses: actions/setup-python@main
+      uses: actions/setup-python@v5
       with:
         python-version: '3.x'
         cache: 'pip' # caching pip dependencies
-        
+
     - name: Install requests
       run: pip install -r requirements.txt
 
-    - name: Run python ipsum.py
-      run: python ./ipsum-Level3-convert_to_routeros.py
-    - name: Run python selenium_test.py
-      run: python ./selenium_test.py
+    - name: Run python ipsum-convert_to_routeros.py
+      run: python ./ipsum-convert_to_routeros.py
       continue-on-error: true
-      env:
-          CHROME_PATH: ${{ steps.setup-chrome.outputs.chrome-path }}
-          CHROMEDRIVER_PATH: ${{ steps.setup-chrome.outputs.chromedriver-path }}
-          
+
     - name: Run python ros-blocklist-gen.py
       run: python ./ros-blocklist-gen.py
       continue-on-error: true
@@ -78,26 +67,32 @@ jobs:
       run: echo "TAG_NAME=$(date +%F-%H-%M)" >> $GITHUB_ENV
 
     - name: Commit & Push changes
-      uses: actions-js/push@master
+      uses: actions-js/push@v1.6
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        force: true
+
+    # 排程觸發時 github.event.commits 為空，改由 git 取得實際推送的 commit
+    - name: Get pushed commit
+      id: pushed
+      run: |
+        echo "sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+        echo "message=$(git log -1 --pretty=%s)" >> $GITHUB_OUTPUT
 
     - name: Notify the commit on Telegram
-      uses: appleboy/telegram-action@master
+      uses: appleboy/telegram-action@v1.1.1
       with:
         token: '${{ secrets.TELEGRAM_BOT_TOKEN }}'
         to: '${{ secrets.TELEGRAM_CHAT_ID }}'
         message: |
           ${{ github.actor }} created commit:
-          Commit message: ${{ github.event.commits[0].message }}
-          
+          Commit message: ${{ steps.pushed.outputs.message }}
+
           Repository: ${{ github.repository }}
-          
-          See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+
+          See changes: https://github.com/${{ github.repository }}/commit/${{ steps.pushed.outputs.sha }}
 
     - name: Create Release
-      uses: softprops/action-gh-release@master
+      uses: softprops/action-gh-release@v3
       with:
         files: ./rsc/*.rsc
         name: Automatic list generation
@@ -106,7 +101,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Delete older releases
-      uses: dev-drprasad/delete-older-releases@master
+      uses: dev-drprasad/delete-older-releases@v0.3.4
       with:
         keep_latest: 2
         delete_tags: true
