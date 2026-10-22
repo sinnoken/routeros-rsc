@@ -115,6 +115,7 @@ The Telegram step needs the `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` reposito
 [`util/`](util/) holds snippets for running on the router itself. They are not part of the generated lists.
 
 - `regex.rsc`: examples of filtering `address-list` entries by list-name regex, timeout and empty comment, then printing the address and comment.
+- `trails-import.rsc` (RouterOS 7.13+): downloads selected [stamparm/trails](https://github.com/stamparm/trails) C2 lists **directly on your router**. It keeps only IP addresses and CIDRs, skipping domains, URL paths and private ranges, and adds them to the `TRAILS-C2` address list with a 3-day timeout. Each daily run refreshes the timeouts, so the list is never emptied during an update. Entries with a timeout are dynamic and **cleared by a reboot**, so also schedule the script at startup; it waits for the default route before downloading. Installation, including both scheduler entries, and a log-first firewall rule are in the file header. Trails data is licensed for **internal defensive use only**. Run the script on networks you operate, and do not republish the resulting lists.
 - `diff.rsc`: keeps a BGP connection's `local.address` in sync with the current PPPoE IP held in an address list. The upstream scanner URLs at the end are commented out for reference.
 
 ## Repository layout
@@ -140,7 +141,8 @@ The generated lists in `rsc/` and `asn/` are not covered by that license. They a
 |---|---|---|
 | [stamparm/ipsum](https://github.com/stamparm/ipsum) | [The Unlicense](https://github.com/stamparm/ipsum) | Public domain |
 | [OpenFilters/internet-scanners](https://github.com/OpenFilters/internet-scanners) | [The Unlicense](https://github.com/OpenFilters/internet-scanners) | Public domain |
-| [stamparm/maltrail](https://github.com/stamparm/maltrail) `data/mass_scanner.txt` | [MIT](https://github.com/stamparm/maltrail/blob/master/LICENSE) | MIT notice is included in `mass_scanner*.rsc`. This repo does **not** use [stamparm/trails](https://github.com/stamparm/trails), which has a separate, more restrictive [data license](https://github.com/stamparm/trails/blob/main/LICENSE.md). |
+| [stamparm/maltrail](https://github.com/stamparm/maltrail) `data/mass_scanner.txt` | [MIT](https://github.com/stamparm/maltrail/blob/master/LICENSE) | MIT notice is included in `mass_scanner*.rsc` |
+| [stamparm/trails](https://github.com/stamparm/trails) | [Maltrail Trails Community Data License](https://github.com/stamparm/trails/blob/main/LICENSE.md) | **Not redistributed.** No Trails data is published in `rsc/` or Releases. `util/trails-import.rsc` makes each router download Trails itself, for its operator's internal defensive use. |
 | [Emerging Threats](https://rules.emergingthreats.net/fwrules/) | BSD-style (in the source file header) | Copyright notice, conditions and disclaimer are kept in the `.rsc` header |
 | [Spamhaus DROP](https://www.spamhaus.org/drop/) | [DROP Terms of Use](https://www.spamhaus.org/drop/terms/) | Redistributed per the [DROP FAQ](https://www.spamhaus.com/faqs/drop/): Spamhaus is named as the source, and its copyright line and timestamps are kept. Fetched at most once per hour, as Spamhaus requires. |
 | [ipv64.net](https://ipv64.net/) | Not published | No license or terms could be found. Check with ipv64.net before redistributing these lists further. |
