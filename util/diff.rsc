@@ -13,10 +13,10 @@
     :log info "BGP local.address is already up to date."
 }
 
-https://github.com/MDMCK10/internet-scanners/raw/refs/heads/main/cidr/rapid7_v4.txt
-https://github.com/MDMCK10/internet-scanners/raw/refs/heads/main/cidr/rapid7_v6.txt
-https://github.com/MDMCK10/internet-scanners/raw/refs/heads/main/cidr/censys_v4.txt
-https://github.com/MDMCK10/internet-scanners/raw/refs/heads/main/cidr/censys_v6.txt
-https://github.com/MDMCK10/internet-scanners/raw/refs/heads/main/cidr/shadowserver_v4.txt
-https://github.com/MDMCK10/internet-scanners/raw/refs/heads/main/cidr/shadowserver_v6.txt
-https://github.com/MDMCK10/internet-scanners/raw/refs/heads/main/cidr/criminalip_v4.txt
+# https://github.com/MDMCK10/internet-scanners/raw/refs/heads/main/cidr/rapid7_v4.txt
+# https://github.com/MDMCK10/internet-scanners/raw/refs/heads/main/cidr/rapid7_v6.txt
+# https://github.com/MDMCK10/internet-scanners/raw/refs/heads/main/cidr/censys_v4.txt
+# https://github.com/MDMCK10/internet-scanners/raw/refs/heads/main/cidr/censys_v6.txt
+# https://github.com/MDMCK10/internet-scanners/raw/refs/heads/main/cidr/shadowserver_v4.txt
+# https://github.com/MDMCK10/internet-scanners/raw/refs/heads/main/cidr/shadowserver_v6.txt
+# https://github.com/MDMCK10/internet-scanners/raw/refs/heads/main/cidr/criminalip_v4.txt
