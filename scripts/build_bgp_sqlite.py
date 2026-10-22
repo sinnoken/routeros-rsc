@@ -9,7 +9,7 @@ from pathlib import Path
 import json
 
 # Simple path constants (no Config class)
-DATA_DIR = Path(__file__).parent
+DATA_DIR = Path(__file__).resolve().parent.parent  # repo 根目錄（本檔位於 scripts/）
 RIB_DAT = DATA_DIR / "rib.latest.dat"
 RIB_BZ2 = DATA_DIR / "rib.latest.bz2"
 ASN_NAMES = DATA_DIR / "asnames.json"
@@ -42,7 +42,7 @@ def main():
     names_file = str(NAMES_FILE)
 
     print("Loading datasets...")
-    asndb = pyasn.pyasn('rib.latest.dat')
+    asndb = pyasn.pyasn(str(RIB_DAT))
     
     with open(names_file, 'r', encoding='utf-8') as f:
         as_map = json.load(f)

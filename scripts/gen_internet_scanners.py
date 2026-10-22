@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
 """
-generate_rsc.py
+gen_internet_scanners.py
 
 將 OpenFilters/internet-scanners repo 中 cidr/*_v4.txt、cidr/*_v6.txt
 合併成單一 Mikrotik RouterOS v7 可用的 .rsc 匯入檔（firewall address-list）。
 
 用法:
     # 方式一：自動 clone 上游 repo 再產生 (需要 git + 網路)
-    python3 generate_rsc.py --output internet-scanners.rsc
+    python3 scripts/gen_internet_scanners.py --output internet-scanners.rsc
 
     # 方式二：已經 checkout 過上游 repo，直接指定路徑 (GitHub Actions 建議用這個)
-    python3 generate_rsc.py --source-dir upstream/cidr --output internet-scanners.rsc
+    python3 scripts/gen_internet_scanners.py --source-dir upstream/cidr --output internet-scanners.rsc
 
     # 連 inactive/ 內的舊區段也一併匯入 (預設不含)
-    python3 generate_rsc.py --include-inactive --output internet-scanners.rsc
+    python3 scripts/gen_internet_scanners.py --include-inactive --output internet-scanners.rsc
 """
 
 import argparse

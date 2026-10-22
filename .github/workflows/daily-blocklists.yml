@@ -1,9 +1,9 @@
-name: Convert stamparm/ipsum list of bad IPs(level3) to RouterOS addressList
+name: "Daily: blocklists (ipsum, ipv64, ET, Spamhaus, ASN)"
 
 on:
   schedule:
   - cron: "0 2 * * *"
-  
+
   workflow_dispatch:
     # ASN 對照：
     #   AS45102 = Alibaba Cloud (阿里雲國際)
@@ -24,9 +24,9 @@ on:
         required: false
         default: 'AS45102 AS14061'
 env:
-  # --- 新增：預設排程執行的 ASN 列表 ---
+  # 預設排程執行的 ASN 列表
   DEFAULT_ASNS: "AS45102"
-  
+
 jobs:
   convert:
     runs-on: ubuntu-latest
@@ -44,32 +44,36 @@ jobs:
     - name: Install requests
       run: pip install -r requirements.txt
 
-    - name: Run python ipsum-convert_to_routeros.py
-      run: python ./ipsum-convert_to_routeros.py
+    - name: Generate legacy ipsum lists
+      run: python scripts/gen_ipsum_legacy.py
       continue-on-error: true
 
-    - name: Run python ros-blocklist-gen.py
-      run: python ./ros-blocklist-gen.py
+    - name: Generate blocklists
+      run: python scripts/gen_blocklists.py
       continue-on-error: true
-    # --- 新增：執行 ASN 抓取與聚合腳本 ---
-    - name: Run python ros-asn-addresslist-gen.py
+
+    # 手動輸入的 ASN 經由環境變數傳入，避免直接展開到 shell 指令中
+    - name: Generate ASN address lists
+      env:
+        CUSTOM_ASNS: ${{ github.event.inputs.custom_asns }}
       run: |
-        if [ "${{ github.event.inputs.custom_asns }}" != "" ]; then
-          RUN_ASNS="${{ github.event.inputs.custom_asns }}"
-        else
-          RUN_ASNS="${{ env.DEFAULT_ASNS }}"
-        fi
+        RUN_ASNS="${CUSTOM_ASNS:-$DEFAULT_ASNS}"
         echo "即將處理以下 ASN: $RUN_ASNS"
-        python ./ros-asn-addresslist-gen.py $RUN_ASNS
+        python scripts/gen_asn_addresslist.py $RUN_ASNS
       continue-on-error: true
-    # -----------------------------------
+
+    # 以 step output 傳遞，編輯器的靜態檢查才認得到（$GITHUB_ENV 會被標為可能無效）
     - name: Generate tag name
-      run: echo "TAG_NAME=$(date +%F-%H-%M)" >> $GITHUB_ENV
+      id: tag
+      run: |
+        echo "name=$(date +%F-%H-%M)" >> $GITHUB_OUTPUT
+        echo "date=$(date -u +%F)" >> $GITHUB_OUTPUT
 
     - name: Commit & Push changes
       uses: actions-js/push@v1.6
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
+        message: "chore(lists): update daily blocklists (${{ steps.tag.outputs.date }})"
 
     # 排程觸發時 github.event.commits 為空，改由 git 取得實際推送的 commit
     - name: Get pushed commit
@@ -96,10 +100,10 @@ jobs:
       with:
         files: ./rsc/*.rsc
         name: Automatic list generation
-        tag_name: ${{ env.TAG_NAME }}
+        tag_name: ${{ steps.tag.outputs.name }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
+
     - name: Delete older releases
       uses: dev-drprasad/delete-older-releases@v0.3.4
       with:
@@ -107,10 +111,3 @@ jobs:
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-#    - name: Upload log files
-#      uses: actions/upload-artifact@master
-#      with:
-#        name: Logs
-#        path: logs/*.log
-#      if: ${{ always() }}

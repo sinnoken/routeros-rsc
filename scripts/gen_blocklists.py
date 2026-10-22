@@ -168,17 +168,36 @@ def count_existing_entries(output_file: str) -> int:
         return sum(1 for line in f if ' add address=' in line)
 
 
+def extract_upstream_header(lines: list) -> list:
+    """取出來源檔開頭的註解區塊（版權、授權、時間戳記），去掉 # 或 ; 註解符號"""
+    header = []
+    for raw_line in lines:
+        line = raw_line.strip()
+        if line and not line.startswith(('#', ';')):
+            break
+        header.append(line.lstrip('#;').strip())
+    while header and not header[-1]:
+        header.pop()
+    return header
+
+
 def write_rsc(
     output_file: str, comment: str, url: str,
     before: int, after: int, saved: int, ratio: float,
     prefix_cmd: str,
-    collapsed: list, list_name: str
+    collapsed: list, list_name: str, upstream_header: list
 ) -> None:
     """將整併結果寫入 RSC 檔案"""
     now_str = datetime.now().astimezone().strftime('%Y-%m-%d %H:%M:%S %Z%z')
     # 先匯入暫存清單再改名，匯入期間正式清單不會是空的
     staging = f"{list_name}-STAGING"
     with open(output_file, 'w', encoding='utf-8') as f:
+        # 依上游授權要求，版權聲明與時間戳記原樣置於檔案最前面（Spamhaus、Emerging Threats 等）
+        if upstream_header:
+            f.write("# ---- Upstream notice (retained as required by the source) ----\n")
+            for line in upstream_header:
+                f.write(f"# {line}\n" if line else "#\n")
+            f.write("# ---- End of upstream notice ----\n#\n")
         f.write(f"# {comment}\n")
         f.write(f"# Source: {url}\n")
         f.write("# Converted for RouterOS by sinnoken/routeros-rsc\n")
@@ -213,6 +232,7 @@ def process_url(url_info: dict) -> None:
 
     ip_list = response.text.splitlines()
     print(f"[INFO] [{list_name}] 下載到 {len(ip_list)} 行")
+    upstream_header = extract_upstream_header(ip_list)
 
     # ── 解析：不預設版本，直接分組 ──────────────────────────────
     v4_entries: set = set()
@@ -280,7 +300,7 @@ def process_url(url_info: dict) -> None:
         write_rsc(
             output_file, comment, url,
             before, after, saved, ratio,
-            prefix_cmd, collapsed, lname_out
+            prefix_cmd, collapsed, lname_out, upstream_header
         )
         print(f"[OK]   [{lname_out}] 已儲存 {output_file}（{after} 筆）")
 

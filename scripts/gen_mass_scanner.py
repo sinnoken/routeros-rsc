@@ -8,11 +8,36 @@ import argparse
 from datetime import datetime, timezone
 
 # ── 設定區 ────────────────────────────────────────────────────────────────────
-# URL = "https://raw.githubusercontent.com/stamparm/maltrail/master/trails/static/mass_scanner_cidr.txt"
-URL = "https://raw.githubusercontent.com/stamparm/maltrail/master/trails/static/mass_scanner.txt"
+# 2026 年 maltrail 重整 repo 後移至 data/（MIT 授權）。威脅情資已拆到 stamparm/trails，
+# 改用 Maltrail Trails Community Data License，轉發成 feed 需書面授權，請勿改抓該 repo
+# URL = "https://raw.githubusercontent.com/stamparm/maltrail/master/data/mass_scanner_cidr.txt"
+URL = "https://raw.githubusercontent.com/stamparm/maltrail/master/data/mass_scanner.txt"
 MAX_COMMENT_LEN = 110
 RETRY_COUNT = 3
 RETRY_DELAY = 2  # 秒
+
+# MIT 授權要求轉發時保留版權聲明與授權文字
+MALTRAIL_NOTICE = """\
+Maltrail data: Copyright (c) 2014-present Maltrail developers (https://github.com/stamparm/maltrail/)
+Licensed under the MIT License:
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE."""
 
 OUTPUT_V4 = "mass_scanner.rsc"
 OUTPUT_V6 = "mass_scanner_v6.rsc"
@@ -194,7 +219,10 @@ def write_rsc(filename: str, collapsed: list, comments_map: dict, is_v6: bool = 
     with open(filename, "w", encoding="utf-8") as f:
         f.write("# Maltrail Mass Scanner List\n")
         f.write("# Source: https://github.com/stamparm/maltrail + Local Variable List\n")
-        f.write(f"# Generated on: {gen_time}\n\n")
+        f.write(f"# Generated on: {gen_time}\n#\n")
+        for line in MALTRAIL_NOTICE.splitlines():
+            f.write(f"# {line}\n" if line else "#\n")
+        f.write("\n")
         f.write(f"{cmd_path} remove [find list={list_name}]\n")
 
         for net in collapsed:

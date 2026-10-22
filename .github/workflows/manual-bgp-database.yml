@@ -1,4 +1,4 @@
-name: Extract ASN Prefixes
+name: "Manual: ASN prefixes + BGP SQLite"
 
 on:
   workflow_dispatch:  # 手動觸發工作流程
@@ -22,11 +22,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install pyasn
 
-    - name: Download BGP data & Run Python script
-      run: python asn-prefix-extractor.py 45102
+    - name: Extract ASN prefixes
+      run: python scripts/extract_asn_prefixes.py 45102
 
-    - name: Download BGP data & Run Python script & export sqlite
-      run: python build_bgp_sqlite.py
+    - name: Build BGP SQLite database
+      run: python scripts/build_bgp_sqlite.py
 
     - name: Commit and push changes
       run: |
@@ -37,7 +37,7 @@ jobs:
         if git diff --cached --quiet; then
           echo "No changes, skip commit."
         else
-          git commit -m 'Add asn_{asn}_prefixes.txt'
+          git commit -m "chore(asn): update ASN prefixes and BGP database ($(date -u +%F))"
           git push
         fi
       env:

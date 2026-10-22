@@ -1,7 +1,7 @@
-name: CIDR Aggregator to RouterOS
+name: "Weekly: Maltrail mass scanner"
 on:
   schedule:
-    - cron: '0 0 * * 1' # 每週一凌晨 0 點執行
+    - cron: '0 0 * * 1' # 每週一 UTC 00:00（台北時間 08:00）執行
   workflow_dispatch:      # 允許手動點擊執行
 
 jobs:
@@ -13,16 +13,13 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Fetch, Process, and Generate RSC
-        run: python3 mass_scanner-extractor.py
-
-      - name: Move RSC files to rsc/ folder
         run: |
-          mkdir -p rsc
-          mv mass_scanner.rsc rsc/mass_scanner.rsc
-          mv mass_scanner_v6.rsc rsc/mass_scanner_v6.rsc
+          python3 scripts/gen_mass_scanner.py \
+            --output-v4 rsc/mass_scanner.rsc \
+            --output-v6 rsc/mass_scanner_v6.rsc
 
       - name: Commit and Push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Update: Maltrail Scanner RouterOS RSC list [skip ci]"
+          commit_message: "chore(lists): update mass-scanner lists [skip ci]"
           file_pattern: 'rsc/mass_scanner.rsc rsc/mass_scanner_v6.rsc'

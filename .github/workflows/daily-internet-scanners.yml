@@ -1,4 +1,4 @@
-name: Update Mikrotik internet-scanners.rsc
+name: "Daily: internet-scanners"
 
 on:
   schedule:
@@ -29,7 +29,7 @@ jobs:
 
       - name: Generate merged .rsc
         run: |
-          python3 ros-internet-scanners-gen.py \
+          python3 scripts/gen_internet_scanners.py \
             --collapse \
             --source-dir upstream/cidr \
             --output rsc/internet-scanners.rsc \
@@ -43,6 +43,6 @@ jobs:
           if [ -z "$(git status --porcelain -- rsc/internet-scanners.rsc)" ]; then
             echo "No changes, skip commit."
           else
-            git commit -m "chore: update internet-scanners.rsc ($(date -u +'%Y-%m-%d'))"
+            git commit -m "chore(lists): update internet-scanners ($(date -u +'%Y-%m-%d'))"
             git push
           fi
