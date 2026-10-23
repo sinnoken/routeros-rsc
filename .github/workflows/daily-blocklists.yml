@@ -33,10 +33,10 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
 
     - name: Set up Python
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v7
       with:
         python-version: '3.x'
         cache: 'pip' # caching pip dependencies
@@ -104,10 +104,15 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+    # dev-drprasad/delete-older-releases 仍是 node20 且已無更新，改用 runner 內建的 gh CLI
+    # 保留最新 2 個 release，其餘連同 tag 一併刪除
     - name: Delete older releases
-      uses: dev-drprasad/delete-older-releases@v0.3.4
-      with:
-        keep_latest: 2
-        delete_tags: true
+      run: |
+        gh release list --limit 1000 --json tagName,createdAt \
+          --jq 'sort_by(.createdAt) | reverse | .[2:][] | .tagName' |
+        while read -r tag; do
+          gh release delete "$tag" --cleanup-tag --yes
+        done
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_REPO: ${{ github.repository }}

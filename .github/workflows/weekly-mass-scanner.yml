@@ -10,7 +10,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Fetch, Process, and Generate RSC
         run: |
@@ -19,7 +19,7 @@ jobs:
             --output-v6 rsc/mass_scanner_v6.rsc
 
       - name: Commit and Push
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "chore(lists): update mass-scanner lists [skip ci]"
           file_pattern: 'rsc/mass_scanner.rsc rsc/mass_scanner_v6.rsc'
