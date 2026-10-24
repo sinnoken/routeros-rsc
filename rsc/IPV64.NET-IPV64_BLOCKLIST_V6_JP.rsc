@@ -2,8 +2,8 @@
 # Source: https://ipv64.net/blocklists/countries/ipv64_blocklist_v6_JP.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-10-23 06:47:25 UTC+0000
-# Entries   : 787 raw -> 668 after CIDR aggregation (saved 119, 15.1%)
+# Generated : 2026-10-24 06:42:54 UTC+0000
+# Entries   : 788 raw -> 669 after CIDR aggregation (saved 119, 15.1%)
 
 /ipv6 firewall address-list remove [find list=IPV64.NET-IPV64_BLOCKLIST_V6_JP-STAGING]
 /ipv6 firewall address-list add address=2001:200::/32 comment="Japan IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_JP-STAGING
@@ -654,6 +654,7 @@
 /ipv6 firewall address-list add address=240b:c000::/24 comment="Japan IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_JP-STAGING
 /ipv6 firewall address-list add address=240d::/27 comment="Japan IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_JP-STAGING
 /ipv6 firewall address-list add address=240f::/23 comment="Japan IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_JP-STAGING
+/ipv6 firewall address-list add address=2602:f29d::/40 comment="Japan IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_JP-STAGING
 /ipv6 firewall address-list add address=2602:f614::/40 comment="Japan IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_JP-STAGING
 /ipv6 firewall address-list add address=2602:f688::/32 comment="Japan IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_JP-STAGING
 /ipv6 firewall address-list add address=2602:f75d::/36 comment="Japan IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_JP-STAGING
