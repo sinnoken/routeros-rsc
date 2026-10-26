@@ -1,6 +1,27 @@
 # Maltrail Mass Scanner List
 # Source: https://github.com/stamparm/maltrail + Local Variable List
-# Generated on: 2026-08-24 00:36:07 UTC+0000
+# Generated on: 2026-10-26 02:26:23 UTC+0000
+#
+# Maltrail data: Copyright (c) 2014-present Maltrail developers (https://github.com/stamparm/maltrail/)
+# Licensed under the MIT License:
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
 
 /ipv6 firewall address-list remove [find list=MALTRAIL-SCANNER-V6]
 /ipv6 firewall address-list add address=2400:6180:0:d0::3d:1/128 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER-V6

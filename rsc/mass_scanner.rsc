@@ -1,6 +1,27 @@
 # Maltrail Mass Scanner List
 # Source: https://github.com/stamparm/maltrail + Local Variable List
-# Generated on: 2026-08-24 00:36:07 UTC+0000
+# Generated on: 2026-10-26 02:26:23 UTC+0000
+#
+# Maltrail data: Copyright (c) 2014-present Maltrail developers (https://github.com/stamparm/maltrail/)
+# Licensed under the MIT License:
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
 
 /ip firewall address-list remove [find list=MALTRAIL-SCANNER]
 /ip firewall address-list add address=5.63.151.96/27 comment="Maltrail: rapid7.com" list=MALTRAIL-SCANNER
@@ -8,10 +29,6 @@
 /ip firewall address-list add address=5.196.200.248/30 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=5.196.200.252/31 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=5.196.200.254/32 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=13.249.87.45/32 comment="Maltrail-Scanner" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=13.249.87.52/32 comment="Maltrail-Scanner" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=13.249.87.58/32 comment="Maltrail-Scanner" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=13.249.87.125/32 comment="Maltrail-Scanner" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=15.235.189.144/28 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=15.235.224.227/32 comment="Maltrail: modat.io" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=15.235.224.238/31 comment="Maltrail: modat.io" list=MALTRAIL-SCANNER
@@ -1150,14 +1167,6 @@
 /ip firewall address-list add address=97.107.137.247/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=97.107.140.226/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=98.189.26.18/32 comment="Maltrail: sba-research.org" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=99.84.168.15/32 comment="Maltrail-Scanner" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=99.84.168.29/32 comment="Maltrail-Scanner" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=99.84.168.89/32 comment="Maltrail-Scanner" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=99.84.168.122/32 comment="Maltrail-Scanner" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=99.84.254.24/32 comment="Maltrail-Scanner" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=99.84.254.27/32 comment="Maltrail-Scanner" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=99.84.254.42/32 comment="Maltrail-Scanner" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=99.84.254.71/32 comment="Maltrail-Scanner" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=104.131.0.69/32 comment="Maltrail: shodan.io" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=104.131.5.198/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=104.131.64.92/32 comment="Maltrail: binaryedge.ninja" list=MALTRAIL-SCANNER
