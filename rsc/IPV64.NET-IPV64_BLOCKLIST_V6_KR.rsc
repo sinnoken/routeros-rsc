@@ -2,8 +2,8 @@
 # Source: https://ipv64.net/blocklists/countries/ipv64_blocklist_v6_KR.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-10-26 07:15:44 UTC+0000
-# Entries   : 184 raw -> 143 after CIDR aggregation (saved 41, 22.3%)
+# Generated : 2026-10-27 07:06:44 UTC+0000
+# Entries   : 183 raw -> 142 after CIDR aggregation (saved 41, 22.4%)
 
 /ipv6 firewall address-list remove [find list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING]
 /ipv6 firewall address-list add address=2001:220::/32 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
@@ -35,7 +35,6 @@
 /ipv6 firewall address-list add address=2001:df0:d580::/48 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
 /ipv6 firewall address-list add address=2001:df0:e540::/48 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
 /ipv6 firewall address-list add address=2001:df1:6c80::/48 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
-/ipv6 firewall address-list add address=2001:df3:d9c0::/48 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
 /ipv6 firewall address-list add address=2001:df4:f780::/48 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
 /ipv6 firewall address-list add address=2001:df5:5c40::/48 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
 /ipv6 firewall address-list add address=2001:df5:6800::/48 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING

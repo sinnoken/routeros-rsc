@@ -9,7 +9,7 @@
 # Source: https://www.spamhaus.org/drop/dropv6.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-10-26 07:15:45 UTC+0000
+# Generated : 2026-10-27 07:06:44 UTC+0000
 # Entries   : 91 raw -> 85 after CIDR aggregation (saved 6, 6.6%)
 
 /ipv6 firewall address-list remove [find list=SPAMHAUS-DROPV6-STAGING]
