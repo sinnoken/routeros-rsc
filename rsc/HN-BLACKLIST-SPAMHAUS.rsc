@@ -1,16 +1,16 @@
 # ---- Upstream notice (retained as required by the source) ----
-# Spamhaus DROP List 2026/10/24 - (c) 2026 The Spamhaus Project SLU
+# Spamhaus DROP List 2026/10/27 - (c) 2026 The Spamhaus Project SLU
 # https://www.spamhaus.org/drop/drop.txt
-# Last-Modified: Sat, 24 Oct 2026 09:00:57 GMT
-# Expires: Sat, 24 Oct 2026 10:14:02 GMT
+# Last-Modified: Tue, 27 Oct 2026 18:13:55 GMT
+# Expires: Tue, 27 Oct 2026 19:14:02 GMT
 # ---- End of upstream notice ----
 #
 # SPAMHAUS-DROP
 # Source: https://www.spamhaus.org/drop/drop.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-10-27 07:06:44 UTC+0000
-# Entries   : 1687 raw -> 1593 after CIDR aggregation (saved 94, 5.6%)
+# Generated : 2026-10-28 07:46:12 UTC+0000
+# Entries   : 1759 raw -> 1619 after CIDR aggregation (saved 140, 8.0%)
 
 /ip firewall address-list remove [find list=HN-BLACKLIST-SPAMHAUS-STAGING]
 /ip firewall address-list add address=1.10.16.0/20 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -69,11 +69,12 @@
 /ip firewall address-list add address=27.124.0.0/18 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=27.126.160.0/20 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=27.146.0.0/16 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=31.40.201.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=31.43.185.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=31.56.19.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=31.56.52.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=31.56.209.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=31.57.184.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=31.57.184.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=31.57.216.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=31.76.32.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=31.129.49.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -106,8 +107,7 @@
 /ip firewall address-list add address=42.128.0.0/12 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=42.160.0.0/12 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=42.208.0.0/12 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=43.228.157.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=43.228.159.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=43.228.156.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=43.229.52.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=43.229.240.0/21 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=43.231.220.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -131,16 +131,7 @@
 /ip firewall address-list add address=45.65.32.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=45.66.117.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=45.66.118.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=45.74.3.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=45.74.7.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=45.74.10.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=45.74.16.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=45.74.21.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=45.74.40.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=45.74.47.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=45.74.57.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=45.74.59.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=45.74.61.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=45.74.0.0/18 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=45.80.37.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=45.80.158.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=45.80.248.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -183,7 +174,7 @@
 /ip firewall address-list add address=45.141.215.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=45.142.152.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=45.142.193.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=45.144.212.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=45.144.212.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=45.148.10.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=45.150.34.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=45.150.212.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -222,19 +213,36 @@
 /ip firewall address-list add address=62.204.41.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=63.80.8.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=64.15.0.0/20 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=64.69.97.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=64.69.98.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=64.69.100.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=64.69.102.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=64.69.122.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=64.69.125.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=64.69.126.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=64.77.128.0/18 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=64.89.160.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=64.92.224.0/20 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=64.116.200.0/21 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=64.204.37.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=64.205.156.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=64.205.164.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=64.205.172.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=64.205.188.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=64.250.144.0/20 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=65.166.249.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=65.205.64.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=65.216.208.0/21 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=66.6.59.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=66.198.225.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=67.219.208.0/20 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=69.33.250.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=69.33.252.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=69.40.207.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=69.165.0.0/20 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=74.0.80.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=74.0.92.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=74.2.112.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=74.114.148.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=76.74.0.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=76.74.36.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -248,13 +256,15 @@
 /ip firewall address-list add address=77.81.84.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=77.81.86.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=77.81.89.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=77.83.39.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=77.83.36.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=77.83.207.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=77.90.154.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=77.90.185.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=77.91.119.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=77.109.3.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=77.244.221.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=78.40.143.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=78.108.119.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=78.153.140.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=79.124.62.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=80.94.92.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -268,6 +278,10 @@
 /ip firewall address-list add address=81.94.159.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=82.135.156.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=82.135.228.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=82.147.84.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=82.152.234.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=82.152.241.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=82.163.28.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=83.175.0.0/18 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=83.217.208.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=83.218.218.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -278,6 +292,7 @@
 /ip firewall address-list add address=85.158.149.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=85.203.26.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=85.203.46.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=85.208.84.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=85.208.212.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=85.209.204.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=85.239.144.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -311,6 +326,7 @@
 /ip firewall address-list add address=87.228.109.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=87.228.110.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=87.251.79.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=88.214.50.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=89.18.16.0/21 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=89.23.126.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=89.32.41.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -340,7 +356,7 @@
 /ip firewall address-list add address=89.40.209.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=89.41.50.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=89.43.50.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=89.45.34.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=89.45.34.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=89.45.82.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=89.46.47.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=89.106.83.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -355,6 +371,7 @@
 /ip firewall address-list add address=91.200.164.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=91.202.233.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=91.204.224.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=91.206.71.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=91.206.169.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=91.214.109.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=91.215.85.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -405,7 +422,10 @@
 /ip firewall address-list add address=94.154.43.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=94.154.46.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=94.183.168.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=94.183.174.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=95.85.238.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=95.155.168.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=95.155.174.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=95.164.131.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=95.164.162.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=95.169.180.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -544,17 +564,17 @@
 /ip firewall address-list add address=103.250.224.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=103.253.216.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=103.254.108.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=104.37.0.0/21 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=104.152.52.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=104.167.19.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=104.167.25.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=104.193.228.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=104.232.96.0/20 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=104.243.240.0/20 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=104.244.56.0/21 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=104.244.80.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=104.249.10.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=104.250.163.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=104.250.164.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=104.250.184.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=104.250.160.0/19 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=104.251.180.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=106.48.64.0/18 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=106.95.0.0/16 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -662,6 +682,9 @@
 /ip firewall address-list add address=138.219.172.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=138.226.236.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=138.241.0.0/16 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=138.249.120.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=138.249.122.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=138.249.124.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=139.183.192.0/18 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=140.82.64.0/19 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=140.82.96.0/20 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -691,6 +714,8 @@
 /ip firewall address-list add address=147.45.222.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=147.78.224.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=147.90.182.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=147.90.214.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=147.90.219.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=147.119.0.0/16 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=148.148.0.0/16 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=148.178.0.0/16 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -757,6 +782,7 @@
 /ip firewall address-list add address=161.248.178.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=162.71.0.0/19 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=162.217.160.0/21 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=162.246.184.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=162.249.20.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=163.5.102.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=163.47.19.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -821,6 +847,7 @@
 /ip firewall address-list add address=168.198.0.0/16 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=168.206.0.0/16 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=168.227.140.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=169.40.60.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=169.40.135.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=169.129.0.0/16 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=169.136.224.0/19 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -832,7 +859,7 @@
 /ip firewall address-list add address=170.179.0.0/16 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=170.247.220.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=171.26.0.0/16 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=172.94.9.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=172.94.0.0/17 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=172.111.128.0/17 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=172.247.38.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=173.44.0.0/19 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -850,12 +877,14 @@
 /ip firewall address-list add address=176.126.194.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=176.223.116.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=176.223.118.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=176.223.188.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=177.234.136.0/21 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=178.16.52.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=178.20.210.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=178.236.252.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=179.43.175.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=180.178.180.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=180.178.191.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=180.178.192.0/18 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=180.222.32.0/19 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=180.235.124.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -902,6 +931,7 @@
 /ip firewall address-list add address=185.144.180.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=185.148.240.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=185.161.148.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=185.165.78.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=185.166.92.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=185.169.4.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=185.177.239.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -909,12 +939,14 @@
 /ip firewall address-list add address=185.192.36.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=185.192.100.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=185.192.103.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=185.197.182.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=185.212.240.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=185.215.132.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=185.215.247.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=185.218.16.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=185.230.14.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=185.232.45.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=185.235.167.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=185.237.104.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=185.238.176.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=185.239.44.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -1018,7 +1050,7 @@
 /ip firewall address-list add address=192.251.231.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=192.252.16.0/20 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=192.252.176.0/20 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=192.253.248.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=192.253.240.0/20 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=193.3.164.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=193.24.123.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=193.26.115.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -1056,10 +1088,14 @@
 /ip firewall address-list add address=195.24.237.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=195.96.32.0/19 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=195.133.16.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=195.162.249.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=195.162.250.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=195.162.252.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=195.177.92.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=195.178.110.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=195.178.148.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=195.181.224.0/20 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=195.216.154.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=196.10.61.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=196.10.62.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=196.10.64.0/19 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -1068,22 +1104,7 @@
 /ip firewall address-list add address=196.49.11.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=196.216.1.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=196.223.43.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=196.251.65.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=196.251.66.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=196.251.69.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=196.251.80.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=196.251.85.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=196.251.92.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=196.251.96.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=196.251.98.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=196.251.100.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=196.251.102.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=196.251.107.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=196.251.112.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=196.251.116.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=196.251.118.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=196.251.121.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=196.251.122.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=196.251.64.0/18 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=197.11.156.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=197.231.248.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=197.234.221.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -1468,6 +1489,11 @@
 /ip firewall address-list add address=205.196.104.0/21 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=205.196.112.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=205.196.116.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=205.196.151.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=205.196.152.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=205.196.154.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=205.196.157.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=205.196.159.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=205.196.164.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=205.196.192.0/21 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=205.196.200.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -1504,8 +1530,7 @@
 /ip firewall address-list add address=206.83.128.0/21 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=206.121.28.0/22 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=206.121.32.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=206.123.145.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=206.123.156.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=206.123.128.0/19 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=206.125.16.0/20 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=206.130.180.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=206.130.188.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -1594,6 +1619,7 @@
 /ip firewall address-list add address=217.60.77.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=217.60.102.0/23 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=217.60.195.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
+/ip firewall address-list add address=217.60.197.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=217.60.199.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=217.60.241.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=217.60.250.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
