@@ -9,7 +9,7 @@
 # Source: https://www.spamhaus.org/drop/drop.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-10-28 07:46:12 UTC+0000
+# Generated : 2026-10-29 07:52:18 UTC+0000
 # Entries   : 1759 raw -> 1619 after CIDR aggregation (saved 140, 8.0%)
 
 /ip firewall address-list remove [find list=HN-BLACKLIST-SPAMHAUS-STAGING]
