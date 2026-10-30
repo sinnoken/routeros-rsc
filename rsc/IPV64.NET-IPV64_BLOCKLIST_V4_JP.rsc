@@ -2,8 +2,8 @@
 # Source: https://ipv64.net/blocklists/countries/ipv64_blocklist_v4_JP.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-10-29 07:52:18 UTC+0000
-# Entries   : 4808 raw -> 3209 after CIDR aggregation (saved 1599, 33.3%)
+# Generated : 2026-10-30 07:55:28 UTC+0000
+# Entries   : 4806 raw -> 3207 after CIDR aggregation (saved 1599, 33.3%)
 
 /ip firewall address-list remove [find list=IPV64.NET-IPV64_BLOCKLIST_V4_JP-STAGING]
 /ip firewall address-list add address=1.0.16.0/20 comment="Japan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_JP-STAGING
@@ -48,7 +48,6 @@
 /ip firewall address-list add address=23.166.44.0/24 comment="Japan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_JP-STAGING
 /ip firewall address-list add address=23.176.40.0/24 comment="Japan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_JP-STAGING
 /ip firewall address-list add address=23.183.56.0/24 comment="Japan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_JP-STAGING
-/ip firewall address-list add address=23.187.72.0/24 comment="Japan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_JP-STAGING
 /ip firewall address-list add address=23.232.128.0/17 comment="Japan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_JP-STAGING
 /ip firewall address-list add address=24.41.112.0/20 comment="Japan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_JP-STAGING
 /ip firewall address-list add address=24.53.192.0/19 comment="Japan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_JP-STAGING
@@ -1682,7 +1681,6 @@
 /ip firewall address-list add address=143.125.0.0/16 comment="Japan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_JP-STAGING
 /ip firewall address-list add address=143.189.0.0/16 comment="Japan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_JP-STAGING
 /ip firewall address-list add address=143.201.0.0/16 comment="Japan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_JP-STAGING
-/ip firewall address-list add address=143.203.228.0/22 comment="Japan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_JP-STAGING
 /ip firewall address-list add address=144.1.0.0/16 comment="Japan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_JP-STAGING
 /ip firewall address-list add address=144.48.8.0/22 comment="Japan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_JP-STAGING
 /ip firewall address-list add address=144.79.51.0/24 comment="Japan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_JP-STAGING
