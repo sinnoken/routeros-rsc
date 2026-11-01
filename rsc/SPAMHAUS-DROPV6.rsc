@@ -1,16 +1,16 @@
 # ---- Upstream notice (retained as required by the source) ----
 # Spamhaus IPv6 DROP List 2026/10/31 - (c) 2026 The Spamhaus Project SLU
 # https://www.spamhaus.org/drop/dropv6.txt
-# Last-Modified: Tue, 27 Oct 2026 10:33:21 GMT
-# Expires: Sat, 31 Oct 2026 08:14:02 GMT
+# Last-Modified: Sat, 31 Oct 2026 17:29:36 GMT
+# Expires: Sat, 31 Oct 2026 18:44:02 GMT
 # ---- End of upstream notice ----
 #
 # SPAMHAUS-DROP
 # Source: https://www.spamhaus.org/drop/dropv6.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-10-31 07:48:10 UTC+0000
-# Entries   : 92 raw -> 86 after CIDR aggregation (saved 6, 6.5%)
+# Generated : 2026-11-01 08:28:38 UTC+0000
+# Entries   : 89 raw -> 83 after CIDR aggregation (saved 6, 6.7%)
 
 /ipv6 firewall address-list remove [find list=SPAMHAUS-DROPV6-STAGING]
 /ipv6 firewall address-list add address=2001:678:254::/48 comment="SPAMHAUS-DROP" list=SPAMHAUS-DROPV6-STAGING
@@ -89,9 +89,6 @@
 /ipv6 firewall address-list add address=2a12:a800:1::/48 comment="SPAMHAUS-DROP" list=SPAMHAUS-DROPV6-STAGING
 /ipv6 firewall address-list add address=2a12:a800:7::/48 comment="SPAMHAUS-DROP" list=SPAMHAUS-DROPV6-STAGING
 /ipv6 firewall address-list add address=2a12:a800:8::/48 comment="SPAMHAUS-DROP" list=SPAMHAUS-DROPV6-STAGING
-/ipv6 firewall address-list add address=2a12:dd47:8500::/40 comment="SPAMHAUS-DROP" list=SPAMHAUS-DROPV6-STAGING
-/ipv6 firewall address-list add address=2a12:dd47:db00::/40 comment="SPAMHAUS-DROP" list=SPAMHAUS-DROPV6-STAGING
-/ipv6 firewall address-list add address=2a13:df80:a800::/38 comment="SPAMHAUS-DROP" list=SPAMHAUS-DROPV6-STAGING
 /ipv6 firewall address-list add address=2a13:df84::/32 comment="SPAMHAUS-DROP" list=SPAMHAUS-DROPV6-STAGING
 /ipv6 firewall address-list add address=2a13:df87:b600::/39 comment="SPAMHAUS-DROP" list=SPAMHAUS-DROPV6-STAGING
 /ipv6 firewall address-list add address=2a13:ef45::/32 comment="SPAMHAUS-DROP" list=SPAMHAUS-DROPV6-STAGING
