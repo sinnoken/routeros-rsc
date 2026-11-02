@@ -1,16 +1,16 @@
 # ---- Upstream notice (retained as required by the source) ----
-# Spamhaus DROP List 2026/10/31 - (c) 2026 The Spamhaus Project SLU
+# Spamhaus DROP List 2026/11/02 - (c) 2026 The Spamhaus Project SLU
 # https://www.spamhaus.org/drop/drop.txt
-# Last-Modified: Sat, 31 Oct 2026 17:30:19 GMT
-# Expires: Sat, 31 Oct 2026 18:44:02 GMT
+# Last-Modified: Sun, 01 Nov 2026 11:45:38 GMT
+# Expires: Mon, 02 Nov 2026 08:44:02 GMT
 # ---- End of upstream notice ----
 #
 # SPAMHAUS-DROP
 # Source: https://www.spamhaus.org/drop/drop.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-11-01 08:28:38 UTC+0000
-# Entries   : 1755 raw -> 1614 after CIDR aggregation (saved 141, 8.0%)
+# Generated : 2026-11-02 08:40:52 UTC+0000
+# Entries   : 1753 raw -> 1612 after CIDR aggregation (saved 141, 8.0%)
 
 /ip firewall address-list remove [find list=HN-BLACKLIST-SPAMHAUS-STAGING]
 /ip firewall address-list add address=1.10.16.0/20 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
@@ -1374,8 +1374,6 @@
 /ip firewall address-list add address=204.89.202.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=204.89.224.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=204.91.96.0/20 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=204.106.128.0/18 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
-/ip firewall address-list add address=204.106.192.0/19 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=204.107.132.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=204.107.208.0/24 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
 /ip firewall address-list add address=204.110.8.0/21 comment="SPAMHAUS-DROP" list=HN-BLACKLIST-SPAMHAUS-STAGING
