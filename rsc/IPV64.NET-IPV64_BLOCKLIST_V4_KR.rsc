@@ -2,8 +2,8 @@
 # Source: https://ipv64.net/blocklists/countries/ipv64_blocklist_v4_KR.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-11-05 08:48:12 UTC+0000
-# Entries   : 2430 raw -> 998 after CIDR aggregation (saved 1432, 58.9%)
+# Generated : 2026-11-06 08:48:48 UTC+0000
+# Entries   : 2431 raw -> 999 after CIDR aggregation (saved 1432, 58.9%)
 
 /ip firewall address-list remove [find list=IPV64.NET-IPV64_BLOCKLIST_V4_KR-STAGING]
 /ip firewall address-list add address=1.11.0.0/16 comment="South Korea IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_KR-STAGING
@@ -707,6 +707,7 @@
 /ip firewall address-list add address=152.149.0.0/16 comment="South Korea IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_KR-STAGING
 /ip firewall address-list add address=154.10.0.0/16 comment="South Korea IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_KR-STAGING
 /ip firewall address-list add address=155.230.0.0/16 comment="South Korea IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_KR-STAGING
+/ip firewall address-list add address=156.9.148.0/22 comment="South Korea IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_KR-STAGING
 /ip firewall address-list add address=156.147.0.0/16 comment="South Korea IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_KR-STAGING
 /ip firewall address-list add address=157.66.64.0/23 comment="South Korea IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_KR-STAGING
 /ip firewall address-list add address=157.119.32.0/21 comment="South Korea IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_KR-STAGING
