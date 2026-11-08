@@ -1,7 +1,7 @@
 # ===================================================================
 # Mikrotik RouterOS v7 firewall address-list import file
 # Source : https://github.com/OpenFilters/internet-scanners
-# Generated: 2026-11-07 09:42:45 UTC
+# Generated: 2026-11-08 09:56:20 UTC
 # List name : internet-scanners
 # Entries  : IPv4=20369  IPv6=3234
 # 註: 已使用 --collapse 合併相鄰/重疊/被包含的網段
