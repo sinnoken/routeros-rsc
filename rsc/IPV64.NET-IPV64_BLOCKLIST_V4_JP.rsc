@@ -2,7 +2,7 @@
 # Source: https://ipv64.net/blocklists/countries/ipv64_blocklist_v4_JP.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-11-08 08:23:01 UTC+0000
+# Generated : 2026-11-09 08:53:54 UTC+0000
 # Entries   : 4807 raw -> 3208 after CIDR aggregation (saved 1599, 33.3%)
 
 /ip firewall address-list remove [find list=IPV64.NET-IPV64_BLOCKLIST_V4_JP-STAGING]
