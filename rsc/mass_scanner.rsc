@@ -1,6 +1,6 @@
 # Maltrail Mass Scanner List
 # Source: https://github.com/stamparm/maltrail + Local Variable List
-# Generated on: 2026-11-02 03:35:54 UTC+0000
+# Generated on: 2026-11-09 03:48:28 UTC+0000
 #
 # Maltrail data: Copyright (c) 2014-present Maltrail developers (https://github.com/stamparm/maltrail/)
 # Licensed under the MIT License:
@@ -1068,15 +1068,8 @@
 /ip firewall address-list add address=91.196.152.2/31 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=91.196.152.4/30 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=91.196.152.8/29 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=91.196.152.16/29 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=91.196.152.24/30 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=91.196.152.29/32 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=91.196.152.30/31 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=91.196.152.32/30 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=91.196.152.36/31 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=91.196.152.39/32 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=91.196.152.40/29 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=91.196.152.48/28 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=91.196.152.16/28 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=91.196.152.32/27 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=91.196.152.64/26 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=91.196.152.128/26 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=91.196.152.192/27 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
@@ -1089,10 +1082,7 @@
 /ip firewall address-list add address=91.230.168.2/31 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=91.230.168.4/30 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=91.230.168.8/29 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=91.230.168.16/29 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=91.230.168.24/31 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=91.230.168.26/32 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
-/ip firewall address-list add address=91.230.168.28/30 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
+/ip firewall address-list add address=91.230.168.16/28 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=91.230.168.32/27 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=91.230.168.64/26 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER
 /ip firewall address-list add address=91.230.168.128/26 comment="Maltrail: onyphe.net" list=MALTRAIL-SCANNER

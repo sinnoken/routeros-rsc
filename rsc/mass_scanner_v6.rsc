@@ -1,6 +1,6 @@
 # Maltrail Mass Scanner List
 # Source: https://github.com/stamparm/maltrail + Local Variable List
-# Generated on: 2026-11-02 03:35:54 UTC+0000
+# Generated on: 2026-11-09 03:48:28 UTC+0000
 #
 # Maltrail data: Copyright (c) 2014-present Maltrail developers (https://github.com/stamparm/maltrail/)
 # Licensed under the MIT License:
