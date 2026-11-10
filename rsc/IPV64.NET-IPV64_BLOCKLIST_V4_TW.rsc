@@ -2,8 +2,8 @@
 # Source: https://ipv64.net/blocklists/countries/ipv64_blocklist_v4_TW.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-11-09 08:53:53 UTC+0000
-# Entries   : 1084 raw -> 735 after CIDR aggregation (saved 349, 32.2%)
+# Generated : 2026-11-10 09:00:39 UTC+0000
+# Entries   : 1155 raw -> 806 after CIDR aggregation (saved 349, 30.2%)
 
 /ip firewall address-list remove [find list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING]
 /ip firewall address-list add address=1.34.0.0/15 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
@@ -373,6 +373,63 @@
 /ip firewall address-list add address=103.255.40.0/22 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
 /ip firewall address-list add address=103.255.206.0/23 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
 /ip firewall address-list add address=103.255.210.0/23 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.66.112/31 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.66.117/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.66.118/31 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.66.120/30 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.66.124/31 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.66.126/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.69.112/31 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.69.117/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.69.118/31 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.69.120/30 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.69.124/31 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.69.126/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.83.84/31 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.83.89/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.83.90/31 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.83.92/30 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.83.96/31 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.83.98/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.99.78/31 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.99.83/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.99.84/30 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.99.88/30 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.99.92/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.101.78/31 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.101.83/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.101.84/30 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.101.88/30 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.101.92/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.117.114/31 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.117.119/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.117.120/29 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.117.128/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.120.114/31 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.120.119/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.120.120/29 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.120.128/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.128.6/31 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.128.11/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.128.12/30 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.128.16/30 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.128.20/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.138.177/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.139.17/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.139.18/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.141.10/31 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.141.20/31 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.141.22/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.141.75/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.142.7/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.148.240/30 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.148.244/31 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.148.246/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.149.156/30 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.149.160/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.151.153/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.151.154/31 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.151.156/31 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
 /ip firewall address-list add address=106.1.0.0/16 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
 /ip firewall address-list add address=106.64.0.0/15 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
 /ip firewall address-list add address=106.104.0.0/14 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
@@ -495,6 +552,12 @@
 /ip firewall address-list add address=140.138.0.0/16 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
 /ip firewall address-list add address=144.79.66.0/23 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
 /ip firewall address-list add address=144.79.236.0/23 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=146.75.132.156/30 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=146.75.132.160/31 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=146.75.160.156/30 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=146.75.160.160/31 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=146.75.187.48/30 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=146.75.187.52/31 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
 /ip firewall address-list add address=150.107.56.0/21 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
 /ip firewall address-list add address=150.107.64.0/22 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
 /ip firewall address-list add address=150.116.0.0/15 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
@@ -567,6 +630,14 @@
 /ip firewall address-list add address=165.101.88.0/23 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
 /ip firewall address-list add address=165.101.152.0/23 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
 /ip firewall address-list add address=168.95.0.0/16 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=172.224.254.16/28 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=172.225.51.0/28 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=172.225.52.96/27 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=172.225.59.192/27 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=172.225.59.240/28 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=172.225.124.128/27 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=172.226.160.0/27 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=172.226.160.32/28 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
 /ip firewall address-list add address=175.41.48.0/20 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
 /ip firewall address-list add address=175.96.0.0/14 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
 /ip firewall address-list add address=175.111.32.0/19 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING

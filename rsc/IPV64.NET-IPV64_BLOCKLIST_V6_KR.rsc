@@ -2,8 +2,8 @@
 # Source: https://ipv64.net/blocklists/countries/ipv64_blocklist_v6_KR.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-11-09 08:53:53 UTC+0000
-# Entries   : 183 raw -> 142 after CIDR aggregation (saved 41, 22.4%)
+# Generated : 2026-11-10 09:00:39 UTC+0000
+# Entries   : 303 raw -> 262 after CIDR aggregation (saved 41, 13.5%)
 
 /ipv6 firewall address-list remove [find list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING]
 /ipv6 firewall address-list add address=2001:220::/32 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
@@ -147,6 +147,126 @@
 /ipv6 firewall address-list add address=2407:d100::/32 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
 /ipv6 firewall address-list add address=2602:f5d1::/40 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
 /ipv6 firewall address-list add address=2602:f71f::/36 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2606:54c0:4680::/41 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2606:54c0:4700::/44 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2606:54c0:4710::/45 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2606:54c3:0:ce::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2606:54c3:0:243::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2606:54c3:0:385::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2606:54c3:0:579::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2606:54c3:0:6f5::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2606:54c3:0:700::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2606:54c3:0:9a5::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2606:54c3:0:ab9::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2606:54c3:0:c1d::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2606:54c3:0:d9e::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2606:54c3:0:dfa::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2606:54c3:0:10f2::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2606:54c3:0:1321::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2606:54c3:0:1520::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2606:54c3:0:1577::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2606:54c3:0:1671::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2606:54c3:0:1863::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2606:54c3:0:1886::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2606:54c3:0:1923::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c0::/53 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c0:800::/56 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c0:4000::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c0:5000::/59 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c0:5020::/60 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c0:5030::/63 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c0:5032::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c1:4000::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c2::/53 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c2:800::/56 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c2:4000::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c2:5000::/59 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c2:5020::/60 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c2:5030::/63 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c2:5032::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c3:4000::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c4::/53 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c4:800::/56 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c4:4000::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c4:5000::/59 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c4:5020::/60 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c4:5030::/63 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c4:5032::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c5:4000::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c8::/53 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c8:800::/56 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c8:4000::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c8:5000::/59 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c8:5020::/60 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c8:5030::/63 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c8:5032::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c9::/53 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c9:800::/56 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c9:4000::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c9:5000::/59 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c9:5020::/60 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c9:5030::/63 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3c9:5032::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3ca:4000::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3cb:4000::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3cc::/53 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3cc:800::/56 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3cc:4000::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3cc:5000::/59 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3cc:5020::/60 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3cc:5030::/63 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3cc:5032::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3cd:4000::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3d0::/53 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3d0:800::/56 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3d0:4000::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3d0:5000::/59 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3d0:5020::/60 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3d0:5030::/63 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3d0:5032::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3d1:4000::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3dc::/53 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3dc:800::/56 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3dc:4000::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3dc:5000::/59 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3dc:5020::/60 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3dc:5030::/63 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3dc:5032::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3dd:4000::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3e0::/53 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3e0:800::/56 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3e0:4000::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3e0:5000::/59 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3e0:5020::/60 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3e0:5030::/63 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3e0:5032::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3e1:4000::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3e4::/53 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3e4:800::/56 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3e4:4000::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3e4:5000::/59 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3e4:5020::/60 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3e4:5030::/63 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3e4:5032::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a02:26f7:c3e7:4000::/64 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a04:4e41:12a0:2000::/51 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a04:4e41:12a0:4000::/52 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a04:4e41:12a8::/48 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a04:4e41:2200::/51 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a04:4e41:2200:2000::/52 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a04:4e41:2201::/48 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a04:4e41:2400:d000::/52 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a04:4e41:2400:e000::/51 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a04:4e41:2401::/48 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a04:4e41:6001:2000::/51 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a04:4e41:6001:4000::/52 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a04:4e41:6007::/48 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a09:bac2:4680::/41 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a09:bac2:4700::/44 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a09:bac2:4710::/45 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a09:bac3:4680::/41 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a09:bac3:4700::/44 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
+/ipv6 firewall address-list add address=2a09:bac3:4710::/45 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
 /ipv6 firewall address-list add address=2a0f:3ec0::/29 comment="South Korea IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING
 /ipv6 firewall address-list remove [find list=IPV64.NET-IPV64_BLOCKLIST_V6_KR]
 /ipv6 firewall address-list set [find list=IPV64.NET-IPV64_BLOCKLIST_V6_KR-STAGING] list=IPV64.NET-IPV64_BLOCKLIST_V6_KR
