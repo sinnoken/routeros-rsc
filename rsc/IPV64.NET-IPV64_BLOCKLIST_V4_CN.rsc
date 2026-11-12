@@ -2,8 +2,8 @@
 # Source: https://ipv64.net/blocklists/countries/ipv64_blocklist_v4_CN.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-11-11 08:40:57 UTC+0000
-# Entries   : 8904 raw -> 5606 after CIDR aggregation (saved 3298, 37.0%)
+# Generated : 2026-11-12 09:01:45 UTC+0000
+# Entries   : 8906 raw -> 5608 after CIDR aggregation (saved 3298, 37.0%)
 
 /ip firewall address-list remove [find list=IPV64.NET-IPV64_BLOCKLIST_V4_CN-STAGING]
 /ip firewall address-list add address=1.0.1.0/24 comment="China IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_CN-STAGING
@@ -3952,6 +3952,7 @@
 /ip firewall address-list add address=175.185.0.0/16 comment="China IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_CN-STAGING
 /ip firewall address-list add address=175.186.0.0/15 comment="China IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_CN-STAGING
 /ip firewall address-list add address=175.188.0.0/14 comment="China IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_CN-STAGING
+/ip firewall address-list add address=176.116.4.0/24 comment="China IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_CN-STAGING
 /ip firewall address-list add address=177.201.160.0/19 comment="China IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_CN-STAGING
 /ip firewall address-list add address=177.203.96.0/19 comment="China IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_CN-STAGING
 /ip firewall address-list add address=177.203.224.0/19 comment="China IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_CN-STAGING
@@ -5504,6 +5505,7 @@
 /ip firewall address-list add address=211.160.0.0/13 comment="China IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_CN-STAGING
 /ip firewall address-list add address=212.64.0.0/17 comment="China IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_CN-STAGING
 /ip firewall address-list add address=212.129.128.0/17 comment="China IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_CN-STAGING
+/ip firewall address-list add address=217.114.35.0/24 comment="China IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_CN-STAGING
 /ip firewall address-list add address=218.0.0.0/11 comment="China IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_CN-STAGING
 /ip firewall address-list add address=218.56.0.0/13 comment="China IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_CN-STAGING
 /ip firewall address-list add address=218.64.0.0/11 comment="China IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_CN-STAGING

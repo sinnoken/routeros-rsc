@@ -167,7 +167,6 @@ add list=AS45102 address=149.129.64.0/18
 add list=AS45102 address=149.129.128.0/17
 add list=AS45102 address=156.227.20.0/24
 add list=AS45102 address=156.236.17.0/24
-add list=AS45102 address=156.245.1.0/24
 add list=AS45102 address=161.117.0.0/16
 add list=AS45102 address=170.33.20.0/22
 add list=AS45102 address=170.33.24.0/24
