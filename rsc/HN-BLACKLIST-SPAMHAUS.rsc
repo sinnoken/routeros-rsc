@@ -1,15 +1,15 @@
 # ---- Upstream notice (retained as required by the source) ----
-# Spamhaus DROP List 2026/11/13 - (c) 2026 The Spamhaus Project SLU
+# Spamhaus DROP List 2026/11/15 - (c) 2026 The Spamhaus Project SLU
 # https://www.spamhaus.org/drop/drop.txt
-# Last-Modified: Fri, 13 Nov 2026 13:04:00 GMT
-# Expires: Fri, 13 Nov 2026 16:56:44 GMT
+# Last-Modified: Sat, 14 Nov 2026 13:42:26 GMT
+# Expires: Sun, 15 Nov 2026 08:56:44 GMT
 # ---- End of upstream notice ----
 #
 # SPAMHAUS-DROP
 # Source: https://www.spamhaus.org/drop/drop.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-11-14 08:21:57 UTC+0000
+# Generated : 2026-11-15 08:39:41 UTC+0000
 # Entries   : 1758 raw -> 1621 after CIDR aggregation (saved 137, 7.8%)
 
 /ip firewall address-list remove [find list=HN-BLACKLIST-SPAMHAUS-STAGING]

@@ -46,7 +46,7 @@
 # Source: https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-11-14 08:21:57 UTC+0000
+# Generated : 2026-11-15 08:39:41 UTC+0000
 # Entries   : 1781 raw -> 1643 after CIDR aggregation (saved 138, 7.7%)
 
 /ip firewall address-list remove [find list=EMERGINGTHREATS-BLOCK-IPS-STAGING]
