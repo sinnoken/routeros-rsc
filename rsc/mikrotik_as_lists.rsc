@@ -151,6 +151,7 @@ add list=AS45102 address=110.76.23.0/24
 add list=AS45102 address=116.251.64.0/18
 add list=AS45102 address=139.95.0.0/20
 add list=AS45102 address=139.95.16.0/22
+add list=AS45102 address=139.95.21.0/24
 add list=AS45102 address=139.95.22.0/23
 add list=AS45102 address=139.95.24.0/21
 add list=AS45102 address=139.95.32.0/21
