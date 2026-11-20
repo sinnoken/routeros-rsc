@@ -2,8 +2,8 @@
 # Source: https://ipv64.net/blocklists/countries/ipv64_blocklist_v4_TW.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-11-19 09:41:53 UTC+0000
-# Entries   : 1155 raw -> 806 after CIDR aggregation (saved 349, 30.2%)
+# Generated : 2026-11-20 09:28:59 UTC+0000
+# Entries   : 1157 raw -> 808 after CIDR aggregation (saved 349, 30.2%)
 
 /ip firewall address-list remove [find list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING]
 /ip firewall address-list add address=1.34.0.0/15 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
@@ -422,6 +422,8 @@
 /ip firewall address-list add address=104.28.141.22/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
 /ip firewall address-list add address=104.28.141.75/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
 /ip firewall address-list add address=104.28.142.7/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.147.92/31 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
+/ip firewall address-list add address=104.28.147.94/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
 /ip firewall address-list add address=104.28.148.240/30 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
 /ip firewall address-list add address=104.28.148.244/31 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
 /ip firewall address-list add address=104.28.148.246/32 comment="Taiwan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_TW-STAGING
