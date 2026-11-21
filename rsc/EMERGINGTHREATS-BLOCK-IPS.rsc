@@ -35,7 +35,7 @@
 # USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 #
-# Rev 8023
+# Rev 8024
 #
 # Abuse.ch C&C List
 #
@@ -46,7 +46,7 @@
 # Source: https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-11-20 09:28:58 UTC+0000
+# Generated : 2026-11-21 08:59:45 UTC+0000
 # Entries   : 1770 raw -> 1636 after CIDR aggregation (saved 134, 7.6%)
 
 /ip firewall address-list remove [find list=EMERGINGTHREATS-BLOCK-IPS-STAGING]
@@ -271,19 +271,21 @@
 /ip firewall address-list add address=64.92.224.0/20 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=64.116.200.0/21 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=64.204.37.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
+/ip firewall address-list add address=64.205.72.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=64.205.156.0/22 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=64.205.164.0/22 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=64.205.172.0/22 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=64.205.188.0/22 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=64.250.144.0/20 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
-/ip firewall address-list add address=65.49.1.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=65.166.249.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=65.205.64.0/22 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=65.216.208.0/21 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=66.6.59.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
+/ip firewall address-list add address=66.132.172.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
+/ip firewall address-list add address=66.132.186.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
+/ip firewall address-list add address=66.132.195.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=66.198.225.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=67.219.208.0/20 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
-/ip firewall address-list add address=69.5.169.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=69.33.250.0/23 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=69.33.252.0/22 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=69.40.207.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
@@ -301,6 +303,7 @@
 /ip firewall address-list add address=76.74.78.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=77.36.112.0/21 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=77.47.242.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
+/ip firewall address-list add address=77.67.26.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=77.81.84.0/23 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=77.81.86.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=77.81.89.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
@@ -309,6 +312,7 @@
 /ip firewall address-list add address=77.90.154.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=77.90.185.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=77.109.3.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
+/ip firewall address-list add address=77.239.124.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=78.40.143.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=78.108.119.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=78.153.140.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
@@ -341,6 +345,7 @@
 /ip firewall address-list add address=85.209.204.0/22 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=85.239.144.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=85.239.147.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
+/ip firewall address-list add address=86.38.187.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=86.54.25.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=86.104.222.0/23 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=86.104.224.0/23 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
@@ -411,7 +416,6 @@
 /ip firewall address-list add address=91.92.47.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=91.92.240.0/22 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=91.188.254.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
-/ip firewall address-list add address=91.196.152.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=91.200.133.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=91.200.164.0/22 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=91.202.233.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
@@ -424,6 +428,8 @@
 /ip firewall address-list add address=91.220.163.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=91.224.92.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=91.229.52.0/22 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
+/ip firewall address-list add address=91.230.168.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
+/ip firewall address-list add address=91.231.89.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=91.232.18.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=91.233.0.0/23 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=91.235.130.0/23 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
@@ -472,6 +478,7 @@
 /ip firewall address-list add address=96.126.64.0/22 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=96.126.68.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=98.98.195.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
+/ip firewall address-list add address=100.29.192.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=101.0.16.0/20 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=101.1.16.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=101.36.96.0/19 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
@@ -720,6 +727,7 @@
 /ip firewall address-list add address=138.185.116.0/22 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=138.219.172.0/22 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=138.226.236.0/23 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
+/ip firewall address-list add address=138.226.239.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=138.241.0.0/16 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=138.249.120.0/23 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=138.249.122.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
@@ -753,7 +761,6 @@
 /ip firewall address-list add address=147.90.214.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=147.90.219.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=147.119.0.0/16 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
-/ip firewall address-list add address=147.185.132.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=148.148.0.0/16 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=148.178.0.0/16 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=148.185.0.0/16 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
@@ -774,7 +781,6 @@
 /ip firewall address-list add address=153.51.160.0/22 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=153.93.0.0/16 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=154.23.189.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
-/ip firewall address-list add address=154.80.128.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=154.85.48.0/21 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=154.209.190.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=154.211.12.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
@@ -843,7 +849,6 @@
 /ip firewall address-list add address=167.31.0.0/16 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=167.74.0.0/18 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=167.87.0.0/16 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
-/ip firewall address-list add address=167.94.145.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=167.148.201.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=167.158.0.0/16 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=167.185.0.0/16 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
@@ -997,7 +1002,6 @@
 /ip firewall address-list add address=185.241.208.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=185.241.211.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=185.242.3.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
-/ip firewall address-list add address=185.242.226.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=185.243.96.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=185.244.249.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=185.245.62.0/23 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
@@ -1107,7 +1111,6 @@
 /ip firewall address-list add address=193.139.0.0/16 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=193.142.146.0/23 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=193.143.1.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
-/ip firewall address-list add address=193.163.125.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=193.178.158.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=193.202.82.0/23 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=193.226.76.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
@@ -1139,8 +1142,6 @@
 /ip firewall address-list add address=195.178.110.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=195.178.148.0/23 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=195.181.224.0/20 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
-/ip firewall address-list add address=195.182.16.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
-/ip firewall address-list add address=195.184.76.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=195.216.154.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=196.10.61.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=196.10.62.0/23 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
@@ -1660,7 +1661,6 @@
 /ip firewall address-list add address=213.209.159.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=216.7.96.0/20 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=216.9.224.0/22 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
-/ip firewall address-list add address=216.25.90.0/24 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=216.26.224.0/19 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=216.63.240.0/22 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
 /ip firewall address-list add address=216.93.48.0/21 comment="Emerging Threats FW Block IPs" list=EMERGINGTHREATS-BLOCK-IPS-STAGING
