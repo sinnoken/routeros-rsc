@@ -1,15 +1,15 @@
 # ---- Upstream notice (retained as required by the source) ----
-# Spamhaus IPv6 DROP List 2026/11/20 - (c) 2026 The Spamhaus Project SLU
+# Spamhaus IPv6 DROP List 2026/11/22 - (c) 2026 The Spamhaus Project SLU
 # https://www.spamhaus.org/drop/dropv6.txt
 # Last-Modified: Fri, 20 Nov 2026 09:32:55 GMT
-# Expires: Fri, 20 Nov 2026 10:56:44 GMT
+# Expires: Sun, 22 Nov 2026 09:56:44 GMT
 # ---- End of upstream notice ----
 #
 # SPAMHAUS-DROP
 # Source: https://www.spamhaus.org/drop/dropv6.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-11-21 08:59:45 UTC+0000
+# Generated : 2026-11-22 09:07:58 UTC+0000
 # Entries   : 90 raw -> 84 after CIDR aggregation (saved 6, 6.7%)
 
 /ipv6 firewall address-list remove [find list=SPAMHAUS-DROPV6-STAGING]
