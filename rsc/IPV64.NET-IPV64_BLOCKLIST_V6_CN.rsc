@@ -2,8 +2,8 @@
 # Source: https://ipv64.net/blocklists/countries/ipv64_blocklist_v6_CN.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-11-23 10:02:02 UTC+0000
-# Entries   : 2411 raw -> 2383 after CIDR aggregation (saved 28, 1.2%)
+# Generated : 2026-11-24 11:52:11 UTC+0000
+# Entries   : 2412 raw -> 2384 after CIDR aggregation (saved 28, 1.2%)
 
 /ipv6 firewall address-list remove [find list=IPV64.NET-IPV64_BLOCKLIST_V6_CN-STAGING]
 /ipv6 firewall address-list add address=2001:250::/30 comment="China IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_CN-STAGING
@@ -808,6 +808,7 @@
 /ipv6 firewall address-list add address=2402:8260::/32 comment="China IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_CN-STAGING
 /ipv6 firewall address-list add address=2402:8300::/32 comment="China IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_CN-STAGING
 /ipv6 firewall address-list add address=2402:8380::/32 comment="China IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_CN-STAGING
+/ipv6 firewall address-list add address=2402:8420::/32 comment="China IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_CN-STAGING
 /ipv6 firewall address-list add address=2402:85c0::/32 comment="China IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_CN-STAGING
 /ipv6 firewall address-list add address=2402:8800::/32 comment="China IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_CN-STAGING
 /ipv6 firewall address-list add address=2402:8840::/32 comment="China IPv6 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V6_CN-STAGING
