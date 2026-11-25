@@ -2,8 +2,8 @@
 # Source: https://ipv64.net/blocklists/countries/ipv64_blocklist_v4_JP.txt
 # Converted for RouterOS by sinnoken/routeros-rsc
 # WARNING: Auto-generated. Do not edit manually.
-# Generated : 2026-11-24 11:52:11 UTC+0000
-# Entries   : 5045 raw -> 3446 after CIDR aggregation (saved 1599, 31.7%)
+# Generated : 2026-11-25 10:43:46 UTC+0000
+# Entries   : 5044 raw -> 3445 after CIDR aggregation (saved 1599, 31.7%)
 
 /ip firewall address-list remove [find list=IPV64.NET-IPV64_BLOCKLIST_V4_JP-STAGING]
 /ip firewall address-list add address=1.0.16.0/20 comment="Japan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_JP-STAGING
@@ -143,7 +143,6 @@
 /ip firewall address-list add address=36.52.0.0/14 comment="Japan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_JP-STAGING
 /ip firewall address-list add address=36.240.0.0/13 comment="Japan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_JP-STAGING
 /ip firewall address-list add address=36.255.36.0/22 comment="Japan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_JP-STAGING
-/ip firewall address-list add address=36.255.120.0/22 comment="Japan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_JP-STAGING
 /ip firewall address-list add address=36.255.160.0/22 comment="Japan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_JP-STAGING
 /ip firewall address-list add address=36.255.216.0/22 comment="Japan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_JP-STAGING
 /ip firewall address-list add address=36.255.236.0/22 comment="Japan IPv4 blocklist" list=IPV64.NET-IPV64_BLOCKLIST_V4_JP-STAGING
